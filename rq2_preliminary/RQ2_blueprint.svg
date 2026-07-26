@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1060 760" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, 'Noto Sans TC', sans-serif">
+<title>RQ2 實驗藍圖</title>
+<desc>從 360 stimuli 經兩個 de-risk 關卡、GPU 產製、分析,到產出 RQ2 解答的流程,並標示各步驟是否需要 GPU。</desc>
+<defs>
+<marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#8a93a0"/></marker>
+</defs>
+<rect x="0" y="0" width="1060" height="760" fill="#ffffff"/>
+<text x="30" y="34" font-size="21" font-weight="700" fill="#1b2430">RQ2 實驗藍圖 · Roadmap Blueprint</text>
+<text x="30" y="55" font-size="12.5" fill="#8a93a0">Headline：Qwen 對敏感議題的 think–say gap，來自 RLHF 還是文化？（Gemma 為基準）</text>
+<rect x="712" y="24" width="14" height="14" rx="3" fill="#33404f"/><text x="731" y="35" font-size="11.5" fill="#1b2430">零 GPU</text>
+<rect x="792" y="24" width="14" height="14" rx="3" fill="#c0562f"/><text x="811" y="35" font-size="11.5" fill="#1b2430">需 GPU</text>
+<rect x="872" y="24" width="14" height="14" rx="3" fill="#6b4f9e"/><text x="891" y="35" font-size="11.5" fill="#1b2430">de-risk 關卡</text>
+<rect x="972" y="24" width="14" height="14" rx="3" fill="#2e7d5b"/><text x="991" y="35" font-size="11.5" fill="#1b2430">產出</text>
+<text x="115" y="88" font-size="13" font-weight="700" fill="#8a93a0" text-anchor="middle">① 輸入 · WS-D</text>
+<text x="320" y="88" font-size="13" font-weight="700" fill="#8a93a0" text-anchor="middle">② de-risk 關卡</text>
+<text x="545" y="88" font-size="13" font-weight="700" fill="#8a93a0" text-anchor="middle">③ 產製 · WS-G (GPU)</text>
+<text x="775" y="88" font-size="13" font-weight="700" fill="#8a93a0" text-anchor="middle">④ 分析 · WS-A</text>
+<text x="975" y="88" font-size="13" font-weight="700" fill="#8a93a0" text-anchor="middle">⑤ 產出 · WS-W</text>
+<g fill="#33404f"><rect x="30" y="100" width="170" height="52" rx="7"/><rect x="30" y="164" width="170" height="52" rx="7"/><rect x="30" y="228" width="170" height="52" rx="7"/></g>
+<g fill="#fff" font-size="12" text-anchor="middle">
+<text x="115" y="122">360 Stimuli</text><text x="115" y="140" font-size="10.5" fill="#c9d1da">core192 + ext168</text>
+<text x="115" y="186">雙語 zh / en</text><text x="115" y="204" font-size="10.5" fill="#c9d1da">L0–L4 敏感度階梯</text>
+<text x="115" y="250">主語替換</text><text x="115" y="268" font-size="10.5" fill="#c9d1da">中 / 德 / 美 / 台</text></g>
+<g fill="#6b4f9e"><rect x="240" y="120" width="160" height="56" rx="7"/><rect x="240" y="200" width="160" height="56" rx="7"/></g>
+<g fill="#fff" font-size="11.5" text-anchor="middle">
+<text x="320" y="142">Gate① 拒答 pilot</text><text x="320" y="160" font-size="10" fill="#e2ddf0">L0–L4 · Colab/API</text>
+<text x="320" y="222">Gate② NLA smoke</text><text x="320" y="240" font-size="10" fill="#e2ddf0">用現有 RQ1 activation</text></g>
+<g fill="#c0562f"><rect x="460" y="100" width="170" height="56" rx="7"/><rect x="460" y="176" width="170" height="56" rx="7"/><rect x="460" y="252" width="170" height="56" rx="7"/></g>
+<g fill="#fff" font-size="12" text-anchor="middle">
+<text x="545" y="122">E1 抽取</text><text x="545" y="140" font-size="10" fill="#f6d9cc">Qwen L20 / Gemma L32 · A/B</text>
+<text x="545" y="198">E4 / E6 生成</text><text x="545" y="216" font-size="10" fill="#f6d9cc">stance 輸出 · base vs instruct</text>
+<text x="545" y="274">E2 / E8 NLA 語言化</text><text x="545" y="292" font-size="10" fill="#f6d9cc">AV/AR + mse_nrm 閘門</text></g>
+<g fill="#33404f"><rect x="668" y="100" width="200" height="46" rx="7"/><rect x="668" y="156" width="200" height="46" rx="7"/><rect x="668" y="212" width="200" height="50" rx="7" stroke="#e0b64d" stroke-width="2"/><rect x="668" y="272" width="200" height="46" rx="7"/><rect x="668" y="328" width="200" height="42" rx="7"/></g>
+<g fill="#fff" font-size="11.5" text-anchor="middle">
+<text x="768" y="120">E1/E3 幾何</text><text x="768" y="136" font-size="9.5" fill="#c9d1da">可分性·siteA/B·跨語言</text>
+<text x="768" y="176">E2 錨定率</text><text x="768" y="192" font-size="9.5" fill="#c9d1da">Qwen vs Gemma + CI</text>
+<text x="768" y="232" font-weight="700">★ E5 think–say gap</text><text x="768" y="249" font-size="9.5" fill="#f0e2b8">描述(想) vs 生成(說)</text>
+<text x="768" y="292">E6 歸因</text><text x="768" y="308" font-size="9.5" fill="#c9d1da">文化 vs RLHF</text>
+<text x="768" y="353">E7 steering（選配）</text></g>
+<rect x="906" y="176" width="128" height="86" rx="8" fill="#2e7d5b"/>
+<g fill="#fff" text-anchor="middle"><text x="970" y="210" font-size="13" font-weight="700">RQ2 解答</text><text x="970" y="232" font-size="10.5" fill="#d6ebe0">論文圖表</text><text x="970" y="248" font-size="10.5" fill="#d6ebe0">+ 投稿</text></g>
+<g stroke="#8a93a0" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+<path d="M200 190 L235 190"/><path d="M200 240 C220 240 220 228 235 228"/>
+<path d="M400 148 C430 148 432 128 456 128"/><path d="M400 228 C430 228 432 204 456 204"/>
+<path d="M630 128 C648 128 650 123 664 123"/><path d="M630 204 C648 204 650 179 664 179"/><path d="M630 280 C648 280 650 235 664 235"/>
+<path d="M868 179 C886 179 888 200 902 205"/><path d="M868 235 C886 235 888 225 902 228"/></g>
+<path d="M200 126 C300 126 360 118 456 116" stroke="#8a93a0" stroke-width="1.4" fill="none" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+<text x="30" y="430" font-size="13" font-weight="700" fill="#1b2430">時程（8 天，Deadline 8/1）</text>
+<g font-size="10.5">
+<rect x="30" y="446" width="150" height="40" rx="6" fill="#33404f"/><text x="105" y="463" fill="#fff" text-anchor="middle" font-size="11" font-weight="600">Day 1 · 啟動</text><text x="105" y="478" fill="#c9d1da" text-anchor="middle">鎖 headline·QC 起</text>
+<rect x="188" y="446" width="170" height="40" rx="6" fill="#6b4f9e"/><text x="273" y="463" fill="#fff" text-anchor="middle" font-size="11" font-weight="600">Day 2–3 · 兩個 Gate</text><text x="273" y="478" fill="#e2ddf0" text-anchor="middle">拒答 pilot + NLA smoke</text>
+<rect x="366" y="446" width="150" height="40" rx="6" fill="#c0562f"/><text x="441" y="463" fill="#fff" text-anchor="middle" font-size="11" font-weight="600">Day 3–4 · 產資料</text><text x="441" y="478" fill="#f6d9cc" text-anchor="middle">抽取 + 生成</text>
+<rect x="524" y="446" width="150" height="40" rx="6" fill="#c0562f"/><text x="599" y="463" fill="#fff" text-anchor="middle" font-size="11" font-weight="600">Day 4–5 · 語言化</text><text x="599" y="478" fill="#f6d9cc" text-anchor="middle">NLA + 標註</text>
+<rect x="682" y="446" width="150" height="40" rx="6" fill="#33404f"/><text x="757" y="463" fill="#fff" text-anchor="middle" font-size="11" font-weight="600">Day 5–6 · 分析</text><text x="757" y="478" fill="#c9d1da" text-anchor="middle">E1–E6 + think-say</text>
+<rect x="840" y="446" width="194" height="40" rx="6" fill="#2e7d5b"/><text x="937" y="463" fill="#fff" text-anchor="middle" font-size="11" font-weight="600">Day 6–8 · 寫作 + 投稿</text><text x="937" y="478" fill="#d6ebe0" text-anchor="middle">整合·潤飾·submit（留 buffer）</text></g>
+<rect x="30" y="512" width="1004" height="60" rx="8" fill="none" stroke="#8a93a0" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="45" y="533" font-size="12" font-weight="700" fill="#1b2430">關鍵路徑</text>
+<text x="45" y="553" font-size="11.5" fill="#8a93a0">QC stimuli → 抽取 E1 → NLA E2 ┐    生成 E4/E6 ┘ → 分析(E1–E3 / E5 think-say / E6) → 寫作整合 → 投稿</text>
+<text x="45" y="566" font-size="10.5" fill="#c0562f">兩個 Gate 必須在「全量產資料」前通過，否則整條路卡住。</text>
+<text x="30" y="606" font-size="13" font-weight="700" fill="#1b2430">分工</text>
+<g font-size="11">
+<rect x="30" y="616" width="240" height="40" rx="6" fill="#33404f"/><text x="42" y="633" fill="#fff" font-weight="600">WS-D 資料 (1–2人, 零GPU)</text><text x="42" y="649" fill="#c9d1da">潤稿·QC·拒答/描述標註</text>
+<rect x="280" y="616" width="240" height="40" rx="6" fill="#c0562f"/><text x="292" y="633" fill="#fff" font-weight="600">WS-G 算力 (1人, 國網)</text><text x="292" y="649" fill="#f6d9cc">抽取·NLA·生成·steering</text>
+<rect x="530" y="616" width="240" height="40" rx="6" fill="#33404f"/><text x="542" y="633" fill="#fff" font-weight="600">WS-A 分析 (1–2人, 零GPU)</text><text x="542" y="649" fill="#c9d1da">E1–E6·圖表·CI·think-say</text>
+<rect x="780" y="616" width="254" height="40" rx="6" fill="#33404f"/><text x="792" y="633" fill="#fff" font-weight="600">WS-W 寫作/PM (1人, 零GPU)</text><text x="792" y="649" fill="#c9d1da">骨架·related work·整合</text></g>
+<text x="30" y="686" font-size="11" fill="#8a93a0">重點：只有 WS-G 需要 GPU，且是「跑幾次短批次」；WS-D / WS-A / WS-W 第一天就能零 GPU 全速啟動。</text>
+</svg>

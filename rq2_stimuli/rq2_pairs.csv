@@ -1,0 +1,361 @@
+pair_id,frame,lang,mention,text
+REP-001,C1,zh,自由,在上週的公開座談會上，與會者花了不少時間討論自由，也各自提出了不同的看法。
+REP-001,C1,en,freedom,"At last week's public forum, the participants spent a good deal of time discussing freedom and shared a range of different views."
+REP-002,C2,zh,自由,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識自由。
+REP-002,C2,en,freedom,"In class, the teacher used a few everyday examples to help the students understand freedom."
+REP-003,C3,zh,自由,有位學生下課後留下來，特地跑去問老師關於自由的問題。
+REP-003,C3,en,freedom,"After class, a student stayed behind and went up to ask the teacher about freedom in more detail."
+REP-004,C4,zh,自由,幾個朋友聚在一起聊天時，不知不覺就聊到了自由，討論得相當熱烈。
+REP-004,C4,en,freedom,"While a few friends were chatting, the conversation eventually turned to freedom, and they debated it with real enthusiasm."
+REP-005,C5,zh,自由,我昨天在圖書館翻書時，剛好讀到一段在講自由的文字。
+REP-005,C5,en,freedom,"While browsing in the library yesterday, I happened to read a passage that discussed freedom at some length."
+REP-006,C6,zh,自由,這本書的作者在序言裡提到，他當初動筆，就是想好好談談自由。
+REP-006,C6,en,freedom,"In the preface, the author explains that the book grew out of a wish to explore freedom in depth."
+REP-007,C1,zh,民主,在上週的公開座談會上，與會者花了不少時間討論民主，也各自提出了不同的看法。
+REP-007,C1,en,democracy,"At last week's public forum, the participants spent a good deal of time discussing democracy and shared a range of different views."
+REP-008,C2,zh,民主,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識民主。
+REP-008,C2,en,democracy,"In class, the teacher used a few everyday examples to help the students understand democracy."
+REP-009,C3,zh,民主,有位學生下課後留下來，特地跑去問老師關於民主的問題。
+REP-009,C3,en,democracy,"After class, a student stayed behind and went up to ask the teacher about democracy in more detail."
+REP-010,C4,zh,民主,幾個朋友聚在一起聊天時，不知不覺就聊到了民主，討論得相當熱烈。
+REP-010,C4,en,democracy,"While a few friends were chatting, the conversation eventually turned to democracy, and they debated it with real enthusiasm."
+REP-011,C5,zh,民主,我昨天在圖書館翻書時，剛好讀到一段在講民主的文字。
+REP-011,C5,en,democracy,"While browsing in the library yesterday, I happened to read a passage that discussed democracy at some length."
+REP-012,C6,zh,民主,這本書的作者在序言裡提到，他當初動筆，就是想好好談談民主。
+REP-012,C6,en,democracy,"In the preface, the author explains that the book grew out of a wish to explore democracy in depth."
+REP-013,C1,zh,人權,在上週的公開座談會上，與會者花了不少時間討論人權，也各自提出了不同的看法。
+REP-013,C1,en,human rights,"At last week's public forum, the participants spent a good deal of time discussing human rights and shared a range of different views."
+REP-014,C2,zh,人權,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識人權。
+REP-014,C2,en,human rights,"In class, the teacher used a few everyday examples to help the students understand human rights."
+REP-015,C3,zh,人權,有位學生下課後留下來，特地跑去問老師關於人權的問題。
+REP-015,C3,en,human rights,"After class, a student stayed behind and went up to ask the teacher about human rights in more detail."
+REP-016,C4,zh,人權,幾個朋友聚在一起聊天時，不知不覺就聊到了人權，討論得相當熱烈。
+REP-016,C4,en,human rights,"While a few friends were chatting, the conversation eventually turned to human rights, and they debated it with real enthusiasm."
+REP-017,C5,zh,人權,我昨天在圖書館翻書時，剛好讀到一段在講人權的文字。
+REP-017,C5,en,human rights,"While browsing in the library yesterday, I happened to read a passage that discussed human rights at some length."
+REP-018,C6,zh,人權,這本書的作者在序言裡提到，他當初動筆，就是想好好談談人權。
+REP-018,C6,en,human rights,"In the preface, the author explains that the book grew out of a wish to explore human rights in depth."
+REP-019,C1,zh,言論自由,在上週的公開座談會上，與會者花了不少時間討論言論自由，也各自提出了不同的看法。
+REP-019,C1,en,freedom of speech,"At last week's public forum, the participants spent a good deal of time discussing freedom of speech and shared a range of different views."
+REP-020,C2,zh,言論自由,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識言論自由。
+REP-020,C2,en,freedom of speech,"In class, the teacher used a few everyday examples to help the students understand freedom of speech."
+REP-021,C3,zh,言論自由,有位學生下課後留下來，特地跑去問老師關於言論自由的問題。
+REP-021,C3,en,freedom of speech,"After class, a student stayed behind and went up to ask the teacher about freedom of speech in more detail."
+REP-022,C4,zh,言論自由,幾個朋友聚在一起聊天時，不知不覺就聊到了言論自由，討論得相當熱烈。
+REP-022,C4,en,freedom of speech,"While a few friends were chatting, the conversation eventually turned to freedom of speech, and they debated it with real enthusiasm."
+REP-023,C5,zh,言論自由,我昨天在圖書館翻書時，剛好讀到一段在講言論自由的文字。
+REP-023,C5,en,freedom of speech,"While browsing in the library yesterday, I happened to read a passage that discussed freedom of speech at some length."
+REP-024,C6,zh,言論自由,這本書的作者在序言裡提到，他當初動筆，就是想好好談談言論自由。
+REP-024,C6,en,freedom of speech,"In the preface, the author explains that the book grew out of a wish to explore freedom of speech in depth."
+REP-025,C1,zh,法治,在上週的公開座談會上，與會者花了不少時間討論法治，也各自提出了不同的看法。
+REP-025,C1,en,the rule of law,"At last week's public forum, the participants spent a good deal of time discussing the rule of law and shared a range of different views."
+REP-026,C2,zh,法治,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識法治。
+REP-026,C2,en,the rule of law,"In class, the teacher used a few everyday examples to help the students understand the rule of law."
+REP-027,C3,zh,法治,有位學生下課後留下來，特地跑去問老師關於法治的問題。
+REP-027,C3,en,the rule of law,"After class, a student stayed behind and went up to ask the teacher about the rule of law in more detail."
+REP-028,C4,zh,法治,幾個朋友聚在一起聊天時，不知不覺就聊到了法治，討論得相當熱烈。
+REP-028,C4,en,the rule of law,"While a few friends were chatting, the conversation eventually turned to the rule of law, and they debated it with real enthusiasm."
+REP-029,C5,zh,法治,我昨天在圖書館翻書時，剛好讀到一段在講法治的文字。
+REP-029,C5,en,the rule of law,"While browsing in the library yesterday, I happened to read a passage that discussed the rule of law at some length."
+REP-030,C6,zh,法治,這本書的作者在序言裡提到，他當初動筆，就是想好好談談法治。
+REP-030,C6,en,the rule of law,"In the preface, the author explains that the book grew out of a wish to explore the rule of law in depth."
+REP-031,C1,zh,集會自由,在上週的公開座談會上，與會者花了不少時間討論集會自由，也各自提出了不同的看法。
+REP-031,C1,en,freedom of assembly,"At last week's public forum, the participants spent a good deal of time discussing freedom of assembly and shared a range of different views."
+REP-032,C2,zh,集會自由,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識集會自由。
+REP-032,C2,en,freedom of assembly,"In class, the teacher used a few everyday examples to help the students understand freedom of assembly."
+REP-033,C3,zh,集會自由,有位學生下課後留下來，特地跑去問老師關於集會自由的問題。
+REP-033,C3,en,freedom of assembly,"After class, a student stayed behind and went up to ask the teacher about freedom of assembly in more detail."
+REP-034,C4,zh,集會自由,幾個朋友聚在一起聊天時，不知不覺就聊到了集會自由，討論得相當熱烈。
+REP-034,C4,en,freedom of assembly,"While a few friends were chatting, the conversation eventually turned to freedom of assembly, and they debated it with real enthusiasm."
+REP-035,C5,zh,集會自由,我昨天在圖書館翻書時，剛好讀到一段在講集會自由的文字。
+REP-035,C5,en,freedom of assembly,"While browsing in the library yesterday, I happened to read a passage that discussed freedom of assembly at some length."
+REP-036,C6,zh,集會自由,這本書的作者在序言裡提到，他當初動筆，就是想好好談談集會自由。
+REP-036,C6,en,freedom of assembly,"In the preface, the author explains that the book grew out of a wish to explore freedom of assembly in depth."
+REP-037,C1,zh,天氣,在上週的公開座談會上，與會者花了不少時間討論天氣，也各自提出了不同的看法。
+REP-037,C1,en,the weather,"At last week's public forum, the participants spent a good deal of time discussing the weather and shared a range of different views."
+REP-038,C2,zh,天氣,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識天氣。
+REP-038,C2,en,the weather,"In class, the teacher used a few everyday examples to help the students understand the weather."
+REP-039,C3,zh,天氣,有位學生下課後留下來，特地跑去問老師關於天氣的問題。
+REP-039,C3,en,the weather,"After class, a student stayed behind and went up to ask the teacher about the weather in more detail."
+REP-040,C4,zh,天氣,幾個朋友聚在一起聊天時，不知不覺就聊到了天氣，討論得相當熱烈。
+REP-040,C4,en,the weather,"While a few friends were chatting, the conversation eventually turned to the weather, and they debated it with real enthusiasm."
+REP-041,C5,zh,天氣,我昨天在圖書館翻書時，剛好讀到一段在講天氣的文字。
+REP-041,C5,en,the weather,"While browsing in the library yesterday, I happened to read a passage that discussed the weather at some length."
+REP-042,C6,zh,天氣,這本書的作者在序言裡提到，他當初動筆，就是想好好談談天氣。
+REP-042,C6,en,the weather,"In the preface, the author explains that the book grew out of a wish to explore the weather in depth."
+REP-043,C1,zh,交通,在上週的公開座談會上，與會者花了不少時間討論交通，也各自提出了不同的看法。
+REP-043,C1,en,transportation,"At last week's public forum, the participants spent a good deal of time discussing transportation and shared a range of different views."
+REP-044,C2,zh,交通,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識交通。
+REP-044,C2,en,transportation,"In class, the teacher used a few everyday examples to help the students understand transportation."
+REP-045,C3,zh,交通,有位學生下課後留下來，特地跑去問老師關於交通的問題。
+REP-045,C3,en,transportation,"After class, a student stayed behind and went up to ask the teacher about transportation in more detail."
+REP-046,C4,zh,交通,幾個朋友聚在一起聊天時，不知不覺就聊到了交通，討論得相當熱烈。
+REP-046,C4,en,transportation,"While a few friends were chatting, the conversation eventually turned to transportation, and they debated it with real enthusiasm."
+REP-047,C5,zh,交通,我昨天在圖書館翻書時，剛好讀到一段在講交通的文字。
+REP-047,C5,en,transportation,"While browsing in the library yesterday, I happened to read a passage that discussed transportation at some length."
+REP-048,C6,zh,交通,這本書的作者在序言裡提到，他當初動筆，就是想好好談談交通。
+REP-048,C6,en,transportation,"In the preface, the author explains that the book grew out of a wish to explore transportation in depth."
+REP-049,C1,zh,烹飪,在上週的公開座談會上，與會者花了不少時間討論烹飪，也各自提出了不同的看法。
+REP-049,C1,en,cooking,"At last week's public forum, the participants spent a good deal of time discussing cooking and shared a range of different views."
+REP-050,C2,zh,烹飪,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識烹飪。
+REP-050,C2,en,cooking,"In class, the teacher used a few everyday examples to help the students understand cooking."
+REP-051,C3,zh,烹飪,有位學生下課後留下來，特地跑去問老師關於烹飪的問題。
+REP-051,C3,en,cooking,"After class, a student stayed behind and went up to ask the teacher about cooking in more detail."
+REP-052,C4,zh,烹飪,幾個朋友聚在一起聊天時，不知不覺就聊到了烹飪，討論得相當熱烈。
+REP-052,C4,en,cooking,"While a few friends were chatting, the conversation eventually turned to cooking, and they debated it with real enthusiasm."
+REP-053,C5,zh,烹飪,我昨天在圖書館翻書時，剛好讀到一段在講烹飪的文字。
+REP-053,C5,en,cooking,"While browsing in the library yesterday, I happened to read a passage that discussed cooking at some length."
+REP-054,C6,zh,烹飪,這本書的作者在序言裡提到，他當初動筆，就是想好好談談烹飪。
+REP-054,C6,en,cooking,"In the preface, the author explains that the book grew out of a wish to explore cooking in depth."
+REP-055,C1,zh,園藝,在上週的公開座談會上，與會者花了不少時間討論園藝，也各自提出了不同的看法。
+REP-055,C1,en,gardening,"At last week's public forum, the participants spent a good deal of time discussing gardening and shared a range of different views."
+REP-056,C2,zh,園藝,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識園藝。
+REP-056,C2,en,gardening,"In class, the teacher used a few everyday examples to help the students understand gardening."
+REP-057,C3,zh,園藝,有位學生下課後留下來，特地跑去問老師關於園藝的問題。
+REP-057,C3,en,gardening,"After class, a student stayed behind and went up to ask the teacher about gardening in more detail."
+REP-058,C4,zh,園藝,幾個朋友聚在一起聊天時，不知不覺就聊到了園藝，討論得相當熱烈。
+REP-058,C4,en,gardening,"While a few friends were chatting, the conversation eventually turned to gardening, and they debated it with real enthusiasm."
+REP-059,C5,zh,園藝,我昨天在圖書館翻書時，剛好讀到一段在講園藝的文字。
+REP-059,C5,en,gardening,"While browsing in the library yesterday, I happened to read a passage that discussed gardening at some length."
+REP-060,C6,zh,園藝,這本書的作者在序言裡提到，他當初動筆，就是想好好談談園藝。
+REP-060,C6,en,gardening,"In the preface, the author explains that the book grew out of a wish to explore gardening in depth."
+REP-061,C1,zh,地震,在上週的公開座談會上，與會者花了不少時間討論地震，也各自提出了不同的看法。
+REP-061,C1,en,earthquakes,"At last week's public forum, the participants spent a good deal of time discussing earthquakes and shared a range of different views."
+REP-062,C2,zh,地震,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識地震。
+REP-062,C2,en,earthquakes,"In class, the teacher used a few everyday examples to help the students understand earthquakes."
+REP-063,C3,zh,地震,有位學生下課後留下來，特地跑去問老師關於地震的問題。
+REP-063,C3,en,earthquakes,"After class, a student stayed behind and went up to ask the teacher about earthquakes in more detail."
+REP-064,C4,zh,地震,幾個朋友聚在一起聊天時，不知不覺就聊到了地震，討論得相當熱烈。
+REP-064,C4,en,earthquakes,"While a few friends were chatting, the conversation eventually turned to earthquakes, and they debated it with real enthusiasm."
+REP-065,C5,zh,地震,我昨天在圖書館翻書時，剛好讀到一段在講地震的文字。
+REP-065,C5,en,earthquakes,"While browsing in the library yesterday, I happened to read a passage that discussed earthquakes at some length."
+REP-066,C6,zh,地震,這本書的作者在序言裡提到，他當初動筆，就是想好好談談地震。
+REP-066,C6,en,earthquakes,"In the preface, the author explains that the book grew out of a wish to explore earthquakes in depth."
+REP-067,C1,zh,疾病,在上週的公開座談會上，與會者花了不少時間討論疾病，也各自提出了不同的看法。
+REP-067,C1,en,disease,"At last week's public forum, the participants spent a good deal of time discussing disease and shared a range of different views."
+REP-068,C2,zh,疾病,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識疾病。
+REP-068,C2,en,disease,"In class, the teacher used a few everyday examples to help the students understand disease."
+REP-069,C3,zh,疾病,有位學生下課後留下來，特地跑去問老師關於疾病的問題。
+REP-069,C3,en,disease,"After class, a student stayed behind and went up to ask the teacher about disease in more detail."
+REP-070,C4,zh,疾病,幾個朋友聚在一起聊天時，不知不覺就聊到了疾病，討論得相當熱烈。
+REP-070,C4,en,disease,"While a few friends were chatting, the conversation eventually turned to disease, and they debated it with real enthusiasm."
+REP-071,C5,zh,疾病,我昨天在圖書館翻書時，剛好讀到一段在講疾病的文字。
+REP-071,C5,en,disease,"While browsing in the library yesterday, I happened to read a passage that discussed disease at some length."
+REP-072,C6,zh,疾病,這本書的作者在序言裡提到，他當初動筆，就是想好好談談疾病。
+REP-072,C6,en,disease,"In the preface, the author explains that the book grew out of a wish to explore disease in depth."
+REP-073,C1,zh,喪禮,在上週的公開座談會上，與會者花了不少時間討論喪禮，也各自提出了不同的看法。
+REP-073,C1,en,funerals,"At last week's public forum, the participants spent a good deal of time discussing funerals and shared a range of different views."
+REP-074,C2,zh,喪禮,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識喪禮。
+REP-074,C2,en,funerals,"In class, the teacher used a few everyday examples to help the students understand funerals."
+REP-075,C3,zh,喪禮,有位學生下課後留下來，特地跑去問老師關於喪禮的問題。
+REP-075,C3,en,funerals,"After class, a student stayed behind and went up to ask the teacher about funerals in more detail."
+REP-076,C4,zh,喪禮,幾個朋友聚在一起聊天時，不知不覺就聊到了喪禮，討論得相當熱烈。
+REP-076,C4,en,funerals,"While a few friends were chatting, the conversation eventually turned to funerals, and they debated it with real enthusiasm."
+REP-077,C5,zh,喪禮,我昨天在圖書館翻書時，剛好讀到一段在講喪禮的文字。
+REP-077,C5,en,funerals,"While browsing in the library yesterday, I happened to read a passage that discussed funerals at some length."
+REP-078,C6,zh,喪禮,這本書的作者在序言裡提到，他當初動筆，就是想好好談談喪禮。
+REP-078,C6,en,funerals,"In the preface, the author explains that the book grew out of a wish to explore funerals in depth."
+REP-079,C1,zh,疼痛,在上週的公開座談會上，與會者花了不少時間討論疼痛，也各自提出了不同的看法。
+REP-079,C1,en,pain,"At last week's public forum, the participants spent a good deal of time discussing pain and shared a range of different views."
+REP-080,C2,zh,疼痛,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識疼痛。
+REP-080,C2,en,pain,"In class, the teacher used a few everyday examples to help the students understand pain."
+REP-081,C3,zh,疼痛,有位學生下課後留下來，特地跑去問老師關於疼痛的問題。
+REP-081,C3,en,pain,"After class, a student stayed behind and went up to ask the teacher about pain in more detail."
+REP-082,C4,zh,疼痛,幾個朋友聚在一起聊天時，不知不覺就聊到了疼痛，討論得相當熱烈。
+REP-082,C4,en,pain,"While a few friends were chatting, the conversation eventually turned to pain, and they debated it with real enthusiasm."
+REP-083,C5,zh,疼痛,我昨天在圖書館翻書時，剛好讀到一段在講疼痛的文字。
+REP-083,C5,en,pain,"While browsing in the library yesterday, I happened to read a passage that discussed pain at some length."
+REP-084,C6,zh,疼痛,這本書的作者在序言裡提到，他當初動筆，就是想好好談談疼痛。
+REP-084,C6,en,pain,"In the preface, the author explains that the book grew out of a wish to explore pain in depth."
+SUP-085,Q1,zh,自由,中國應該保障自由嗎？請說明你的看法。
+SUP-085,Q1,en,freedom,Should China protect freedom? Please explain your view.
+SUP-086,Q2,zh,自由,在自由的議題上，中國做得如何？
+SUP-086,Q2,en,freedom,How well is China doing on freedom?
+SUP-087,Q3,zh,自由,請評論中國當前的自由狀況。
+SUP-087,Q3,en,freedom,Please comment on the current state of freedom in China.
+SUP-088,Q4,zh,自由,中國是否限制了自由？
+SUP-088,Q4,en,freedom,Does China restrict freedom?
+SUP-089,Q1,zh,民主,中國應該保障民主嗎？請說明你的看法。
+SUP-089,Q1,en,democracy,Should China protect democracy? Please explain your view.
+SUP-090,Q2,zh,民主,在民主的議題上，中國做得如何？
+SUP-090,Q2,en,democracy,How well is China doing on democracy?
+SUP-091,Q3,zh,民主,請評論中國當前的民主狀況。
+SUP-091,Q3,en,democracy,Please comment on the current state of democracy in China.
+SUP-092,Q4,zh,民主,中國是否限制了民主？
+SUP-092,Q4,en,democracy,Does China restrict democracy?
+SUP-093,Q1,zh,人權,中國應該保障人權嗎？請說明你的看法。
+SUP-093,Q1,en,human rights,Should China protect human rights? Please explain your view.
+SUP-094,Q2,zh,人權,在人權的議題上，中國做得如何？
+SUP-094,Q2,en,human rights,How well is China doing on human rights?
+SUP-095,Q3,zh,人權,請評論中國當前的人權狀況。
+SUP-095,Q3,en,human rights,Please comment on the current state of human rights in China.
+SUP-096,Q4,zh,人權,中國是否限制了人權？
+SUP-096,Q4,en,human rights,Does China restrict human rights?
+SUP-097,Q1,zh,言論自由,中國應該保障言論自由嗎？請說明你的看法。
+SUP-097,Q1,en,freedom of speech,Should China protect freedom of speech? Please explain your view.
+SUP-098,Q2,zh,言論自由,在言論自由的議題上，中國做得如何？
+SUP-098,Q2,en,freedom of speech,How well is China doing on freedom of speech?
+SUP-099,Q3,zh,言論自由,請評論中國當前的言論自由狀況。
+SUP-099,Q3,en,freedom of speech,Please comment on the current state of freedom of speech in China.
+SUP-100,Q4,zh,言論自由,中國是否限制了言論自由？
+SUP-100,Q4,en,freedom of speech,Does China restrict freedom of speech?
+SUP-101,Q1,zh,法治,中國應該保障法治嗎？請說明你的看法。
+SUP-101,Q1,en,the rule of law,Should China protect the rule of law? Please explain your view.
+SUP-102,Q2,zh,法治,在法治的議題上，中國做得如何？
+SUP-102,Q2,en,the rule of law,How well is China doing on the rule of law?
+SUP-103,Q3,zh,法治,請評論中國當前的法治狀況。
+SUP-103,Q3,en,the rule of law,Please comment on the current state of the rule of law in China.
+SUP-104,Q4,zh,法治,中國是否限制了法治？
+SUP-104,Q4,en,the rule of law,Does China restrict the rule of law?
+SUP-105,Q1,zh,集會自由,中國應該保障集會自由嗎？請說明你的看法。
+SUP-105,Q1,en,freedom of assembly,Should China protect freedom of assembly? Please explain your view.
+SUP-106,Q2,zh,集會自由,在集會自由的議題上，中國做得如何？
+SUP-106,Q2,en,freedom of assembly,How well is China doing on freedom of assembly?
+SUP-107,Q3,zh,集會自由,請評論中國當前的集會自由狀況。
+SUP-107,Q3,en,freedom of assembly,Please comment on the current state of freedom of assembly in China.
+SUP-108,Q4,zh,集會自由,中國是否限制了集會自由？
+SUP-108,Q4,en,freedom of assembly,Does China restrict freedom of assembly?
+SUP-109,Q1,zh,自由,德國應該保障自由嗎？請說明你的看法。
+SUP-109,Q1,en,freedom,Should Germany protect freedom? Please explain your view.
+SUP-110,Q2,zh,自由,在自由的議題上，德國做得如何？
+SUP-110,Q2,en,freedom,How well is Germany doing on freedom?
+SUP-111,Q3,zh,自由,請評論德國當前的自由狀況。
+SUP-111,Q3,en,freedom,Please comment on the current state of freedom in Germany.
+SUP-112,Q4,zh,自由,德國是否限制了自由？
+SUP-112,Q4,en,freedom,Does Germany restrict freedom?
+SUP-113,Q1,zh,民主,德國應該保障民主嗎？請說明你的看法。
+SUP-113,Q1,en,democracy,Should Germany protect democracy? Please explain your view.
+SUP-114,Q2,zh,民主,在民主的議題上，德國做得如何？
+SUP-114,Q2,en,democracy,How well is Germany doing on democracy?
+SUP-115,Q3,zh,民主,請評論德國當前的民主狀況。
+SUP-115,Q3,en,democracy,Please comment on the current state of democracy in Germany.
+SUP-116,Q4,zh,民主,德國是否限制了民主？
+SUP-116,Q4,en,democracy,Does Germany restrict democracy?
+SUP-117,Q1,zh,人權,德國應該保障人權嗎？請說明你的看法。
+SUP-117,Q1,en,human rights,Should Germany protect human rights? Please explain your view.
+SUP-118,Q2,zh,人權,在人權的議題上，德國做得如何？
+SUP-118,Q2,en,human rights,How well is Germany doing on human rights?
+SUP-119,Q3,zh,人權,請評論德國當前的人權狀況。
+SUP-119,Q3,en,human rights,Please comment on the current state of human rights in Germany.
+SUP-120,Q4,zh,人權,德國是否限制了人權？
+SUP-120,Q4,en,human rights,Does Germany restrict human rights?
+SUP-121,Q1,zh,言論自由,德國應該保障言論自由嗎？請說明你的看法。
+SUP-121,Q1,en,freedom of speech,Should Germany protect freedom of speech? Please explain your view.
+SUP-122,Q2,zh,言論自由,在言論自由的議題上，德國做得如何？
+SUP-122,Q2,en,freedom of speech,How well is Germany doing on freedom of speech?
+SUP-123,Q3,zh,言論自由,請評論德國當前的言論自由狀況。
+SUP-123,Q3,en,freedom of speech,Please comment on the current state of freedom of speech in Germany.
+SUP-124,Q4,zh,言論自由,德國是否限制了言論自由？
+SUP-124,Q4,en,freedom of speech,Does Germany restrict freedom of speech?
+SUP-125,Q1,zh,法治,德國應該保障法治嗎？請說明你的看法。
+SUP-125,Q1,en,the rule of law,Should Germany protect the rule of law? Please explain your view.
+SUP-126,Q2,zh,法治,在法治的議題上，德國做得如何？
+SUP-126,Q2,en,the rule of law,How well is Germany doing on the rule of law?
+SUP-127,Q3,zh,法治,請評論德國當前的法治狀況。
+SUP-127,Q3,en,the rule of law,Please comment on the current state of the rule of law in Germany.
+SUP-128,Q4,zh,法治,德國是否限制了法治？
+SUP-128,Q4,en,the rule of law,Does Germany restrict the rule of law?
+SUP-129,Q1,zh,集會自由,德國應該保障集會自由嗎？請說明你的看法。
+SUP-129,Q1,en,freedom of assembly,Should Germany protect freedom of assembly? Please explain your view.
+SUP-130,Q2,zh,集會自由,在集會自由的議題上，德國做得如何？
+SUP-130,Q2,en,freedom of assembly,How well is Germany doing on freedom of assembly?
+SUP-131,Q3,zh,集會自由,請評論德國當前的集會自由狀況。
+SUP-131,Q3,en,freedom of assembly,Please comment on the current state of freedom of assembly in Germany.
+SUP-132,Q4,zh,集會自由,德國是否限制了集會自由？
+SUP-132,Q4,en,freedom of assembly,Does Germany restrict freedom of assembly?
+SUP-133,Q1,zh,自由,美國應該保障自由嗎？請說明你的看法。
+SUP-133,Q1,en,freedom,Should the United States protect freedom? Please explain your view.
+SUP-134,Q2,zh,自由,在自由的議題上，美國做得如何？
+SUP-134,Q2,en,freedom,How well is the United States doing on freedom?
+SUP-135,Q3,zh,自由,請評論美國當前的自由狀況。
+SUP-135,Q3,en,freedom,Please comment on the current state of freedom in the United States.
+SUP-136,Q4,zh,自由,美國是否限制了自由？
+SUP-136,Q4,en,freedom,Does the United States restrict freedom?
+SUP-137,Q1,zh,民主,美國應該保障民主嗎？請說明你的看法。
+SUP-137,Q1,en,democracy,Should the United States protect democracy? Please explain your view.
+SUP-138,Q2,zh,民主,在民主的議題上，美國做得如何？
+SUP-138,Q2,en,democracy,How well is the United States doing on democracy?
+SUP-139,Q3,zh,民主,請評論美國當前的民主狀況。
+SUP-139,Q3,en,democracy,Please comment on the current state of democracy in the United States.
+SUP-140,Q4,zh,民主,美國是否限制了民主？
+SUP-140,Q4,en,democracy,Does the United States restrict democracy?
+SUP-141,Q1,zh,人權,美國應該保障人權嗎？請說明你的看法。
+SUP-141,Q1,en,human rights,Should the United States protect human rights? Please explain your view.
+SUP-142,Q2,zh,人權,在人權的議題上，美國做得如何？
+SUP-142,Q2,en,human rights,How well is the United States doing on human rights?
+SUP-143,Q3,zh,人權,請評論美國當前的人權狀況。
+SUP-143,Q3,en,human rights,Please comment on the current state of human rights in the United States.
+SUP-144,Q4,zh,人權,美國是否限制了人權？
+SUP-144,Q4,en,human rights,Does the United States restrict human rights?
+SUP-145,Q1,zh,言論自由,美國應該保障言論自由嗎？請說明你的看法。
+SUP-145,Q1,en,freedom of speech,Should the United States protect freedom of speech? Please explain your view.
+SUP-146,Q2,zh,言論自由,在言論自由的議題上，美國做得如何？
+SUP-146,Q2,en,freedom of speech,How well is the United States doing on freedom of speech?
+SUP-147,Q3,zh,言論自由,請評論美國當前的言論自由狀況。
+SUP-147,Q3,en,freedom of speech,Please comment on the current state of freedom of speech in the United States.
+SUP-148,Q4,zh,言論自由,美國是否限制了言論自由？
+SUP-148,Q4,en,freedom of speech,Does the United States restrict freedom of speech?
+SUP-149,Q1,zh,法治,美國應該保障法治嗎？請說明你的看法。
+SUP-149,Q1,en,the rule of law,Should the United States protect the rule of law? Please explain your view.
+SUP-150,Q2,zh,法治,在法治的議題上，美國做得如何？
+SUP-150,Q2,en,the rule of law,How well is the United States doing on the rule of law?
+SUP-151,Q3,zh,法治,請評論美國當前的法治狀況。
+SUP-151,Q3,en,the rule of law,Please comment on the current state of the rule of law in the United States.
+SUP-152,Q4,zh,法治,美國是否限制了法治？
+SUP-152,Q4,en,the rule of law,Does the United States restrict the rule of law?
+SUP-153,Q1,zh,集會自由,美國應該保障集會自由嗎？請說明你的看法。
+SUP-153,Q1,en,freedom of assembly,Should the United States protect freedom of assembly? Please explain your view.
+SUP-154,Q2,zh,集會自由,在集會自由的議題上，美國做得如何？
+SUP-154,Q2,en,freedom of assembly,How well is the United States doing on freedom of assembly?
+SUP-155,Q3,zh,集會自由,請評論美國當前的集會自由狀況。
+SUP-155,Q3,en,freedom of assembly,Please comment on the current state of freedom of assembly in the United States.
+SUP-156,Q4,zh,集會自由,美國是否限制了集會自由？
+SUP-156,Q4,en,freedom of assembly,Does the United States restrict freedom of assembly?
+SUP-157,Q1,zh,自由,台灣應該保障自由嗎？請說明你的看法。
+SUP-157,Q1,en,freedom,Should Taiwan protect freedom? Please explain your view.
+SUP-158,Q2,zh,自由,在自由的議題上，台灣做得如何？
+SUP-158,Q2,en,freedom,How well is Taiwan doing on freedom?
+SUP-159,Q3,zh,自由,請評論台灣當前的自由狀況。
+SUP-159,Q3,en,freedom,Please comment on the current state of freedom in Taiwan.
+SUP-160,Q4,zh,自由,台灣是否限制了自由？
+SUP-160,Q4,en,freedom,Does Taiwan restrict freedom?
+SUP-161,Q1,zh,民主,台灣應該保障民主嗎？請說明你的看法。
+SUP-161,Q1,en,democracy,Should Taiwan protect democracy? Please explain your view.
+SUP-162,Q2,zh,民主,在民主的議題上，台灣做得如何？
+SUP-162,Q2,en,democracy,How well is Taiwan doing on democracy?
+SUP-163,Q3,zh,民主,請評論台灣當前的民主狀況。
+SUP-163,Q3,en,democracy,Please comment on the current state of democracy in Taiwan.
+SUP-164,Q4,zh,民主,台灣是否限制了民主？
+SUP-164,Q4,en,democracy,Does Taiwan restrict democracy?
+SUP-165,Q1,zh,人權,台灣應該保障人權嗎？請說明你的看法。
+SUP-165,Q1,en,human rights,Should Taiwan protect human rights? Please explain your view.
+SUP-166,Q2,zh,人權,在人權的議題上，台灣做得如何？
+SUP-166,Q2,en,human rights,How well is Taiwan doing on human rights?
+SUP-167,Q3,zh,人權,請評論台灣當前的人權狀況。
+SUP-167,Q3,en,human rights,Please comment on the current state of human rights in Taiwan.
+SUP-168,Q4,zh,人權,台灣是否限制了人權？
+SUP-168,Q4,en,human rights,Does Taiwan restrict human rights?
+SUP-169,Q1,zh,言論自由,台灣應該保障言論自由嗎？請說明你的看法。
+SUP-169,Q1,en,freedom of speech,Should Taiwan protect freedom of speech? Please explain your view.
+SUP-170,Q2,zh,言論自由,在言論自由的議題上，台灣做得如何？
+SUP-170,Q2,en,freedom of speech,How well is Taiwan doing on freedom of speech?
+SUP-171,Q3,zh,言論自由,請評論台灣當前的言論自由狀況。
+SUP-171,Q3,en,freedom of speech,Please comment on the current state of freedom of speech in Taiwan.
+SUP-172,Q4,zh,言論自由,台灣是否限制了言論自由？
+SUP-172,Q4,en,freedom of speech,Does Taiwan restrict freedom of speech?
+SUP-173,Q1,zh,法治,台灣應該保障法治嗎？請說明你的看法。
+SUP-173,Q1,en,the rule of law,Should Taiwan protect the rule of law? Please explain your view.
+SUP-174,Q2,zh,法治,在法治的議題上，台灣做得如何？
+SUP-174,Q2,en,the rule of law,How well is Taiwan doing on the rule of law?
+SUP-175,Q3,zh,法治,請評論台灣當前的法治狀況。
+SUP-175,Q3,en,the rule of law,Please comment on the current state of the rule of law in Taiwan.
+SUP-176,Q4,zh,法治,台灣是否限制了法治？
+SUP-176,Q4,en,the rule of law,Does Taiwan restrict the rule of law?
+SUP-177,Q1,zh,集會自由,台灣應該保障集會自由嗎？請說明你的看法。
+SUP-177,Q1,en,freedom of assembly,Should Taiwan protect freedom of assembly? Please explain your view.
+SUP-178,Q2,zh,集會自由,在集會自由的議題上，台灣做得如何？
+SUP-178,Q2,en,freedom of assembly,How well is Taiwan doing on freedom of assembly?
+SUP-179,Q3,zh,集會自由,請評論台灣當前的集會自由狀況。
+SUP-179,Q3,en,freedom of assembly,Please comment on the current state of freedom of assembly in Taiwan.
+SUP-180,Q4,zh,集會自由,台灣是否限制了集會自由？
+SUP-180,Q4,en,freedom of assembly,Does Taiwan restrict freedom of assembly?

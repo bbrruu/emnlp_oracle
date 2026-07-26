@@ -1,0 +1,66 @@
+{
+  "geometry": {
+    "Qwen2.5-7B": {
+      "dim": 3584,
+      "sep_AUC_siteA": 0.994,
+      "sep_AUC_siteB": 0.979,
+      "cos_dir_siteA_siteB": 0.52,
+      "crosslang_cos_siteA": 0.62,
+      "crosslang_cos_siteB": 0.824,
+      "lang_disp_consistency": {
+        "Taiwan": 0.8,
+        "Japan": 0.785,
+        "Iceland": 0.805
+      }
+    },
+    "Gemma-3-12B": {
+      "dim": 3840,
+      "sep_AUC_siteA": 0.998,
+      "sep_AUC_siteB": 0.992,
+      "cos_dir_siteA_siteB": 0.466,
+      "crosslang_cos_siteA": 0.612,
+      "crosslang_cos_siteB": 0.774,
+      "lang_disp_consistency": {
+        "Taiwan": 0.755,
+        "Japan": 0.737,
+        "Iceland": 0.749
+      }
+    }
+  },
+  "annotation": {
+    "Qwen2.5-7B": {
+      "median_mse": 0.1931,
+      "median_cos": 0.9035,
+      "gate_fail_rate": 0.333,
+      "av_drift_rate": 0.522,
+      "lang_drift_overall": 0.238,
+      "lang_drift_by_ctx": {
+        "en": 0.0,
+        "zh": 0.477
+      },
+      "anchor_taiwan": {
+        "siteA_en": 0.36,
+        "siteA_zh": 0.112,
+        "siteB_en": 0.145,
+        "siteB_zh": 0.043
+      }
+    },
+    "Gemma-3-12B": {
+      "median_mse": 0.0088,
+      "median_cos": 0.9956,
+      "gate_fail_rate": 0.333,
+      "av_drift_rate": 0.224,
+      "lang_drift_overall": 0.315,
+      "lang_drift_by_ctx": {
+        "en": 0.0,
+        "zh": 0.631
+      },
+      "anchor_taiwan": {
+        "siteA_en": 0.095,
+        "siteA_zh": 0.037,
+        "siteB_en": 0.047,
+        "siteB_zh": 0.03
+      }
+    }
+  }
+}

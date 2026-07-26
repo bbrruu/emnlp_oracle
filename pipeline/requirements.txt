@@ -1,0 +1,21 @@
+# RQ2 pipeline 依賴
+# 安裝：pip install -r requirements.txt
+# 注意：請用實驗室伺服器上 Python 3.10/3.11 的環境（RQ1 跑活的那個最保險），
+#       不要用 Python 3.14（torch/transformers 可能沒 wheel）。
+
+# ── 抽取 activation（rq2_extract_activations.py）+ 生成回答 ──
+torch                 # 模型 forward（GPU）；若 CUDA 版不對，改到 pytorch.org 選對應指令
+transformers          # AutoTokenizer / AutoModelForCausalLM
+accelerate            # device_map="auto" 必需（最容易漏）
+pyarrow               # 寫 activation parquet
+numpy
+pyyaml                # 讀 nla_meta.yaml 的層位
+huggingface_hub       # Gemma gated 登入（huggingface-cli login）
+
+# ── tokenizer 驗證（verify_tokenization.py，CPU 即可）──
+tokenizers
+pandas
+
+# ── NLA 語言化（verbalize.py）另外裝，因為 sglang 較重、環境相依 ──
+# pip install "sglang[all]>=0.5.6" safetensors httpx orjson
+# （見 natural_language_autoencoders repo 的 README；需先掛 SGLang server）
