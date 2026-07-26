@@ -1,0 +1,13 @@
+# Python 環境 / 快取
+myvenv/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# 系統垃圾
+.DS_Store
+
+# 大型輸出(視需要;要進版控就註解掉)
+# activations/
+# responses/
