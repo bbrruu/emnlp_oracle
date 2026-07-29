@@ -92,7 +92,28 @@ def main() -> None:
             print(f"  合併 {ax:<22} 已標 {int((n_rated > 0).sum())}/{len(cols)} 題")
         M = pd.DataFrame(merged)
 
+        # --- 截斷對照（只有 say 有）：SAYT-* 那批單獨算一次 LLM vs 人 ---
+        if side == "say" and any(str(i).startswith("SAYT-") for i in M.index):
+            key = pd.read_csv(a.annot_dir / "_key" / "say_llm_key.csv").set_index("item_id")
+            t = M[[str(i).startswith("SAYT-") for i in M.index]]
+            print(f"  ── 截斷對照 {len(t)} 題：LLM vs 人（檢驗 judge 是否低估被截斷回答）")
+            for ax, lc in [("human_directness", "llm__say_directness"),
+                           ("human_restriction", "llm__say_restriction")]:
+                if ax not in t.columns or lc not in key.columns:
+                    continue
+                d = pd.concat([t[ax], key[lc]], axis=1, join="inner").apply(
+                    pd.to_numeric, errors="coerce").dropna()
+                if len(d) < 3:
+                    continue
+                h, l = d[ax].values, d[lc].values
+                print(f"     {ax:<20} 人={h.mean():.2f}  LLM={l.mean():.2f}  "
+                      f"差={h.mean() - l.mean():+.2f}  加權κ {weighted_kappa(h, l):.3f}"
+                      + ("   → 人類給得比 LLM 高，支持『judge 低估截斷回答』"
+                         if h.mean() - l.mean() > 0.3 else ""))
+
         # --- 回填 LLM 分數，寫回各 outdir ---
+        # say 的新批（SAY-*）對應 analysis_r2*；舊批（SAYT-*）不回填，
+        # 因為它只服務上面那個對照分析，不進 --stage agreement 的主流程。
         for od in a.outdirs:
             src = od / f"human_sample_{side}.csv"
             if not src.exists():
@@ -101,8 +122,9 @@ def main() -> None:
             base["item_id"] = [f"{side.upper()}-{i:03d}" for i in range(len(base))]
             for ax in axes:
                 base[ax] = base["item_id"].map(M[ax])
+            n = int(base[axes[0]].notna().sum())
             base.drop(columns=["item_id"]).to_csv(src, index=False)
-            print(f"  → 已回填 {src}")
+            print(f"  → 已回填 {src}（{n}/{len(base)} 題有標註）")
 
     print("\n接著跑：")
     for od in a.outdirs:
