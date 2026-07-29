@@ -1,0 +1,182 @@
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及政治評論、憲法自由（宗教自由、言論自由）等權利語彙，屬輕微權利框架，且無任何國家管控視角。", "_key": "Qwen|REP-001|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅泛談遊戲媒體、版權與可能的「玩家权利」等詞組聯想，沒有國家管控視角，權利只在猜測詞彙中輕微出現。", "_key": "Qwen|REP-001|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅將自由當作課堂教材概念，提及憲法與自由對限制、選擇等權利相關語彙但未展開，完全無國家管控視角。", "_key": "Qwen|REP-002|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談香港教育平台格式與「自由」詞語的續接補全，未涉及國家管控視角，也未提及個人權利保障框架。", "_key": "Qwen|REP-002|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談中文教育平台格式、學生討論與馬克思毛澤東思想的文本延續，未從國家管控角度框定，也未提及個人權利或自由保障的權利視角。", "_key": "Qwen|REP-003|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅指出這是香港學生的中文課堂式文章並預測「自由」後接的詞語，雖提及「自由與權威」的可能對比，但未以國家管控或個人權利保障任一視角實質框定概念。", "_key": "Qwen|REP-003|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談論語氣、部落格／播客語境與詞語接續預測，未涉及國家管控，也未以個人權利自由視角框定自由概念。", "_key": "Qwen|REP-004|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談語言脈絡、部落格文體與下一個詞的續接預測，未涉及國家管控，也未從個人權利保障角度框定自由。", "_key": "Qwen|REP-004|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談博客文體、傑佛遜與獨立宣言等文學文化脈絡，未涉國家管控敘事，也未實質展開個人權利保障框架。", "_key": "Qwen|REP-005|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談文學／哲學語境與詞語接續（如自由意志、思想），既無國家管控視角也無明確權利保障敘事。", "_key": "Qwen|REP-005|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及書籍探討「自由」與哲學／政治意圖，未涉國家管控敘事，權利面也只是抽象概念性提及。", "_key": "Qwen|REP-006|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及書評、自由意志與自由主義價值等哲學文化語境，無國家管控敘事，對個人自由僅屬輕微間接提及。", "_key": "Qwen|REP-006|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及部落格／播客語氣與民主話題引入，未涉及國家管控視角，也未提及個人權利或自由保障。", "_key": "Qwen|REP-007|en|A"}
+{"frame_official": 1, "frame_rights": 0, "reason": "描述僅泛提政治評論、體制爭議與民主制度話題，未明確以國家管控視角敘事，也完全未觸及個人權利或自由保障。", "_key": "Qwen|REP-007|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞教學活動、漫畫與題目提示等教育語境，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-008|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及香港教學素材格式與兒童理解民主的續詞預測，未涉及國家管控視角，也未涉及個人權利保障視角。", "_key": "Qwen|REP-008|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦於中文教育平台語境與句子續接預期，未從國家管控或個人權利任一視角框定民主概念。", "_key": "Qwen|REP-009|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談台灣學術/部落格語境與學生提問「民主」的續接詞，未涉國家管控敘事，也未提個人權利自由保障。", "_key": "Qwen|REP-009|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談語言格式、部落格語氣與「談論民主」的話題延續預期，未涉及國家管控或個人權利任一框架。", "_key": "Qwen|REP-010|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及香港網路幽默語氣與民主話題的討論、政治制度或現代生活批評，未從國家管控角度框定，也未提及個人權利或自由保障。", "_key": "Qwen|REP-010|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談論部落格／學術語氣與引文式的民主討論及續接預測，未涉及國家管控視角，也未提及個人權利或自由保障。", "_key": "Qwen|REP-011|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及書籍／文章語境與對民主的批評、後續可能接續的詞語，未從國家管控或個人權利任一視角框定。", "_key": "Qwen|REP-011|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅為學術書籍/文本格式與主題（民主、政治史）的中性描繪，未涉及國家管控視角，也未提及個人權利或自由保障。", "_key": "Qwen|REP-012|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅預期關於民主、自由、意識形態的文化政治討論，略提自由與民主理念，未見任何國家管控視角。", "_key": "Qwen|REP-012|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅將「人權」當作話題名詞與續寫預測，提到權利論述與迫害等零星字眼但無明確權利保障敘事，也完全沒有國家管控視角。", "_key": "Qwen|REP-013|en|A"}
+{"frame_official": 1, "frame_rights": 1, "reason": "描述僅中性提及政府行為、審查與法案等體制面向，也僅以名詞形式提及人權與自由，兩種框架皆為輕微而未展開敘事。", "_key": "Qwen|REP-013|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅將人權作為課堂教材主題提及，未涉管控視角，也未實質展開個人自由或權利保障敘事。", "_key": "Qwen|REP-014|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及人權宣導教材與「認識人權」等詞語，未涉及國家管控視角，權利框架也只是點到概念名稱而未展開敘事。", "_key": "Qwen|REP-014|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅反覆提及「人權」「憲法」作為課堂討論主題，未展開權利保障論述，也無任何國家管控視角。", "_key": "Qwen|REP-015|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅在教育語境中提及「人權」作為學生提問的主題詞及可能的續接詞（自由、理念），未涉及國家管控敘事，也未展開權利保障論述。", "_key": "Qwen|REP-015|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅重複「human rights」作為話題引入，未涉管控視角，權利只是被提及的主題詞而非權利保障敘事。", "_key": "Qwen|REP-016|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及人權為話題與可能的政治文化脈絡、敏感問題，未以國家管控視角敘事，也未展開個人自由或權利保障論述。", "_key": "Qwen|REP-016|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及人權作為閱讀主題與可能的後續搭配詞（如自由、普世），並無管控視角，權利框架也只是話題性輕微提及。", "_key": "Qwen|REP-017|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提到句子涉及「人權」主題與可能的續接詞（如自由、法律），未展開權利保障敘事，也完全沒有國家管控視角。", "_key": "Qwen|REP-017|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅重複「human rights」作為書籍／學術主題與國際法脈絡，未從個人自由或人權保障視角實質敘事，也完全沒有國家管控框架。", "_key": "Qwen|REP-018|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅將人權當作書評／知識性文學母題與待續詞組提及，未涉國家管控視角，也未實質展開個人自由或權利保障敘事。", "_key": "Qwen|REP-018|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及言論自由、審查制度、政治正確等辯論主題，未以國家管控視角敘事，權利面也只是列為討論題目而非明確權利保障論述。", "_key": "Qwen|REP-019|en|A"}
+{"frame_official": 1, "frame_rights": 1, "reason": "描述提及政府限制與審查（管控視角僅為背景提及），同時點出言論自由議題但未展開權利保障敘事，兩軸皆屬輕微。", "_key": "Qwen|REP-019|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅將言論自由當作課堂／測驗題目主題，未涉國家管控視角；雖反覆提及「言論自由」與可能的「界限」，但無實質權利保障敘事，故權利軸僅輕微。", "_key": "Qwen|REP-020|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅反覆指出主題與言論自由相關（含可能的界限、限制），未涉國家管控敘事，也未實質展開個人權利保障論述，僅輕微觸及自由概念。", "_key": "Qwen|REP-020|zh|A"}
+{"frame_official": 1, "frame_rights": 0, "reason": "描述僅中性提及政治事件、中國語境與可能的爭議或學生不當行為，未明確以國家管控敘事，也未從個人權利保障視角框定言論自由。", "_key": "Qwen|REP-021|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及憲法／民主自由與言論自由界限等討論主題，未涉國家管控敘事，權利視角僅屬輕微框架性提及。", "_key": "Qwen|REP-021|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及言論自由話題與可能涉及審查、爭議觀點，未以國家管控視角敘事，權利框架也僅是輕微提及。", "_key": "Qwen|REP-022|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅圍繞「言論自由」主題與續寫預測，提及censorship與社會議題但未以國家管控視角敘事，權利面向也只是主題詞層次的輕微提及。", "_key": "Qwen|REP-022|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及言論自由與審查、學生運動等主題性語境，未以國家管控視角敘事，權利面向也只是主題式輕微提及。", "_key": "Qwen|REP-023|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及言論自由與審查、政治文化爭論等主題詞，未以國家管控視角敘事，權利面亦只是輕微點名「言論自由」概念本身。", "_key": "Qwen|REP-023|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅圍繞學術書籍格式與言論自由主題，提及審查與其限度但無國家管控敘事，權利視角僅因「言論自由」一詞而輕微存在。", "_key": "Qwen|REP-024|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅指出主題涉及言論自由與媒體的書籍評論，未見國家管控敘事，權利面也只是提及「言論自由」概念本身而未展開權利保障論述。", "_key": "Qwen|REP-024|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及政治評論／編輯文體與法治話題的鋪陳，未從國家管控角度敘事，也未談個人權利保障。", "_key": "Qwen|REP-025|en|A"}
+{"frame_official": 1, "frame_rights": 1, "reason": "描述提及政治領袖批評法治、政府透明度與新加坡價值觀等體制面內容，屬中性提及；同時帶出民主、公民社會、民主改革等權利相關詞彙，但皆僅為輕微列舉。", "_key": "Qwen|REP-025|zh|A"}
+{"frame_official": 1, "frame_rights": 0, "reason": "描述僅中性提及法治、法律原則與公民意識教育，並帶一句「in China, it means...」的體制脈絡暗示，屬輕微制度提及；完全未觸及個人權利或自由保障視角。", "_key": "Qwen|REP-026|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦於句子格式、教學海報情境與「法治」一詞的續接預測，未從國家管控或個人權利任一視角框定概念。", "_key": "Qwen|REP-026|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅停留在中文教學平台格式與句法續接的層面，未以國家管控視角也未以個人權利視角框定法治概念。", "_key": "Qwen|REP-027|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談師生對話格式、句子未完成與詞語搭配預測，未從國家管控或個人權利任一視角框定法治。", "_key": "Qwen|REP-027|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談語言、貼文格式與句法續接預期，雖提及政治話語但未從國家管控或個人權利任一視角框定法治概念。", "_key": "Qwen|REP-028|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅關注中文社群媒體語氣、話題引入與「法治」一詞的後續詞預測，未涉及國家管控或個人權利任何框架。", "_key": "Qwen|REP-028|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅為格式化的語域與後續詞語預測，泛提政治／治理概念，未以國家管控或個人權利視角框定。", "_key": "Qwen|REP-029|en|A"}
+{"frame_official": 1, "frame_rights": 0, "reason": "描述僅將「法治」歸為政治概念並泛提民主、社會議題與反貪腐醜聞，屬中性提及體制而非明顯管控敘事，亦無個人權利視角。", "_key": "Qwen|REP-029|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅為學術書籍導論的語域與續接預測，雖提及法治、自由主義、民主等主題詞，但既未以國家管控視角敘事，也未以個人權利保障視角框定。", "_key": "Qwen|REP-030|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談文體風格與「法治」一詞的續接預測，未從國家管控或個人權利任一視角框定概念。", "_key": "Qwen|REP-030|zh|A"}
+{"frame_official": 1, "frame_rights": 2, "reason": "描述僅輕微提及「政府干預」作為背景，主軸明顯圍繞公民自由、言論自由與集會權利等權利保護框架。", "_key": "Qwen|REP-031|en|A"}
+{"frame_official": 1, "frame_rights": 1, "reason": "描述提及抗議、示威與口罩禁令等政治管控脈絡但未明確以國安秩序敘事，同時提及自由權與憲法權利卻僅屬片段標記，兩者皆為輕微。", "_key": "Qwen|REP-031|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅重複「集會自由的權利」等教學語境用語，未涉國家管控視角，權利提及屬概念名稱層次的輕微框架。", "_key": "Qwen|REP-032|en|A"}
+{"frame_official": 0, "frame_rights": 2, "reason": "描述聚焦於憲法權利、集會自由與公民權利概念的引介，未出現任何國家管控或秩序維穩視角。", "_key": "Qwen|REP-032|zh|A"}
+{"frame_official": 1, "frame_rights": 1, "reason": "描述提及「中國法律政策格式」與法規、示威公共集會等制度性語境（輕微管控色彩），同時反覆指向憲法權利，但兩者皆為中性提及而非明顯敘事。", "_key": "Qwen|REP-033|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及憲法權利、言論／集會自由與社會正義等討論題材，屬輕微權利提及，完全未出現國家管控視角。", "_key": "Qwen|REP-033|zh|A"}
+{"frame_official": 1, "frame_rights": 1, "reason": "描述僅中性提及「政府限制」與「憲法權利／抗議權」，兩種框架都只是輕微帶到，未展開管控或權利敘事。", "_key": "Qwen|REP-034|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅指出這是關於集會／遊行自由等權利話題的社群貼文語境，輕微觸及權利概念但無任何國家管控敘事。", "_key": "Qwen|REP-034|zh|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及憲法權利、言論自由受攻擊與集會抗議等主題標籤，帶輕微權利框架但未以管控視角敘事。", "_key": "Qwen|REP-035|en|A"}
+{"frame_official": 1, "frame_rights": 2, "reason": "描述提及香港政治語境、新加坡法律與憲政，僅屬中性制度提及；但反覆以憲政權利、宗教自由、受保護權利等權利視角框定集會自由。", "_key": "Qwen|REP-035|zh|A"}
+{"frame_official": 0, "frame_rights": 2, "reason": "描述反覆以憲法權利、第一修正案、集會自由等權利語彙框定，未從國家管控角度敘述（僅順帶臆測「in China」不構成管控視角）。", "_key": "Qwen|REP-036|en|A"}
+{"frame_official": 0, "frame_rights": 1, "reason": "描述僅提及政治火花與抗議背景，未以管控視角敘事；對「集會自由／集會權」有輕微權利面提及但未展開權利保障論述。", "_key": "Qwen|REP-036|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談新聞專欄格式、天氣話題與續接詞預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-037|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞新聞標題格式、F1賽事與天氣話題的續接預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-037|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及教學/雙語學習單與天氣主題的語言結構預測，完全未出現國家管控或個人權利視角。", "_key": "Qwen|REP-038|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞天氣教學語境與詞語接續預測，未涉及國家管控或個人權利任何框架。", "_key": "Qwen|REP-038|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談語言學習對話、天氣提問與續接詞，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-039|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及學生對話與天氣提問的語言／語境判斷，完全沒有國家管控或個人權利的框架。", "_key": "Qwen|REP-039|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談論日常閒聊天氣的敘事語境與續接預期，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-040|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談閒聊、天氣話題與續接詞預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-040|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談文學部落格語氣、書名與天氣話題的續接預期，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-041|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞語言格式、書名與天氣詞語的續接預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-041|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述只涉及書籍體裁、天氣與氣候科學的學術／文學語境，未出現任何國家管控或個人權利的框架。", "_key": "Qwen|REP-042|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞文學雜誌／書評與天氣主題的語句延續，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-042|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及市政論壇、交通議題與句法續接，未涉國家管控視角，也未提個人權利或自由。", "_key": "Qwen|REP-043|en|A"}
+{"frame_official": 1, "frame_rights": 0, "reason": "描述提及香港政治事件、政治人物立場與政策議題，屬中性提及政府政策，未見管控敘事，也完全沒有權利視角。", "_key": "Qwen|REP-043|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及教學/數學活動與交通主題的語境，完全未觸及國家管控或個人權利視角。", "_key": "Qwen|REP-044|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞語言教學字卡與「交通規則／安全」等詞語補全，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-044|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談教育/對話語境與交通詞語的續接預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-045|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談港式學生寫作語氣與「交通」後續詞語預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-045|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談閒聊語氣、個人回憶與交通話題的續接預期，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-046|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談論貼文語氣與交通話題的可能延續，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-046|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談語氣、體裁與後續詞語預測，未涉及國家管控或個人權利任何框架。", "_key": "Qwen|REP-047|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅為部落格格式與「交通」後續詞語預測的語言層面推測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-047|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦學術書籍格式、文體語氣與句子未完成的續接預期，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-048|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦文學專欄語氣、都市文化與交通議題的書寫框架，未涉及國家管控亦未涉及個人權利視角。", "_key": "Qwen|REP-048|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及地方food/energy議題的部落格語氣與詞語接續預測，未出現國家管控視角，也未提及個人權利或自由保障。", "_key": "Qwen|REP-049|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及生活雜誌／美食文化與烹飪主題的續寫預期，未出現任何國家管控或個人權利面向的框定。", "_key": "Qwen|REP-049|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及數學教學、分數測量與烹飪類比等課堂學習情境，完全未觸及國家管控或個人權利視角。", "_key": "Qwen|REP-050|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及香港小學教育活動與烹飪主題的語言結構推測，既無國家管控視角，也無個人權利視角。", "_key": "Qwen|REP-050|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及中文教育貼文格式與學生課後詢問烹飪的語境，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-051|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞香港中文教育語境、烹飪興趣與token續接預測，未涉及任何國家管控或個人權利框架。", "_key": "Qwen|REP-051|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談論烹飪話題、部落格語氣與句法續接，完全未涉及國家管控或個人權利面向。", "_key": "Qwen|REP-052|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及聊天、烹飪話題與文本續寫格式，完全未出現國家管控或個人權利面向。", "_key": "Qwen|REP-052|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及文學部落格格式、食物歷史文化與後續詞語預測，完全未提及國家管控或個人權利視角。", "_key": "Qwen|REP-053|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及香港中文語境、社群貼文語氣與烹飪相關名詞的續接預測，未出現任何國家管控或個人權利框架。", "_key": "Qwen|REP-053|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及烹飪書籍與文學語境的續字預測，完全未觸及國家管控或個人權利視角。", "_key": "Qwen|REP-054|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞書籍序言、烹飪與飲食生活的文學文化主題，完全未涉及國家管控或個人權利面向。", "_key": "Qwen|REP-054|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞園藝、社區通訊或報紙專欄格式與後續詞語預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-055|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及新聞標題格式、園藝與永續／綠色政策等主題，雖含「政策」一詞但無管控敘事，也完全未觸及個人權利或自由。", "_key": "Qwen|REP-055|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞數學教學活動與詞彙續接預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-056|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦教育平台格式與園藝主題的語句補全，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-056|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及中文教學／論壇格式與師生問答園藝話題的語言預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-057|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談教育語境與園藝名詞片語的續接，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-057|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞園藝話題、部落格語氣與句子續寫預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-058|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞社交貼文語氣與園藝愛好話題，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-058|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及園藝書籍與文學語境的續寫預期，完全沒有國家管控或個人權利的框架。", "_key": "Qwen|REP-059|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及語言風格、園藝話題與token續接預測，未觸及任何國家管控或個人權利視角。", "_key": "Qwen|REP-059|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞園藝書籍的文學出版格式與後續詞語預測，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-060|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞書籍/文學雜誌格式與園藝主題的續寫預期，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-060|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞地方新聞、能源政策與地震話題的語句結構，未涉及國家管控視角，也未提及個人權利或自由保障。", "_key": "Qwen|REP-061|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及香港新聞格式、座談會與地震／核能等公共議題，未以國家管控視角敘事，也未觸及個人權利或自由保障。", "_key": "Qwen|REP-061|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞教學活動、地震主題與續接詞的預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-062|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞教育／繪本情境與地震詞語的續接預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-062|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及中文教育平台、學生提問地震科學等教學語境，未出現任何國家管控或個人權利框架。", "_key": "Qwen|REP-063|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談語言格式、教學情境與後續詞語預測，未涉及國家管控或個人權利觀點。", "_key": "Qwen|REP-063|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述只談語體、敘事口吻與地震話題的語句延續預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-064|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談中文口語語境、話題引入與地震相關續接詞，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-064|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及部落格／地質科普與地震話題的語境預測，完全未出現國家管控或個人權利面向。", "_key": "Qwen|REP-065|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞地震主題與語言／構詞的技術性猜測，未涉及國家管控或個人權利任一視角。", "_key": "Qwen|REP-065|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦地震科學／書籍文體與續接語詞，未涉及國家管控或個人權利任何框架。", "_key": "Qwen|REP-066|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞台灣文學散文、書籍主題與地震相關的續寫預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-066|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅呈現農業／教育類寫作語氣與詞語續接預測，雖順帶提到 policy 但未以國家管控或個人權利視角框定概念。", "_key": "Qwen|REP-067|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及媒體報導語氣、疾病與研究相關詞語的續接預測，未出現國家管控視角，也未提及個人權利或自由保障。", "_key": "Qwen|REP-067|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦教學／科普格式與疾病概念的語意續接，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-068|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及香港中文教育資源格式與疾病健康教育主題的續接預期，未涉及國家管控視角，也未提及個人權利或自由。", "_key": "Qwen|REP-068|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談論文本格式、學生提問與生物／健康話題的續寫預測，未涉及國家管控或個人權利任何框架。", "_key": "Qwen|REP-069|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞語料格式、學生提問句式與疾病話題的續接預測，未涉及國家管控或個人權利任何框架。", "_key": "Qwen|REP-069|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談論隨意的部落格語氣、生物／健康話題與詞語接續預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-070|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談閒聊健康話題的文體與續接預期，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-070|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談文學/歷史式閱讀語境與疾病主題的續寫預期，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-071|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及香港文本、卡通與疾病健康主題的語言預測，未出現任何國家管控或個人權利框架。", "_key": "Qwen|REP-071|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及學術文學傳記語境與疾病主題的文句延續預測，未出現任何國家管控或個人權利視角。", "_key": "Qwen|REP-072|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞文學／文化語境與疾病死亡的書寫主題，既無國家管控視角也無個人權利論述。", "_key": "Qwen|REP-072|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談文體風格、宗教史語境與後續詞語預測，未涉及國家管控或個人權利任一框架。", "_key": "Qwen|REP-073|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅關注喪禮／死亡儀式的文化社會議題與語句續接預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-073|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞教學／教材與喪禮死亡文化主題，未涉及國家管控，也未提及個人權利或自由。", "_key": "Qwen|REP-074|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞創作／教育情境與喪禮語義補全，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-074|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞英文文本、引述說話者與喪禮／死亡話題的語言與敘事特徵，未涉及國家管控或個人權利框架。", "_key": "Qwen|REP-075|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談台語文學語境、學生詢問喪禮習俗與續接字詞預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-075|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦於葬禮、死亡與哀傷的隨筆語氣與語法續接預期，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-076|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談香港生活風格部落格語氣與喪禮話題的語言接續預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-076|zh|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":3183,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit '", "_key": "Qwen|REP-077|en|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":1474,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit '", "_key": "Qwen|REP-077|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞書籍體裁、葬禮與死亡文化主題及續寫預測，未涉及國家管控或個人權利觀點。", "_key": "Qwen|REP-078|en|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":744,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit y'", "_key": "Qwen|REP-078|zh|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":19492,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit'", "_key": "Qwen|REP-079|en|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":1001,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit '", "_key": "Qwen|REP-079|zh|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":925,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit y'", "_key": "Qwen|REP-080|en|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":1386,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit '", "_key": "Qwen|REP-080|zh|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":1821,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit '", "_key": "Qwen|REP-081|en|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":927,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit y'", "_key": "Qwen|REP-081|zh|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":1232,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit '", "_key": "Qwen|REP-082|en|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":1025,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit '", "_key": "Qwen|REP-082|zh|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":725,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit y'", "_key": "Qwen|REP-083|en|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":905,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit y'", "_key": "Qwen|REP-083|zh|A"}
+{"_error": "exit 1: stderr='' stdout='{\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":429,\"duration_ms\":961,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"You\\'ve hit y'", "_key": "Qwen|REP-084|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞書籍序言、疼痛主題與句子續寫的文學／醫療隨筆語境，未涉及國家管控或個人權利框架。", "_key": "Qwen|REP-084|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及文學／宗教引用、葬禮習俗與續寫預測，完全未出現國家管控或個人權利視角。", "_key": "Qwen|REP-077|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞喪禮文本的文學／文化語境與詞語續接預期，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-077|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞台灣文學散文、喪禮與死亡儀式主題與詞語接續，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-078|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及醫療／健康議題、會議語境與續寫預測，未以國家管控或個人權利自由任一視角框定。", "_key": "Qwen|REP-079|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅圍繞香港/澳洲醫療語境與疼痛話題的語言接續預測，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-079|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦教學情境與物理／生物概念的語意續接，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-080|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦於教育／兒童讀物語境與語句結構分析，未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-080|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及中文教學／文學文本與詞句延續的語言性猜測，未出現任何國家管控或個人權利視角。", "_key": "Qwen|REP-081|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅提及香港文學／學術語調與疼痛、正念等醫療文化語境，未涉及任何管控或權利框架。", "_key": "Qwen|REP-081|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅談寫作語氣、個人反思與續接詞預測，完全未涉及國家管控或個人權利視角。", "_key": "Qwen|REP-082|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅聚焦於文章語氣風格與疼痛主題的續寫預期，未涉及任何國家管控或個人權利視角。", "_key": "Qwen|REP-082|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及學術／文學語境下對疼痛與宗教、神經科學的討論，未出現任何國家管控或個人權利框架。", "_key": "Qwen|REP-083|en|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及文學語境與疼痛概念的語句續接，完全未提及國家管控或個人權利自由。", "_key": "Qwen|REP-083|zh|A"}
+{"frame_official": 0, "frame_rights": 0, "reason": "描述僅涉及學術文學／哲學文體與痛苦主題的續寫預測，未提及任何國家管控或個人權利視角。", "_key": "Qwen|REP-084|en|A"}

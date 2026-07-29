@@ -1,0 +1,18 @@
+{
+  "Qwen": {
+    "n_vectors": 29,
+    "n_judged": 145,
+    "all_5_identical_rate": 0.586,
+    "within_vector_sd_median": 0.0,
+    "pairwise_exact_agreement": 0.8,
+    "pairwise_weighted_kappa": 0.392
+  },
+  "Gemma": {
+    "n_vectors": 29,
+    "n_judged": 145,
+    "all_5_identical_rate": 0.655,
+    "within_vector_sd_median": 0.0,
+    "pairwise_exact_agreement": 0.848,
+    "pairwise_weighted_kappa": 0.535
+  }
+}
