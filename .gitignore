@@ -11,3 +11,9 @@ __pycache__/
 # 大型輸出(視需要;要進版控就註解掉)
 # activations/
 # responses/
+
+# API key / 憑證
+*.env
+.env
+judge.env
+secrets/
