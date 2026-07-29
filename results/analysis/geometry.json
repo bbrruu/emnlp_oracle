@@ -1,0 +1,348 @@
+{
+  "Qwen": {
+    "dim": 3584,
+    "n_vectors": 720,
+    "sep_AUC_siteA": 1.0,
+    "sep_AUC_siteA_ci": [
+      1.0,
+      1.0
+    ],
+    "sep_AUC_siteA_split_sd": 0.0,
+    "sep_AUC_siteB": 0.775,
+    "sep_AUC_siteB_ci": [
+      0.629,
+      0.902
+    ],
+    "sep_AUC_siteB_split_sd": 0.0581,
+    "sep_AUC_by_control": {
+      "siteA|N_everyday": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteA|N_arousing": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteB|N_everyday": [
+        0.808,
+        0.651,
+        0.911
+      ],
+      "siteB|N_arousing": [
+        0.725,
+        0.51,
+        0.892
+      ]
+    },
+    "paired": {
+      "siteA|all": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.882,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteA|N_everyday": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.869,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteA|N_arousing": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.884,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|all": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.515,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|N_everyday": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.519,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|N_arousing": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.512,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|N_arousing|en": {
+        "n_cells": 6,
+        "mean_loo_cos": 0.368,
+        "cells_positive": "6/6",
+        "p_perm": 0.001
+      },
+      "siteB|N_arousing|zh": {
+        "n_cells": 6,
+        "mean_loo_cos": 0.571,
+        "cells_positive": "6/6",
+        "p_perm": 0.001
+      }
+    },
+    "sep_AUC_by_lang": {
+      "siteA|en": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteA|zh": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteB|en": [
+        0.648,
+        0.454,
+        0.828
+      ],
+      "siteB|zh": [
+        0.83,
+        0.679,
+        0.949
+      ]
+    },
+    "loco_AUC": {
+      "siteA": {
+        "per_concept": {
+          "democracy": 1.0,
+          "freedom": 1.0,
+          "freedom of assembly": 1.0,
+          "freedom of speech": 1.0,
+          "human rights": 1.0,
+          "the rule of law": 1.0
+        },
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "siteB": {
+        "per_concept": {
+          "democracy": 0.76,
+          "freedom": 0.74,
+          "freedom of assembly": 0.832,
+          "freedom of speech": 0.795,
+          "human rights": 0.733,
+          "the rule of law": 0.783
+        },
+        "mean": 0.774,
+        "min": 0.733
+      }
+    },
+    "transfer_AUC": {
+      "siteA": {
+        "en2zh": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "zh2en": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "siteB": {
+        "en2zh": [
+          0.776,
+          0.576,
+          0.979
+        ],
+        "zh2en": [
+          0.687,
+          0.582,
+          0.831
+        ]
+      }
+    },
+    "cos_dir_siteA_siteB": 0.448,
+    "crosslang_cos_siteA": 0.819,
+    "crosslang_cos_siteB": 0.726,
+    "per_concept_AUC_siteA": {
+      "democracy": 1.0,
+      "freedom": 1.0,
+      "freedom of assembly": 1.0,
+      "freedom of speech": 1.0,
+      "human rights": 1.0,
+      "the rule of law": 1.0
+    }
+  },
+  "Gemma": {
+    "dim": 3840,
+    "n_vectors": 720,
+    "sep_AUC_siteA": 1.0,
+    "sep_AUC_siteA_ci": [
+      1.0,
+      1.0
+    ],
+    "sep_AUC_siteA_split_sd": 0.0,
+    "sep_AUC_siteB": 0.742,
+    "sep_AUC_siteB_ci": [
+      0.553,
+      0.878
+    ],
+    "sep_AUC_siteB_split_sd": 0.0699,
+    "sep_AUC_by_control": {
+      "siteA|N_everyday": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteA|N_arousing": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteB|N_everyday": [
+        0.805,
+        0.618,
+        0.938
+      ],
+      "siteB|N_arousing": [
+        0.673,
+        0.487,
+        0.859
+      ]
+    },
+    "paired": {
+      "siteA|all": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.85,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteA|N_everyday": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.837,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteA|N_arousing": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.86,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|all": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.549,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|N_everyday": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.541,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|N_arousing": {
+        "n_cells": 12,
+        "mean_loo_cos": 0.556,
+        "cells_positive": "12/12",
+        "p_perm": 0.001
+      },
+      "siteB|N_arousing|en": {
+        "n_cells": 6,
+        "mean_loo_cos": 0.543,
+        "cells_positive": "6/6",
+        "p_perm": 0.001
+      },
+      "siteB|N_arousing|zh": {
+        "n_cells": 6,
+        "mean_loo_cos": 0.523,
+        "cells_positive": "6/6",
+        "p_perm": 0.001
+      }
+    },
+    "sep_AUC_by_lang": {
+      "siteA|en": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteA|zh": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "siteB|en": [
+        0.66,
+        0.447,
+        0.86
+      ],
+      "siteB|zh": [
+        0.758,
+        0.571,
+        0.913
+      ]
+    },
+    "loco_AUC": {
+      "siteA": {
+        "per_concept": {
+          "democracy": 1.0,
+          "freedom": 1.0,
+          "freedom of assembly": 1.0,
+          "freedom of speech": 1.0,
+          "human rights": 1.0,
+          "the rule of law": 1.0
+        },
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "siteB": {
+        "per_concept": {
+          "democracy": 0.83,
+          "freedom": 0.823,
+          "freedom of assembly": 0.852,
+          "freedom of speech": 0.858,
+          "human rights": 0.771,
+          "the rule of law": 0.826
+        },
+        "mean": 0.827,
+        "min": 0.771
+      }
+    },
+    "transfer_AUC": {
+      "siteA": {
+        "en2zh": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "zh2en": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "siteB": {
+        "en2zh": [
+          0.752,
+          0.564,
+          0.962
+        ],
+        "zh2en": [
+          0.706,
+          0.557,
+          0.99
+        ]
+      }
+    },
+    "cos_dir_siteA_siteB": 0.372,
+    "crosslang_cos_siteA": 0.738,
+    "crosslang_cos_siteB": 0.705,
+    "per_concept_AUC_siteA": {
+      "democracy": 1.0,
+      "freedom": 1.0,
+      "freedom of assembly": 1.0,
+      "freedom of speech": 1.0,
+      "human rights": 1.0,
+      "the rule of law": 1.0
+    }
+  }
+}

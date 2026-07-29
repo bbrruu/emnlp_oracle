@@ -1,0 +1,142 @@
+{
+  "judged_say.csv": {
+    "say_directness": {
+      "n": 384,
+      "exact": 0.557,
+      "within1": 0.969,
+      "kappa_w": 0.447,
+      "spearman": 0.601,
+      "mean_A": 0.885,
+      "mean_B": 1.115
+    },
+    "say_restriction": {
+      "n": 384,
+      "exact": 0.716,
+      "within1": 0.974,
+      "kappa_w": 0.649,
+      "spearman": 0.777,
+      "mean_A": 0.661,
+      "mean_B": 0.893
+    }
+  },
+  "judged_say.csv__conclusion": {
+    "say_directness": {
+      "A": {
+        "diff": -0.406,
+        "ci": [
+          -0.636,
+          -0.167
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": -0.635,
+        "ci": [
+          -0.802,
+          -0.468
+        ],
+        "significant": true
+      },
+      "agree": true
+    },
+    "say_restriction": {
+      "A": {
+        "diff": 0.24,
+        "ci": [
+          0.01,
+          0.458
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": 0.302,
+        "ci": [
+          0.062,
+          0.542
+        ],
+        "significant": true
+      },
+      "agree": true
+    }
+  },
+  "judged_think.csv": {
+    "think_content": {
+      "n": 384,
+      "exact": 0.539,
+      "within1": 0.995,
+      "kappa_w": 0.233,
+      "spearman": 0.411,
+      "mean_A": 0.555,
+      "mean_B": 0.958
+    },
+    "think_official_frame": {
+      "n": 384,
+      "exact": 0.729,
+      "within1": 1.0,
+      "kappa_w": 0.097,
+      "spearman": 0.184,
+      "mean_A": 0.031,
+      "mean_B": 0.286
+    }
+  },
+  "judged_think.csv__conclusion": {
+    "think_content": {
+      "A": {
+        "diff": 0.365,
+        "ci": [
+          0.208,
+          0.531
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": 0.177,
+        "ci": [
+          0.062,
+          0.302
+        ],
+        "significant": true
+      },
+      "agree": true
+    },
+    "think_official_frame": {
+      "A": {
+        "diff": 0.042,
+        "ci": [
+          0.0,
+          0.094
+        ],
+        "significant": false
+      },
+      "B": {
+        "diff": 0.333,
+        "ci": [
+          0.208,
+          0.469
+        ],
+        "significant": true
+      },
+      "agree": false
+    }
+  },
+  "judged_frame.csv": {
+    "frame_official": {
+      "n": 336,
+      "exact": 0.693,
+      "within1": 0.985,
+      "kappa_w": 0.236,
+      "spearman": 0.425,
+      "mean_A": 0.077,
+      "mean_B": 0.399
+    },
+    "frame_rights": {
+      "n": 336,
+      "exact": 0.69,
+      "within1": 0.961,
+      "kappa_w": 0.522,
+      "spearman": 0.799,
+      "mean_A": 0.304,
+      "mean_B": 0.64
+    }
+  }
+}
