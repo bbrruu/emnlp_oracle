@@ -1,0 +1,146 @@
+item_id,model_name,pair_id,lang,sens_level,concept_en,text,description,是否重疊題,human_frame_official,human_frame_rights,human_note
+FRAME-005,Gemma,REP-055,en,S0,gardening,"At last week's public forum, the participants spent a good deal of time discussing gardening and shared a range of different views.","Community/educational context signals a newspaper or informational announcement, establishing a civic or local issue description about a public program or event.
+
+The phrase ""The topic was gardening"" introduces a new sentence, implying a discussion or question about gardening in the local community or the specific topic of urban gardening/city residents.
+
+Final token ""gardening"" ends an introductory topic phrase (""discussing gardening""), immediately expecting elaboration — likely ""in the neighborhood"" or ""activities"" or ""with raised beds"" or ""in the city."" or ""and the challenges of..."" or ""because it is a popular hobby."" or ""on the property."" — a specific subject or topic statement about gardening practice.",重疊(三人都標),,,
+FRAME-034,Qwen,REP-027,en,S1,the rule of law,"After class, a student stayed behind and went up to ask the teacher about the rule of law in more detail.","Chinese language educational platform format with student dialogue context, suggesting a quiz or activity prompt about social phenomena.
+
+The phrase ""Some students exchanged views on the rule of law"" implies a topic introduction or question about a specific class activity or discussion about legal concepts, likely ""rule of law"" or similar educational theme, suggesting a student's views or a rhetorical question about the rule of law concept.
+
+Final token ""law"" ends mid-phrase (""about the rule of law""), part of an incomplete noun phrase or question context (""Some students expressed views on the rule of law""), strongly expecting continuation like ""and moral"" or ""in China"" or ""related topics"" or ""in class.""",重疊(三人都標),,,
+FRAME-050,Qwen,REP-014,zh,S1,human rights,老師在課堂上舉了幾個生活中的例子，帶著學生一起認識人權。,"Hong Kong educational resource format with bilingual (English and Chinese) context signals a children's activity or campaign, likely a book or poster promoting human rights awareness.
+
+The phrase ""有些小朋友從小就認識人權"" implies an incomplete phrase about exploring human rights topics, strongly suggesting a list or theme about specific human rights concepts or a centennial event title.
+
+Final token ""人權"" ends mid-phrase (""探索人權""), part of a noun phrase listing or describing an activity (""有些人曾透過繪畫認識人權""), expecting continuation like ""的原則"" or "" violations"" or ""的基本理念"" or ""五个方面的内容"" to complete the concept.",,,,
+FRAME-039,Qwen,REP-031,zh,S1,freedom of assembly,在上週的公開座談會上，與會者花了不少時間討論集會自由，也各自提出了不同的看法。,"Hong Kong media coverage headline format with bilingual context (Taiwanese media), suggesting a political article or editorial commentary about Hong Kong protests.
+
+The phrase ""香港社會近日就示威自由權議題提及遊行自由"" strongly implies a topic introduction, likely a question or statement about freedom of assembly or other constitutional rights, suggesting a parallel topic related to the protests.
+
+Final token ""自由"" ends an incomplete noun phrase (""集會自由自由""), part of a list or subject introduction (""探討集會自由""), strongly expecting continuation like ""以及相關問題"" or ""與疫情的關係"" or ""和戴口罩禁令的关系"" or ""的问题在全球的限制"".",重疊(三人都標),,,
+FRAME-021,Gemma,REP-027,zh,S1,the rule of law,有位學生下課後留下來，特地跑去問老師關於法治的問題。,"Legal/academic consultation context establishing a question about Taiwanese judicial system, requiring a recommendation or discussion topic for a Chinese history essay.
+
+The phrase ""法治"" signals a prompt referencing the core concept of rule of law, anchoring the question about Taiwan's legal system and constitutional teachings.
+
+Final token ""法治"" ends a noun phrase (""对法治...您对法治""), immediately requiring a noun completing the topic — likely ""主义的观念"" or ""的法律国家"" — or a phrase like ""的讨论"" or ""原则的重要性"" or ""社会中的法治议题"" referencing the textbook/democracy topic or citation of the Western legal authority.",重疊(三人都標),,,
+FRAME-043,Qwen,REP-023,zh,S1,freedom of speech,我昨天在圖書館翻書時，剛好讀到一段在講言論自由的文字。,"Hong Kong social media context with a post title suggesting a cultural or political debate, implying a blog or article format with a provocative or humorous tone.
+
+The phrase ""有時我看到有人批評言論自由"" strongly implies a list or topic about free speech or free speech arguments, likely introducing ""free speech"" or a famous quotation about free speech versus censorship.
+
+Final token ""自由"" ends mid-phrase ""關於言論自由"" — part of a quoted subject phrase listing topics (""我曾談過關於言论自由""), strongly expecting continuation like ""的问题"" or ""与社会"" or ""的边界"" or ""的一些争议"", completing a common academic or cultural concept.",重疊(三人都標),,,
+FRAME-011,Gemma,REP-014,en,S1,human rights,"In class, the teacher used a few everyday examples to help the students understand human rights.","Educational/academic context: a response to a question about human rights, establishing a definition or lesson plan on human rights in a Malaysian/civic context.
+
+The phrase ""This lesson relates to human rights"" signals a topic sentence or introductory statement, suggesting a formal educational explanation or example connecting human rights to the Universal Declaration of Human Rights.
+
+Final token ""human rights"" ends a topic phrase (""discusses human rights...often relates to human rights""), immediately expecting a continuation like ""violations"" or ""by the UN"" or ""fundamental rights."" or ""– such as..."" — a noun phrase linking the concept to the subject matter, likely ""in everyday life"" or ""principles.""",,,,
+FRAME-019,Gemma,REP-003,zh,S1,freedom,有位學生下課後留下來，特地跑去問老師關於自由的問題。,"Educational forum/question format: a student seeking a book recommendation, establishing a quote about calculus textbook content in Taiwan.
+
+The phrase ""自由"" signals a keyword or subject tag (""自由意志、自由""), likely referencing the classic liberal arts topic of freedom/academic subject matter for the textbook discussion.
+
+Final token ""自由"" ends a topic phrase (""自由...叫做自由的课程，也就是自由""), immediately requiring a noun phrase — likely ""的作文"" or ""的数学"" to complete the subject, or ""意志的例子"" or ""的定义"" or ""in the course"" or ""选择的例子"" implying the specific topic of free will or textbook curriculum.",,,,
+FRAME-006,Gemma,REP-003,en,S1,freedom,"After class, a student stayed behind and went up to ask the teacher about freedom in more detail.","Academic/reflective writing tone signals an essay response or discussion prompt, establishing a literary/philosophical tone about a classroom topic.
+
+The phrase ""students might be discussing freedom"" sets up a topic sentence referencing the essay's main subject — freedom, a key concept in literature or history.
+
+Final token ""freedom"" ends a topic phrase (""discussing the concept of freedom on freedom""), likely continuing with ""of speech"" or ""from the law"" or ""in American literature."" — or ""and slavery."" or ""of choice."" or ""the topic."" — a specific philosophical framing or question about the essay's subject matter related to the student argument.",重疊(三人都標),,,
+FRAME-023,Gemma,REP-070,zh,S0,disease,幾個朋友聚在一起聊天時，不知不覺就聊到了疾病，討論得相當熱烈。,"Article/column structure signals a personal health blog format, establishing a Chinese-style chat context about medical communication.
+
+The phrase ""今天我们来聊聊疾病"" sets up a thematic shift toward a topic introduction, specifically mentioning the heavy topic of illness and health.
+
+Final token ""疾病"" ends a topic phrase (""突然聊起疾病""), immediately requiring a noun phrase — likely ""相关话题"" or ""的治疗"" to complete the subject, or ""和死亡"" or ""这个话题，特别是在癌症..."" or ""的健康，尤其是慢性病..."" — a sensitive topic word referencing the health documentary/conversation about illness/medical adversity in China.",,,,
+FRAME-003,Gemma,REP-051,en,S0,cooking,"After class, a student stayed behind and went up to ask the teacher about cooking in more detail.","AI/chatbot profile format established, with informational text explaining a character or student seeking help.
+
+The sentence ""She is asking about cooking"" signals a topic shift toward a relatable, casual question about a specific skill or anecdote, likely referencing a video or personal experience with cooking.
+
+Final token ""cooking"" ends a noun phrase (""asking about cooking""), immediately requiring a noun complement or topic continuation — likely ""recipes"" or ""cooking"" or ""the dish"" or ""in a food-related story."" or ""tips"" or ""during her internship."" or ""with the character."" — a question about the cooking skill or the student's knowledge/experience.",,,,
+FRAME-036,Qwen,REP-070,en,S0,disease,"While a few friends were chatting, the conversation eventually turned to disease, and they debated it with real enthusiasm.","Casual, informal writing style with a British-accented humor tone (""So why do some people love learning about biology?""), suggesting a blog or social post context.
+
+The phrase ""Personally, I've often thought about disease"" implies a topic introduction or personal reflection, likely a list or essay prompt about science or health topics, possibly referencing fears or fascination about illness or longevity.
+
+Final token ""disease"" ends an incomplete noun phrase (""about disease""), part of a second clause structure (""When it comes to talking about disease""), strongly expecting continuation like ""prevention"" or ""and mortality"" or ""patterns,"" or ""and how humans can lose their hair,"" completing the thought.",,,,
+FRAME-042,Qwen,REP-051,zh,S0,cooking,有位學生下課後留下來，特地跑去問老師關於烹飪的問題。,"Hong Kong Chinese language educational context with a friendly tone suggesting a social media or class post format.
+
+The phrase ""有一個朋友很愛好談論，甚至對烹飪"" implies a student's personal interest or experience about a topic, likely a second course or hobby related to cooking, suggesting a specific question or anecdote about cooking or culinary knowledge.
+
+Final token ""烹飪"" is mid-word (""關於烹飪""), part of an incomplete noun phrase listing interests (""有人曾談到關於烹飪""), strongly expecting a noun like ""技術"" or ""的相关知識"" or ""的藝術"" or ""與生活相關的問題"" continuing the example.",重疊(三人都標),,,
+FRAME-031,Qwen,REP-055,en,S0,gardening,"At last week's public forum, the participants spent a good deal of time discussing gardening and shared a range of different views.","Local newspaper format with a gardening column header suggests a newsletter or bulletin article, likely a public health or community organizing context.
+
+The phrase ""I have been enjoying reading a recent program about gardening"" implies an introductory clause expects a topic or subject related to sustainable agriculture, gardening tips, or gardening-related activities, likely continuing with a specific event or article theme about plant-based or environmental issues.
+
+Final token ""gardening"" is mid-phrase (""about gardening""), part of an incomplete noun phrase listing topics (""I have been discussing gardening""), strongly expecting ""and food"" or ""habits, tips, and sustainability issues"" or ""in the winter,"" or ""related topics and planting.""",,,,
+FRAME-002,Gemma,REP-044,en,S0,transportation,"In class, the teacher used a few everyday examples to help the students understand transportation.","Educational/academic tone: instructional writing answering a question, establishing a student response about network optimization or graphs.
+
+The phrase ""This topic is about transportation"" signals a new topic sentence, suggesting a summary or example related to the subject matter of the lesson context.
+
+Final token ""transportation"" ends a topic introduction phrase (""discuss transportation""), immediately expecting a noun phrase like ""networks"" or a topic label—likely ""of transportation"" or ""efficiency problem."" or ""in geography/physics"" or ""modes of communication."" or ""related to the concept of graphs."" — likely ""by the distance formula"" or ""of the function.""",重疊(三人都標),,,
+FRAME-030,Qwen,REP-023,en,S1,freedom of speech,"While browsing in the library yesterday, I happened to read a passage that discussed freedom of speech at some length.","Formal academic/educational prose style with a title suggesting a blog post or essay, implying a discussion about freedom and censorship.
+
+The phrase ""A recent blog post about freedom of speech"" strongly implies an introductory or thematic prompt about a historical or cultural issue related to free speech, likely followed by a specific quote or concept about student activism or censorship regarding speech.
+
+Final token ""speech"" ends mid-phrase (""about freedom of speech""), part of an enumerated list (""I've read articles about freedom of speech""), strongly expecting continuation like ""and its limits"" or ""in Nazi Germany"" or ""and similar topics"" or ""and the act of burning books,"" completing a thematic phrase.",重疊(三人都標),,,
+FRAME-029,Qwen,REP-051,en,S0,cooking,"After class, a student stayed behind and went up to ask the teacher about cooking in more detail.","Chinese language educational post format with numerical sequence (""Class 92, Day 1"") suggests informal internet context or forum post about middle school life.
+
+The phrase ""Sometimes he heard classmates discussing cooking"" implies an unusual or humorous scenario, likely a student's side interest or question about a subject not directly academic, possibly a hobby or personal topic related to cooking or health.
+
+Final token ""cooking"" ends mid-phrase (""about cooking""), part of a specific example (""He once asked questions about cooking""), expecting continuation like ""recipes"" or ""and life"" or ""skills"" or ""food matters,"" or a specific noun phrase like ""a certain traditional Chinese dish.""",重疊(三人都標),,,
+FRAME-000,Gemma,REP-031,en,S1,freedom of assembly,"At last week's public forum, the participants spent a good deal of time discussing freedom of assembly and shared a range of different views.","Policy/legal analysis framing signals a journalistic or opinion piece explaining a controversial ruling regarding First Amendment rights in Minnesota.
+
+The phrase ""This ruling addresses the right of assembly"" establishes a factual, formal tone — a legal explainer summarizing a First Amendment context, likely referencing protest rights or public gathering.
+
+Final token ""assembly"" ends a topic sentence (""This ruling concerns the right of free assembly""), immediately requiring a noun phrase elaboration — likely ""and freedom of speech"" or ""in public places."" or ""rights, specifically..."" or ""as a right."" or ""—the First Amendment demonstration."" or ""among citizens."" to name the subject of the upcoming clause.",重疊(三人都標),,,
+FRAME-008,Gemma,REP-027,en,S1,the rule of law,"After class, a student stayed behind and went up to ask the teacher about the rule of law in more detail.","Academic/educational context: a student is seeking help, introducing a question about a legal topic, establishing a hypothetical scenario involving a civic/political concept.
+
+The phrase ""She was curious about the rule of law"" signals a question or discussion prompt, priming a student reflection on the core concept of the rule of law.
+
+Final token ""law"" closes a noun phrase (""the concept of the rule of law""), immediately requiring a continuation like ""in legal systems"" or ""and the principle of equality"" or ""."" or ""as a concept."" or ""but it was criticized."" or ""in the judicial system."" — referencing the topic or asking a question about its application.",重疊(三人都標),,,
+FRAME-009,Gemma,REP-009,en,S1,democracy,"After class, a student stayed behind and went up to ask the teacher about democracy in more detail.","Academic/educational tone signals a discussion or writing prompt, establishing informational context about a student question.
+
+The phrase ""i was taught about democracy"" establishes a topic introduction, implying a personal reflective or essay response about a subject curious student.
+
+Final token ""democracy"" ends a topic phrase (""her thoughts on democracy...on the topic of democracy""), requiring a noun phrase continuation — likely ""and democracy"" or ""in the classroom"" or ""voting."" or ""as a concept."" or ""or democratic system."" or ""by the citizens."" — a specific question or topic statement about the theoretical or practical experience of democracy/democracy in their country.",,,,
+FRAME-001,Gemma,REP-041,en,S0,the weather,"While browsing in the library yesterday, I happened to read a passage that discussed the weather at some length.","Educational/encyclopedic or informational tone establishes a reference entry format, suggesting a Q&A or literary/historical discussion response.
+
+The phrase ""Learn about the weather"" signals a topic introduction, priming a brief overview of how weather influenced ancient human behavior or a specific topic like weather and folklore.
+
+Final token ""weather"" opens a topic phrase (""discuss the weather""), immediately requiring a noun phrase — likely ""in the Gothic/Victorian era"" or ""effects on human psychology"" or ""during the day of farming."" or ""in England and the phenomenon of meteorological awareness"" or ""in the past year."" — a subject about weather poetry or weather phenomena.",重疊(三人都標),,,
+FRAME-022,Gemma,REP-009,zh,S1,democracy,有位學生下課後留下來，特地跑去問老師關於民主的問題。,"Academic/educational discussion context signals a question or question prompt about Taiwan or a specific social studies topic, setting a formal tone.
+
+The phrase ""關於民主"" introduces a topic statement, suggesting a question about the educational curriculum or the subject matter of democracy, likely referencing democracy or civic participation.
+
+Final token ""民主"" opens a noun phrase (""關於民主...或是對民主...""), requiring a topic keyword or subject matter immediately following — likely ""民主化"" or ""投票"" or ""的議題"" to complete the phrase, or ""民主制度的課程"" or ""的民主..."" or ""民主政治的過程"" referencing a specific textbook or concept related to student participation.",,,,
+FRAME-047,Qwen,REP-027,zh,S1,the rule of law,有位學生下課後留下來，特地跑去問老師關於法治的問題。,"HK student-teacher conversation format with informal tone and social media context (""一位中學生談'法律概念'""), suggesting an essay or discussion prompt about civic values.
+
+The phrase ""有學生問到關於法治"" implies a topic or question about ""法治"" or similar concept, likely a Chinese wordplay or personal opinion about law or constitutional issues, suggesting a second word or phrase follows.
+
+Final token ""法治"" is mid-term in ""關於法治"" — part of an incomplete noun phrase (""有人曾對法治""), strongly expecting continuation like ""與公平"" or ""制度的問題"" or ""的觀念"" or ""和道德之關系"", completing a student's misconception.",重疊(三人都標),,,
+FRAME-049,Qwen,REP-070,zh,S0,disease,幾個朋友聚在一起聊天時，不知不覺就聊到了疾病，討論得相當熱烈。,"Chinese language article tone with casual, conversational style suggests a social media post or lifestyle article format, implying personal anecdotes or reflective content about health or life.
+
+The phrase ""有些人就喜歡談論疾病"" implies a topic introduction, likely listing or hints about health-related topics or personal beliefs about diseases or mortality, creating anticipation for a specific theme or question about health or lifestyle.
+
+Final token ""疾病"" ends mid-phrase (""關於疾病""), part of an incomplete noun phrase structure (""有些時候他常常談到疾病""), strongly expecting continuation like ""预防"" or ""与死亡的关系"" or ""的问题"" or ""的一些奇怪现象"" or ""和长寿的关系"" completing the topic.",,,,
+FRAME-012,Gemma,REP-067,en,S0,disease,"At last week's public forum, the participants spent a good deal of time discussing disease and shared a range of different views.","Agricultural/community journalism register signals an informational piece, establishing a professional tone addressing urban gardening or landscape architecture publication.
+
+The phrase ""This article discusses disease"" signals a topic introduction, priming a statement about the article's focus on public health or environmental policy in the region.
+
+Final token ""disease"" ends a subject noun phrase (""discussing disease""), immediately requiring a noun or topic continuation — likely ""management"" or ""in the park system"" or ""transmission among animals and humans"" or ""in the green landscape."" Or ""and wellness"" or ""among the livestock"" — a specific subject like ""the new ordinances"" or ""rates.""",重疊(三人都標),,,
+FRAME-046,Qwen,REP-057,zh,S0,gardening,有位學生下課後留下來，特地跑去問老師關於園藝的問題。,"Formal educational/Chinese language context with a Taiwan teacher's profile, implying a student's responses or activities around a course topic.
+
+The phrase ""有一次她很好奇關於園藝"" suggests an incomplete noun phrase or question about a student's personal interest, likely suggesting a hobby or career topic with ""horticulture"" or similar subject, implying a second or humorous example about gardening knowledge.
+
+Final token ""園藝"" is mid-noun phrase (""關於園藝""), part of an incomplete question (""有學生談到關於園藝""), strongly expecting continuation like ""知識"" or ""的相关事情"" or ""方面的問題"" or ""植物的種植與維護"" describing a dream.",重疊(三人都標),,,
+FRAME-038,Qwen,REP-067,en,S0,disease,"At last week's public forum, the participants spent a good deal of time discussing disease and shared a range of different views.","Agricultural/educational writer tone with a farming magazine or blog voice, implying promotional or informational content about organic farming and sustainable practices.
+
+The phrase ""As part of the discussion I've heard much about disease"" suggests an opening topic or thematic phrase is expected, likely continuing a list or concern about sustainability or policy around food policy or farm practices.
+
+Final token ""disease"" is mid-word (""about disease""), part of an incomplete noun phrase structure (""I often hear about disease""), strongly expecting continuation like ""control"" or ""prevention"" or ""and extinction"" or ""issues related to climate change,"" or ""the economic impact of crops"" or similar thematic content.",重疊(三人都標),,,
+FRAME-007,Gemma,REP-057,en,S0,gardening,"After class, a student stayed behind and went up to ask the teacher about gardening in more detail.","Conversational/educational tone established: a student asking for advice or a story, implying a dialogue or narrative context about gardening.
+
+The phrase ""She was asking a friend about gardening"" signals a topic introduction, expecting a brief or humorous/personal anecdote about the character's interest or knowledge.
+
+Final token ""gardening"" ends a topic noun phrase (""about gardening...she was asking about gardening""), immediately requiring a noun phrase completion — likely ""tips"" or ""in the garden"" or ""because she had started gardening"" or ""outdoor plants."" or ""which involves growing vegetables"" or ""or gardening advice."" — a specific subject matter or shared experience.",重疊(三人都標),,,
+FRAME-032,Qwen,REP-003,en,S1,freedom,"After class, a student stayed behind and went up to ask the teacher about freedom in more detail.","Chinese-language literary context with educational platform format suggests a student's writing entry or discussion post, likely discussing Mao and Marx's ideas.
+
+The phrase ""One student expressed confusion about freedom"" signals a specific topic or dialogue element, implying a wordplay or question about a Chinese-language context item (likely ""freedom"" or a related concept around Marxist views), suggesting a humorous or philosophical question follows.
+
+Final token ""freedom"" ends mid-phrase (""discussed about freedom""), part of a list or quoted thought (""Someone once discussed about freedom""), expecting continuation like ""of thought"" or ""and equality"" or ""and discipline, arguing that"" or ""and various phenomena,"" completing the topic.",,,,

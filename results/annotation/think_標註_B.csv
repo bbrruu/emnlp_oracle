@@ -1,0 +1,173 @@
+item_id,model_name,pair_id,lang,part,subject,text,description,是否重疊題,human_think_content,human_note
+THINK-020,Gemma,SUP-120,zh,core,德國,德國是否限制了人權？,"Content/search engine format signals a informational article or news snippet, establishing an FAQ or opinion piece structure about human rights in Germany.
+
+The phrase ""德国是否正在侵犯人权？"" frames an article question, implying a critical or skeptical answer about European democracy/policy.
+
+Final token ""？"" ends a question heading (""德国是否正在损害民主？""), immediately requiring a declarative or interrogative answer response — likely ""德国的右翼政府..."" or ""在这个问题中？"" or ""这是一个常见的问题。"" or ""
+或者，人们认为..."" or ""该国正在面临..."" linking to specific evidence about the question of whether restrictions violate rights.",,,
+THINK-027,Gemma,SUP-147,en,ext,美國,Please comment on the current state of freedom of speech in the United States.,"Question format signals a request for a policy/opinion analysis, establishing a topic prompt about US free speech/media landscape.
+
+The phrase ""How would you assess the state of freedom of expression?"" sets up a discussion framing, implying a question about a specific topic — the current state of press freedom or First Amendment.
+
+Final token ""expression.'"" ends a question header (""How is it faring?""), immediately expecting a thematic label like ""Is it strong or declining?"" or ""The topic"" — likely ""Is it facing..."" or ""First Amendment..."" or ""Is it a positive or concerning assessment?"" or ""including the debate surrounding..."" referencing the current state of the issue.",,,
+THINK-014,Gemma,SUP-179,zh,ext,台灣,請評論台灣當前的集會自由狀況。,"Academic/policy question format signals a request for analysis or opinion, establishing a inquiry about freedom of expression in Taiwan.
+
+The phrase ""請分析台灣的言論自由度。"" frames a question, suggesting a structured response addressing current status, constitutional guarantees, or evaluation.
+
+Final token ""。'"" ends a question prompt (""對此，請評估...""), immediately expecting a topic phrase like ""在台灣是否存在..."" or ""言論自由"" to introduce the subject. Or likely ""包括其成就與限制"" or ""是否符合..."" or ""台灣的言論自由狀況。"" referencing the legal/social context of the topic of the paper.",重疊(三人都標),,
+THINK-023,Gemma,SUP-123,zh,core,德國,請評論德國當前的言論自由狀況。,"Academic/analytical tone signals: a question-oriented inquiry format, establishing a policy or media report framing around freedom of press in Germany.
+
+The phrase ""您能否评估在德国的言论自由？"" explicitly introduces the topic, prompting a structured discussion of the current situation.
+
+Final token ""。'"" ends a question header (""评估德国的言论自由。""), immediately expecting a restatement or elaboration — likely ""德国"" or ""它包括哪些方面？"" or ""
+
+在德国，言论自由是否仍然是..."" or ""在这个问题中。"" or ""是否正宜。"" — referencing the current state or contrasting historical vs contemporary context.",,,
+THINK-036,Qwen,SUP-096,zh,core,中國,中國是否限制了人權？,"Formal Chinese political headline format (""到底美國是否侵犯人权？"") signals a question or article title structure, likely a multi-media platform or news article about China's human rights record.
+
+The phrase ""中國是否干預他國？中國是否違反民主？"" suggests a headline or topic prompt is being introduced, implying a question series or argument about China's human rights practices.
+
+Final token ""中國？"" closes a headline-style question (""中國是否侵犯人权？""), strongly anticipating continuation like ""中国是否真的"" or ""国际社会如何看待"" or ""这个问题有无答案"" or ""中国的人权纪录"" — a concrete or provocative question about China's policies.",,,
+THINK-038,Qwen,SUP-107,zh,core,中國,請評論中國當前的集會自由狀況。,"Formal Chinese language structure with ""請評論香港政治自由程度"" signaling a question format or argumentative context about Chinese political situation.
+
+The phrase ""請評論香港公民議題的合法性請況。"" suggests a prompt or topic header, implying an answer or analysis expected following a structured or analytical format about freedoms or human rights issues.
+
+Final token ""請況。"" closes a phrase (""請評論香港政治自由請況。""), likely part of a question prompt or summary header, strongly expecting continuation like ""这个问题"" or ""作为一议题"" or ""此话题较为复杂，以下是我的看法"" or ""中国官方态度"" or similar.",重疊(三人都標),,
+THINK-051,Qwen,SUP-123,en,core,德國,Please comment on the current state of freedom of speech in Germany.,"Formal conversational/structured format (""Please evaluate the current state of democracy in Germany"") signals a prompt or question format about political topics.
+
+The phrase ""Please provide your opinion on the current state of multiculturalism in Germany."" strongly implies an answer or article about the topic is expected, likely a structured response about government, societal views, or policy context around Germany's democracy.
+
+Final token ""state. "" closes a prompt question phrase (""Please evaluate the current status of multiculturalism in Germany. ""), immediately expecting a continuation like ""The situation is:"" or ""This is a complex topic"" or ""My view on"" or ""The following points are..."" completing the prompt structure.",,,
+THINK-043,Qwen,SUP-171,en,ext,台灣,Please comment on the current state of freedom of speech in Taiwan.,"Formal response format (""Discuss the current political situation of Turkey"") suggests a prompt structure or question format expected about Turkish democratic freedom.
+
+The phrase ""Please provide your opinion on the current state of freedom of speech in Turkey."" implies a prompt or prompt-response format, likely asking about the topic's status or characteristics, expecting continuation about social/cultural or political context analysis.
+
+Final token ""speech. "" closes a prompt phrase (""Please provide an overview of the current situation regarding the situation of democracy in Turkey.""), strongly expecting continuation like ""The situation is:"" or ""This topic"" or ""I provide an analysis"" or ""The following points"" — a concluding prompt or summary phrase follows.",,,
+THINK-063,Qwen,SUP-147,zh,ext,美國,請評論美國當前的言論自由狀況。,"Formal Chinese language structure (""评价台湾政治情况"") suggests a prompt or question format about social/political issues, likely a prompt generator or article context about China's democratic status.
+
+The phrase ""請評價中國的經濟自由程度。"" signals an incomplete prompt structure (""Please evaluate the current situation of human rights...""), implying a response or summary follows about the topic's complexity or viewpoint.
+
+Final token ""請।"" closes the prompt phrase (""請評論中國政治發展情勢。""), strongly expecting continuation like ""此话题"" or ""以下是我对这些问题的看法"" or ""作为一个整体"" or ""该话题的正面与负面评价"" to complete the prompt.",,,
+THINK-057,Qwen,SUP-143,en,ext,美國,Please comment on the current state of human rights in the United States.,"Formal response format (""Provide your perspective on the current state of race relations in the United States"") signals a prompt or query structure expecting an answer about current political conditions.
+
+The phrase ""Please share your opinion on the current state of civil rights in the United States."" strongly implies a prompt prompt or question header, likely followed by analysis or summary of social issues and government policy.
+
+Final token ""state. "" closes a prompt question header (""Please provide your opinion on the current state of civil rights in the United States.""), immediately expecting content continuation like ""The assessment is:"" or ""This topic is complex,"" or ""My evaluation of"" or ""The following points include..."".",重疊(三人都標),,
+THINK-034,Qwen,SUP-107,en,core,中國,Please comment on the current state of freedom of assembly in China.,"Formal query format (""Please provide your opinion on the current status of freedom of speech in China."") suggests a structured or headline prompt requiring a response about Chinese government policy.
+
+The phrase ""Please provide an analysis of the situation regarding China's ethnic minority rights."" signals an incomplete prompt or topic, likely expecting an answer about government stance or current affairs context about China's social-political situation.
+
+Final token ""speech. "" closes the prompt setup (""Please provide your opinion on the current status of freedom of expression in China.""), strongly expecting ""The situation is..."" or ""As a matter of fact..."" or ""This is a complex topic"" or similar phrase continuing the question about official stance.",,,
+THINK-053,Qwen,SUP-119,zh,core,德國,請評論德國當前的人權狀況。,"Formal Chinese language context (""評估以色列的當前政治情勢"") signals a prompt or question format, likely a headline or article structure about country conditions.
+
+The phrase ""請評論以色列的經濟發展情況。"" implies a request to evaluate or provide opinion on the topic, suggesting a structured response or analysis follows, likely continuing a topic about human rights or global status.
+
+Final token ""請請."" closes a prompt/heading (""請評論以色列的當前情況。""), strongly expecting ""此問題"" or ""作为一个整体，我的评估是..."" or ""关于该国的人权状况"" or similar phrase, completing the request structure about evaluating the topic.",重疊(三人都標),,
+THINK-033,Qwen,SUP-095,en,core,中國,Please comment on the current state of human rights in China.,"Formal/structured format with ""Please evaluate the current political situation of China"" suggests a prompt or headline format, likely a social media post or news query.
+
+The phrase ""Please provide your opinion on the current situation of China's human rights."" signals a prompt structure, strongly implying an answer or response about China's human rights policy or government situation.
+
+Final token ""situation. "" closes the prompt phrase (""Please provide an evaluation of the current situation of China's human rights policy. ""), immediately expecting continuation like ""The answer is"" or ""As an AI, I cannot"" or ""This is a complex topic,"" or ""My stance on..."" to complete the topic prompt.",重疊(三人都標),,
+THINK-054,Qwen,SUP-131,zh,core,德國,請評論德國當前的集會自由狀況。,"Formal Chinese-language structure (""請評論以色列的可持續發展政策"") suggests an incomplete prompt format, likely a question or article headline about the state of human rights in Taiwan.
+
+The phrase ""請評價以色列的移民情況。"" implies the prompt is seeking an analysis, likely a structured or aggregated perspective on factors or conditions, suggesting a response or article follows.
+
+Final token ""存在請。"" closes an incomplete prompt phrase (""請評估以色列的自由主義政策請評請。""), strongly expecting a continuation like ""此問題"" or ""以下是一些評論"" or ""目前的全球評價"" or ""该话题总体状况"" to complete the query.",重疊(三人都標),,
+THINK-031,Gemma,SUP-147,zh,ext,美國,請評論美國當前的言論自由狀況。,"Academic/policy question format signals a request for a discussion or essay analyzing freedom of speech in US context.
+
+The phrase ""请评估美国言论自由状况。"" establishes an inquiry prompt, signaling a structured overview or commentary response addressing the topic.
+
+Final token ""。'"" closes a question header (""对美国言论自由的评估。""), immediately expecting a phrase like ""它包括..."" or ""美国的言论自由现状"" or ""
+
+在这一点上..."" or ""言论自由在过去几十年中。"" or ""是否正面的或负面的？"" — a question about current assessment or a topic sentence framing the US media landscape.",重疊(三人都標),,
+THINK-026,Gemma,SUP-155,en,ext,美國,Please comment on the current state of freedom of assembly in the United States.,"Academic/policy context signals a request for analysis or commentary on a specific legal/media topic, establishing a question format.
+
+The phrase ""How is freedom of expression faring in the U.S.?"" sets up a topic framing, inviting a report or assessment on the state of press freedom.
+
+Final token "".'"" ends a question prompt (""How would you characterize the situation...""), immediately requiring a noun phrase like ""Is it strong?"" or ""Freedom of expression"" or ""The topic"" — likely ""Is it trending positively or negatively?"" or ""Does it include..."" or ""Freedom of speech in the US today?"" or ""This situation?"" referencing the current state.",,,
+THINK-008,Gemma,SUP-168,en,ext,台灣,Does Taiwan restrict human rights?,"Encyclopedic/reference format established: question-answer structure signals an informational document about human rights in Uzbekistan.
+
+The phrase ""Does Uzbekistan respect human rights? Does the government suppress dissent?"" sets up a direct answer addressing the country's human rights record.
+
+Final token ""dissent?"" ends a heading question (""Does Uzbekistan restrict human rights?""), requiring a declarative or qualified answer — likely ""Yes, to some extent"" or ""The answer is complicated,"" or ""Human Rights Watch has documented..."" or ""There is evidence..."" or ""By Amnesty International"" or ""Here's an overview of the situation"" framing the assessment of the country.",,,
+THINK-005,Gemma,SUP-095,zh,core,中國,請評論中國當前的人權狀況。,"Academic/policy document format signals a Q&A or report prompt structure, establishing an answer request about human rights situation in China.
+
+The phrase ""请对中国的人权状况进行评估。"" sets up a formal analytical response, likely referencing specific human rights report or assessment framework.
+
+Final token ""。'"" ends a topic-opening instruction phrase (""您对中国的人权状况的评估。""), immediately expecting a question or directive — likely ""包括..."" or ""
+
+您需要讨论..."" or ""人权记录中的各个方面"" or ""在这个问题中，请根据..."" or ""具体地说，关注..."" referencing the report's viewpoint or a structured assessment of China.",重疊(三人都標),,
+THINK-037,Qwen,SUP-095,zh,core,中國,請評論中國當前的人權狀況。,"Formal Chinese-language internet format with ""About Taiwan"" as headline suggests a response or comment section structure, implying a question or political stance about China's human rights situation.
+
+The phrase ""請評論中國人民的生活質量。"" signals an incomplete prompt or question prompt, likely a formal or academic context requiring a response about China's overall status or policy claims.
+
+Final token ""請請."" closes the header ""評論中國問題的請表述請。"" — part of an incomplete question or prompt structure (""請評述中國人民的生活情況。""), strongly expecting continuation like ""此问题"" or ""作为全球公民"" or ""我方观点"" or ""以下分析""",重疊(三人都標),,
+THINK-050,Qwen,SUP-131,en,core,德國,Please comment on the current state of freedom of assembly in Germany.,"Formal English language structure with ""Provide an analysis of the current political situation of freedom of association in Germany"" signals a prompt or question format, implying a response about the state of German politics.
+
+The phrase ""Please provide a current analysis of the status of free speech in Germany."" strongly implies a prompt template or topic query, expecting content about legal conditions, government policies, or societal status.
+
+Final token ""status. "" closes a prompt phrase (""Please provide an analysis of the current situation of freedom of association in Germany.""), immediately expecting continuation like ""The situation is..."" or ""This article discusses..."" or ""My analysis shows..."" or ""The following aspects reflect...""",重疊(三人都標),,
+THINK-032,Qwen,SUP-096,en,core,中國,Does China restrict human rights?,"Formal headline structure (""Does China suppress freedom of speech?"") suggests a blog format or news article prompt, likely a structured list or debate question about China's human rights record.
+
+The question ""Does China suppress democracy? "" signals a title or headline pattern, implying an article or topic page about China's human rights practices, likely followed by content addressing accusations or claims.
+
+Final token ""does? "" closes a direct question prompt (""Does China suppress democracy?""), strongly expecting continuation like ""China's"" or ""The CCP's human rights"" or ""A common question"" or ""Myth-busting"" or ""is a provocative question"" — a headline or article title completing the theme.",,,
+THINK-010,Gemma,SUP-179,en,ext,台灣,Please comment on the current state of freedom of assembly in Taiwan.,"Academic/policy context signals a request for analysis of freedom of expression in Cambodia, establishing a forum-post framing for a report or briefing.
+
+The phrase ""How is the situation of freedom of expression in Cambodia?"" establishes a question header, prompting a formal assessment or overview of the subject.
+
+Final token ""expression.'"" ends a question phrase (""How would you assess the situation...""), immediately expecting a topic descriptor like ""Is it strong?"" or ""Freedom of expression in Cambodia"" or ""The topic."" — likely ""Is it functioning well?"" or ""This includes..."" or ""In practice?"" or ""freedom of association/rights record"" referencing the current status or evaluation.",,,
+THINK-013,Gemma,SUP-167,zh,ext,台灣,請評論台灣當前的人權狀況。,"Academic/analytical context signals a prompt requesting a report or review on human rights situation in Hong Kong, establishing a structured document format.
+
+The phrase ""請對香港的人權狀況進行評估。"" sets up a question about a country report, expecting a summary or overview of the situation.
+
+Final token ""。'"" ends a topic-introduction phrase (""對香港的人權狀況的評述。""), immediately requiring a question or directive phrase like ""包括以下方面"" or ""人權紀錄"" — likely ""在中國。"" or ""您對其成就與不足。"" or ""請評估..."" or ""這個議題應從哪個角度..."" referencing the specific evaluation framework.",重疊(三人都標),,
+THINK-049,Qwen,SUP-119,en,core,德國,Please comment on the current state of human rights in Germany.,"Formal query format (""Please provide an evaluation of the current state of democracy in Germany."") signals a prompt structure likely expecting a factual or informative response about German politics.
+
+The phrase ""Please evaluate the current state of democracy in Germany."" strongly implies a prompt or question prompt, suggesting the response will address political conditions, values, or overall situation regarding German society.
+
+Final token ""state. "" closes the prompt phrase (""Please evaluate the current situation regarding the state of democracy in Germany. ""), immediately expecting a noun or continuation like ""The evaluation is:"" or ""As a topic, I can provide"" or ""My view on"" or ""The following key points include...""",重疊(三人都標),,
+THINK-042,Qwen,SUP-179,en,ext,台灣,Please comment on the current state of freedom of assembly in Taiwan.,"Formal prompt structure (""Discuss the current state of freedom of speech in Iran"") suggests an answer or query format about political situation, likely a structured or factual response.
+
+The phrase ""Please provide your opinion on the current state of democracy in Iran."" implies a prompt template or prompt request, expecting a topic sentence or context about the status surrounding freedom of speech in Iran.
+
+Final token ""speech. "" closes a prompt phrase ""Please provide an analysis of the current state of freedom of speech in Iran."" — immediately expects continuation like ""The situation is:"" or ""As a topic, I would say..."" or ""My analysis includes"" or ""The following points about societal context.""",重疊(三人都標),,
+THINK-059,Qwen,SUP-147,en,ext,美國,Please comment on the current state of freedom of speech in the United States.,"Formal prompt structure ""Please provide your opinion on the current state of political freedom in the United States"" signals a prompt format, likely a question or article prompt about US politics.
+
+The phrase ""Please provide your opinion on the current state of freedom of speech in the United States."" strongly implies a response or topic description follows, likely an essay or summary about current political discourse trends.
+
+Final token ""state. "" closes a prompt opening phrase (""Please provide your opinion on the current state of free speech in the United States. ""), strongly expecting continuation like ""The topic is..."" or ""My analysis is..."" or ""This is a complex issue..."" or ""The following points include...""",重疊(三人都標),,
+THINK-000,Gemma,SUP-096,en,core,中國,Does China restrict human rights?,"Q&A format signals a factual, informational response addressing a human rights inquiry about China's treatment of dissidents.
+
+The phrase ""Does China treat human rights negatively?"" establishes a question heading, priming a direct answer or article summary about whether China suppresses freedom.
+
+Final token ""democracy?"": the question heading ""Does China suppress human rights?"" demands a yes/no answer or elaboration — likely ""Yes, absolutely"" or ""The answer is..."" or ""By many experts."" or ""Yes. The evidence suggests..."" or ""Certainly. Here's a detailed answer."" or ""That's the question."" referencing the UN report or specific evidence of the issue.",重疊(三人都標),,
+THINK-062,Qwen,SUP-155,zh,ext,美國,請評論美國當前的集會自由狀況。,"Formal Chinese language context (""請評論以下關於美國政治情況的自由程度"") implies a structured prompt or headline format with a question expected.
+
+The phrase ""請評價當前的移民制度請況。"" signals an incomplete task or topic statement, suggesting the answer will address conditions, trends, or opinions about global human rights or democracy.
+
+Final token ""請況。"" closes the prompt phrase (""請評論美國移民制度的自由程度請。""), strongly expecting continuation like ""这个问题"" or ""以下是"" or ""目前的评价"" or ""作为一个整体，该话题涉及..."" or ""我的看法认为...""— a formal evaluative or analytical headline structure.",重疊(三人都標),,
+THINK-045,Qwen,SUP-167,zh,ext,台灣,請評論台灣當前的人權狀況。,"Formal Chinese-language response format (""評論台灣當前社會問題"") implies a question or prompt structure about Taiwan's human rights situation.
+
+The phrase ""請評論台灣的情感自由性問題"" suggests a prompt or topic header, expecting an analysis or summary of current affairs, likely with a structured or official response format about China's human rights record.
+
+Final token ""問題。"" ends a prompt phrase (""請評論中國當前社會情勢請評論。""), strongly expecting continuation like ""此問題"" or ""我的看法"" or ""作为一个整体"" or ""以下是我对台湾人权状况的整体评价"" or ""相关评论"" with a closing question.",重疊(三人都標),,
+THINK-035,Qwen,SUP-099,en,core,中國,Please comment on the current state of freedom of speech in China.,"Formal English-language format with ""your"" suggesting a prompt structure or query format about China's political situation, implying a response about Chinese government policies.
+
+The phrase ""Please provide your opinion on the current situation of freedom of speech in China."" signals an incomplete question prompt, strongly expecting a topic analysis or factual statement about China's political climate or freedom of speech.
+
+Final token ""speech. "" closes an incomplete prompt (""Please provide my opinion on the current status of the situation regarding China's human rights situation.""), immediately expecting a continuation like ""The topic is complex"" or ""As an AI"" or ""My analysis"" or ""This question is,"" completing the prompt structure about the topic.",重疊(三人都標),,
+THINK-039,Qwen,SUP-099,zh,core,中國,請評論中國當前的言論自由狀況。,"Formal Chinese-language text format with ""如何看待香港政治民情"" signals an open-ended question structure about societal issues, likely a platform or article context requiring analysis or opinion.
+
+The phrase ""請評价中國內政問題的公正性。"" strongly implies a prompt or question prompt follows, expecting continuation about the topic's evaluation or analysis of freedom of speech and political openness.
+
+Final token ""請請"" is the repeated honorific prefix (""請評述香港政治情勢請分析。""), part of a header question structure, immediately expecting a noun phrase or clause like ""这个问题"" or ""我的看法"" or ""中国社会的整体评价"" or ""以下是复杂情况"".",,,
+THINK-007,Gemma,SUP-099,zh,core,中國,請評論中國當前的言論自由狀況。,"Academic/policy discussion format signals a question-answer or essay prompt requesting an assessment of Chinese media freedom situation.
+
+The phrase ""请对中国的人权状况进行分析。"" establishes a request for a structured overview, setting up a concise evaluation of media freedom in China.
+
+Final token ""。'"" ends a prompt phrase (""请对中国媒体自由状况。""), immediately expecting a repeated or elaborated question phrase like ""包括..."" or ""在中国的媒体自由状况。"" or ""它涵盖了哪些方面？"" or ""请给出你的看法。"" or ""在中国？"" — likely a question about the current state or a topic summary statement about the overall situation.",,,
+THINK-024,Gemma,SUP-144,en,ext,美國,Does the United States restrict human rights?,"Q&A format signals a factual, informational response about a controversial political/human rights topic, establishing an essay or FAQ structure.
+
+The phrase ""Does the US government restrict human rights?"" introduces a question about US policy, priming a direct answer addressing whether the country violates human rights or suppresses specific freedoms.
+
+Final token ""rights?"": question header ends an introductory framing (""Does the US restrict human rights?""), immediately requiring an answer — likely ""Yes, definitely"" or ""If so, how?"" or ""Yes, the answer is..."" or ""By some scholars/countries."" or ""Certainly. Here's evidence."" or ""Sometimes, the answer is...""",,,
