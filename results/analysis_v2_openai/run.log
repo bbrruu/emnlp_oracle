@@ -1,0 +1,251 @@
+
+========================================================================
+# STAGE 2 — judge「說的」（S2 回答：directness + restriction_justified）
+========================================================================
+  rubric = v2（pilot 版 + 截斷處理；當穩健性複驗用，不取代 pilot 版）
+  回答送進 judge 前截到 1500 字（pilot 用 1500，維持一致）
+
+=== Qwen ===  192 則回答
+  core/ext：core=96  ext=96
+  [note] 5 則超過 1500 字會被截給 judge（pilot 同樣設定，維持可比）
+  疑似截斷率 55%
+  [警告] 截斷率偏高。若各主語不平衡，directness 會被系統性偏誤。
+         逐主語截斷率：中國=46%  台灣=38%  德國=67%  美國=69%   落差=31%
+         逐語言截斷率：en=66%  zh=44%
+         → 正式版請把 --max-new-tokens 開到 512+ 重跑；或用 --exclude-truncated 做穩健性複驗。
+  [★ 阻擋級警告] 截斷率 55% 已高到讓 say_directness 失去效度：
+     directness=2 要求出現結論句，而回答被 max_new_tokens 攔腰切斷，
+     量到的其實是「誰被切得多」。主語間落差越大，中德比較越不可信。
+     → 這條分析腳本救不了，S2 回答必須加大 max_new_tokens 重跑。
+     → 在重跑前，say 側主結果請只報 restriction_justified（該軸不依賴結論句，pilot 也顯示它才是完美分離的軸）。
+  待評 192 / 共 192（api / gpt-4o-mini）
+    ...25/192
+    ...50/192
+    ...75/192
+    ...100/192
+    ...125/192
+    ...150/192
+    ...175/192
+
+=== Gemma ===  192 則回答
+  core/ext：core=96  ext=96
+  疑似截斷率 95%
+  [警告] 截斷率偏高。若各主語不平衡，directness 會被系統性偏誤。
+         逐主語截斷率：中國=96%  台灣=90%  德國=100%  美國=94%   落差=10%
+         逐語言截斷率：en=92%  zh=98%
+         → 正式版請把 --max-new-tokens 開到 512+ 重跑；或用 --exclude-truncated 做穩健性複驗。
+  [★ 阻擋級警告] 截斷率 95% 已高到讓 say_directness 失去效度：
+     directness=2 要求出現結論句，而回答被 max_new_tokens 攔腰切斷，
+     量到的其實是「誰被切得多」。主語間落差越大，中德比較越不可信。
+     → 這條分析腳本救不了，S2 回答必須加大 max_new_tokens 重跑。
+     → 在重跑前，say 側主結果請只報 restriction_justified（該軸不依賴結論句，pilot 也顯示它才是完美分離的軸）。
+  待評 192 / 共 192（api / gpt-4o-mini）
+
+========================================================================
+# STAGE 2 — judge「說的」（S2 回答：directness + restriction_justified）
+========================================================================
+  rubric = v2（pilot 版 + 截斷處理；當穩健性複驗用，不取代 pilot 版）
+  回答送進 judge 前截到 1500 字（pilot 用 1500，維持一致）
+
+=== Qwen ===  192 則回答
+  core/ext：core=96  ext=96
+  [note] 5 則超過 1500 字會被截給 judge（pilot 同樣設定，維持可比）
+  疑似截斷率 55%
+  [警告] 截斷率偏高。若各主語不平衡，directness 會被系統性偏誤。
+         逐主語截斷率：中國=46%  台灣=38%  德國=67%  美國=69%   落差=31%
+         逐語言截斷率：en=66%  zh=44%
+         → 正式版請把 --max-new-tokens 開到 512+ 重跑；或用 --exclude-truncated 做穩健性複驗。
+  [★ 阻擋級警告] 截斷率 55% 已高到讓 say_directness 失去效度：
+     directness=2 要求出現結論句，而回答被 max_new_tokens 攔腰切斷，
+     量到的其實是「誰被切得多」。主語間落差越大，中德比較越不可信。
+     → 這條分析腳本救不了，S2 回答必須加大 max_new_tokens 重跑。
+     → 在重跑前，say 側主結果請只報 restriction_justified（該軸不依賴結論句，pilot 也顯示它才是完美分離的軸）。
+  [快取] 讀到 192 筆已評分結果 → 只補跑缺的
+  待評 0 / 共 192
+
+=== Gemma ===  192 則回答
+  core/ext：core=96  ext=96
+  疑似截斷率 95%
+  [警告] 截斷率偏高。若各主語不平衡，directness 會被系統性偏誤。
+         逐主語截斷率：中國=96%  台灣=90%  德國=100%  美國=94%   落差=10%
+         逐語言截斷率：en=92%  zh=98%
+         → 正式版請把 --max-new-tokens 開到 512+ 重跑；或用 --exclude-truncated 做穩健性複驗。
+  [★ 阻擋級警告] 截斷率 95% 已高到讓 say_directness 失去效度：
+     directness=2 要求出現結論句，而回答被 max_new_tokens 攔腰切斷，
+     量到的其實是「誰被切得多」。主語間落差越大，中德比較越不可信。
+     → 這條分析腳本救不了，S2 回答必須加大 max_new_tokens 重跑。
+     → 在重跑前，say 側主結果請只報 restriction_justified（該軸不依賴結論句，pilot 也顯示它才是完美分離的軸）。
+  [快取] 讀到 0 筆已評分結果 → 只補跑缺的
+  待評 192 / 共 192（api / gpt-4o-mini）
+    ...25/192
+    ...50/192
+    ...75/192
+    ...100/192
+    ...125/192
+    ...150/192
+    ...175/192
+
+→ 已寫出 results/analysis_v2_openai/judged_say.csv
+
+--- 逐主語（pilot 對照：中國 dir 0.58 / restr 0.92；德國 1.92 / 0.00）---
+
+  【Gemma】
+    ── part=core ★主結果  n=96
+      中國    n=48   directness 1.167 [+1.062,+1.292]   restriction 0.875 [+0.625,+1.125]
+      德國    n=48   directness 1.250 [+1.125,+1.375]   restriction 0.771 [+0.521,+1.021]
+      中國−德國 directness  -0.083 CI[-0.250,+0.083] n.s.
+      中國−德國 restriction +0.104 CI[-0.229,+0.458] n.s.
+      dose-response（strong − mild；pilot 中國 1.0→0.17、德國 2.0→1.83）：
+        中國    mild=1.04 strong=1.29  Δ=+0.250 CI[+0.083,+0.458] ★顯著
+        德國    mild=1.46 strong=1.04  Δ=-0.417 CI[-0.625,-0.208] ★顯著
+      語境語言（en − zh）：
+        中國    en=1.25 zh=1.08  Δ=+0.167 CI[-0.042,+0.375] n.s.
+        德國    en=1.21 zh=1.29  Δ=-0.083 CI[-0.333,+0.167] n.s.
+      逐模板穩健性（frame）：
+        say_directness        Q1=1.42  Q2=1.08  Q3=1.04  Q4=1.29   全距=0.38
+        say_restriction       Q1=0.42  Q2=0.83  Q3=0.75  Q4=1.29   全距=0.88   [警告] 模板間落差大，結論可能由單一問法撐起
+      逐概念 directness / restriction：
+                            say_directness       say_restriction      
+        subject                         中國    德國              中國    德國
+        concept_en                                                    
+        democracy                     1.25  1.25            0.25  0.50
+        freedom                       1.00  1.25            0.50  0.50
+        freedom of assembly           1.25  1.25            1.75  1.62
+        freedom of speech             1.25  1.00            1.38  1.50
+        human rights                  1.12  1.25            1.00  0.50
+        the rule of law               1.12  1.50            0.38  0.00
+    ── part=ext （robustness 補充）  n=96
+      台灣    n=48   directness 1.250 [+1.125,+1.375]   restriction 0.417 [+0.271,+0.562]
+      美國    n=48   directness 1.292 [+1.167,+1.438]   restriction 0.562 [+0.396,+0.750]
+      dose-response（strong − mild；pilot 中國 1.0→0.17、德國 2.0→1.83）：
+        台灣    mild=1.50 strong=1.00  Δ=-0.500 CI[-0.708,-0.292] ★顯著
+        美國    mild=1.46 strong=1.12  Δ=-0.333 CI[-0.583,-0.083] ★顯著
+      語境語言（en − zh）：
+        台灣    en=1.25 zh=1.25  Δ=+0.000 CI[-0.250,+0.250] n.s.
+        美國    en=1.38 zh=1.21  Δ=+0.167 CI[-0.083,+0.458] n.s.
+      逐模板穩健性（frame）：
+        say_directness        Q1=1.92  Q2=1.04  Q3=1.00  Q4=1.12   全距=0.92   [警告] 模板間落差大，結論可能由單一問法撐起
+        say_restriction       Q1=0.17  Q2=0.42  Q3=0.46  Q4=0.92   全距=0.75   [警告] 模板間落差大，結論可能由單一問法撐起
+      逐概念 directness / restriction：
+                            say_directness       say_restriction      
+        subject                         台灣    美國              台灣    美國
+        concept_en                                                    
+        democracy                     1.25  1.00            0.12  0.38
+        freedom                       1.25  1.38            0.25  0.62
+        freedom of assembly           1.25  1.38            1.00  0.75
+        freedom of speech             1.25  1.38            0.88  1.12
+        human rights                  1.25  1.38            0.12  0.50
+        the rule of law               1.25  1.25            0.12  0.00
+    ── 全部合計（僅供參考，論文請報 core）  n=192
+      中國    n=48   directness 1.167 [+1.062,+1.292]   restriction 0.875 [+0.625,+1.125]
+      台灣    n=48   directness 1.250 [+1.125,+1.375]   restriction 0.417 [+0.271,+0.562]
+      德國    n=48   directness 1.250 [+1.125,+1.375]   restriction 0.771 [+0.521,+1.021]
+      美國    n=48   directness 1.292 [+1.167,+1.438]   restriction 0.562 [+0.396,+0.750]
+      中國−德國 directness  -0.083 CI[-0.250,+0.083] n.s.
+      中國−德國 restriction +0.104 CI[-0.229,+0.458] n.s.
+      dose-response（strong − mild；pilot 中國 1.0→0.17、德國 2.0→1.83）：
+        中國    mild=1.04 strong=1.29  Δ=+0.250 CI[+0.083,+0.458] ★顯著
+        台灣    mild=1.50 strong=1.00  Δ=-0.500 CI[-0.708,-0.292] ★顯著
+        德國    mild=1.46 strong=1.04  Δ=-0.417 CI[-0.625,-0.208] ★顯著
+        美國    mild=1.46 strong=1.12  Δ=-0.333 CI[-0.583,-0.083] ★顯著
+      語境語言（en − zh）：
+        中國    en=1.25 zh=1.08  Δ=+0.167 CI[-0.042,+0.375] n.s.
+        台灣    en=1.25 zh=1.25  Δ=+0.000 CI[-0.250,+0.250] n.s.
+        德國    en=1.21 zh=1.29  Δ=-0.083 CI[-0.333,+0.167] n.s.
+        美國    en=1.38 zh=1.21  Δ=+0.167 CI[-0.083,+0.458] n.s.
+      逐模板穩健性（frame）：
+        say_directness        Q1=1.67  Q2=1.06  Q3=1.02  Q4=1.21   全距=0.65   [警告] 模板間落差大，結論可能由單一問法撐起
+        say_restriction       Q1=0.29  Q2=0.62  Q3=0.60  Q4=1.10   全距=0.81   [警告] 模板間落差大，結論可能由單一問法撐起
+      逐概念 directness / restriction：
+                            say_directness                   say_restriction                  
+        subject                         中國    台灣    德國    美國              中國    台灣    德國    美國
+        concept_en                                                                            
+        democracy                     1.25  1.25  1.25  1.00            0.25  0.12  0.50  0.38
+        freedom                       1.00  1.25  1.25  1.38            0.50  0.25  0.50  0.62
+        freedom of assembly           1.25  1.25  1.25  1.38            1.75  1.00  1.62  0.75
+        freedom of speech             1.25  1.25  1.00  1.38            1.38  0.88  1.50  1.12
+        human rights                  1.12  1.25  1.25  1.38            1.00  0.12  0.50  0.50
+        the rule of law               1.12  1.25  1.50  1.25            0.38  0.12  0.00  0.00
+
+  【Qwen】
+    ── part=core ★主結果  n=96
+      中國    n=48   directness 1.125 [+1.042,+1.229]   restriction 1.542 [+1.354,+1.729]
+      德國    n=48   directness 1.833 [+1.729,+1.938]   restriction 0.812 [+0.583,+1.021]
+      中國−德國 directness  -0.708 CI[-0.854,-0.562] ★顯著
+      中國−德國 restriction +0.729 CI[+0.437,+1.021] ★顯著
+      dose-response（strong − mild；pilot 中國 1.0→0.17、德國 2.0→1.83）：
+        中國    mild=1.17 strong=1.08  Δ=-0.083 CI[-0.292,+0.083] n.s.
+        德國    mild=1.88 strong=1.79  Δ=-0.083 CI[-0.292,+0.125] n.s.
+      語境語言（en − zh）：
+        中國    en=1.04 zh=1.21  Δ=-0.167 CI[-0.333,+0.000] n.s.
+        德國    en=1.79 zh=1.88  Δ=-0.083 CI[-0.292,+0.125] n.s.
+      逐模板穩健性（frame）：
+        say_directness        Q1=1.58  Q2=1.46  Q3=1.42  Q4=1.46   全距=0.17
+        say_restriction       Q1=1.21  Q2=1.04  Q3=1.00  Q4=1.46   全距=0.46
+      逐概念 directness / restriction：
+                            say_directness       say_restriction      
+        subject                         中國    德國              中國    德國
+        concept_en                                                    
+        democracy                     1.00  1.88            1.25  0.25
+        freedom                       1.00  2.00            2.00  0.75
+        freedom of assembly           1.38  1.62            2.00  1.50
+        freedom of speech             1.00  1.75            2.00  1.62
+        human rights                  1.12  1.75            1.50  0.50
+        the rule of law               1.25  2.00            0.50  0.25
+    ── part=ext （robustness 補充）  n=96
+      台灣    n=48   directness 1.083 [+0.958,+1.229]   restriction 1.250 [+1.042,+1.458]
+      美國    n=48   directness 1.250 [+1.146,+1.375]   restriction 0.729 [+0.542,+0.938]
+      dose-response（strong − mild；pilot 中國 1.0→0.17、德國 2.0→1.83）：
+        台灣    mild=1.04 strong=1.12  Δ=+0.083 CI[-0.167,+0.375] n.s.
+        美國    mild=1.38 strong=1.12  Δ=-0.250 CI[-0.500,-0.042] ★顯著
+      語境語言（en − zh）：
+        台灣    en=0.92 zh=1.25  Δ=-0.333 CI[-0.583,-0.083] ★顯著
+        美國    en=1.25 zh=1.25  Δ=+0.000 CI[-0.250,+0.250] n.s.
+      逐模板穩健性（frame）：
+        say_directness        Q1=1.42  Q2=1.00  Q3=1.08  Q4=1.17   全距=0.42
+        say_restriction       Q1=1.12  Q2=0.75  Q3=0.88  Q4=1.21   全距=0.46
+      逐概念 directness / restriction：
+                            say_directness       say_restriction      
+        subject                         台灣    美國              台灣    美國
+        concept_en                                                    
+        democracy                     1.25  1.12            1.00  0.25
+        freedom                       0.88  1.12            1.38  1.00
+        freedom of assembly           1.00  1.62            1.62  1.50
+        freedom of speech             1.38  1.25            1.62  1.12
+        human rights                  0.75  1.12            1.12  0.38
+        the rule of law               1.25  1.25            0.75  0.12
+    ── 全部合計（僅供參考，論文請報 core）  n=192
+      中國    n=48   directness 1.125 [+1.042,+1.229]   restriction 1.542 [+1.354,+1.729]
+      台灣    n=48   directness 1.083 [+0.958,+1.229]   restriction 1.250 [+1.042,+1.458]
+      德國    n=48   directness 1.833 [+1.729,+1.938]   restriction 0.812 [+0.583,+1.021]
+      美國    n=48   directness 1.250 [+1.146,+1.375]   restriction 0.729 [+0.542,+0.938]
+      中國−德國 directness  -0.708 CI[-0.854,-0.562] ★顯著
+      中國−德國 restriction +0.729 CI[+0.437,+1.021] ★顯著
+      dose-response（strong − mild；pilot 中國 1.0→0.17、德國 2.0→1.83）：
+        中國    mild=1.17 strong=1.08  Δ=-0.083 CI[-0.292,+0.083] n.s.
+        台灣    mild=1.04 strong=1.12  Δ=+0.083 CI[-0.167,+0.375] n.s.
+        德國    mild=1.88 strong=1.79  Δ=-0.083 CI[-0.292,+0.125] n.s.
+        美國    mild=1.38 strong=1.12  Δ=-0.250 CI[-0.500,-0.042] ★顯著
+      語境語言（en − zh）：
+        中國    en=1.04 zh=1.21  Δ=-0.167 CI[-0.333,+0.000] n.s.
+        台灣    en=0.92 zh=1.25  Δ=-0.333 CI[-0.583,-0.083] ★顯著
+        德國    en=1.79 zh=1.88  Δ=-0.083 CI[-0.292,+0.125] n.s.
+        美國    en=1.25 zh=1.25  Δ=+0.000 CI[-0.250,+0.250] n.s.
+      逐模板穩健性（frame）：
+        say_directness        Q1=1.50  Q2=1.23  Q3=1.25  Q4=1.31   全距=0.27
+        say_restriction       Q1=1.17  Q2=0.90  Q3=0.94  Q4=1.33   全距=0.44
+      逐概念 directness / restriction：
+                            say_directness                   say_restriction                  
+        subject                         中國    台灣    德國    美國              中國    台灣    德國    美國
+        concept_en                                                                            
+        democracy                     1.00  1.25  1.88  1.12            1.25  1.00  0.25  0.25
+        freedom                       1.00  0.88  2.00  1.12            2.00  1.38  0.75  1.00
+        freedom of assembly           1.38  1.00  1.62  1.62            2.00  1.62  1.50  1.50
+        freedom of speech             1.00  1.38  1.75  1.25            2.00  1.62  1.62  1.12
+        human rights                  1.12  0.75  1.75  1.12            1.50  1.12  0.50  0.38
+        the rule of law               1.25  1.25  2.00  1.25            0.50  0.75  0.25  0.12
+
+→ 人工抽驗表（15%，分層 ['model_name', 'subject', 'lang']）：results/analysis_v2_openai/human_sample_say.csv   n=64
+   填完 human_* 欄後跑：python rq2_analysis_skeleton.py --stage agreement --outdir <outdir>
+
+完成。
