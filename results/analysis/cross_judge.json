@@ -20,43 +20,81 @@
     }
   },
   "judged_say.csv__conclusion": {
-    "say_directness": {
+    "Gemma|say_directness": {
       "A": {
-        "diff": -0.406,
+        "diff": 0.25,
         "ci": [
-          -0.636,
-          -0.167
+          -0.104,
+          0.604
         ],
-        "significant": true
+        "significant": false
       },
       "B": {
-        "diff": -0.635,
+        "diff": -0.625,
         "ci": [
-          -0.802,
-          -0.468
+          -0.875,
+          -0.354
         ],
         "significant": true
       },
-      "agree": true
+      "verdict": "disagree"
     },
-    "say_restriction": {
+    "Gemma|say_restriction": {
       "A": {
-        "diff": 0.24,
+        "diff": -0.292,
         "ci": [
-          0.01,
-          0.458
+          -0.479,
+          -0.104
         ],
         "significant": true
       },
       "B": {
-        "diff": 0.302,
+        "diff": -0.042,
         "ci": [
-          0.062,
-          0.542
+          -0.417,
+          0.333
+        ],
+        "significant": false
+      },
+      "verdict": "disagree"
+    },
+    "Qwen|say_directness": {
+      "A": {
+        "diff": -1.062,
+        "ci": [
+          -1.312,
+          -0.771
         ],
         "significant": true
       },
-      "agree": true
+      "B": {
+        "diff": -0.646,
+        "ci": [
+          -0.792,
+          -0.479
+        ],
+        "significant": true
+      },
+      "verdict": "agree_effect"
+    },
+    "Qwen|say_restriction": {
+      "A": {
+        "diff": 0.771,
+        "ci": [
+          0.438,
+          1.104
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": 0.646,
+        "ci": [
+          0.354,
+          0.937
+        ],
+        "significant": true
+      },
+      "verdict": "agree_effect"
     }
   },
   "judged_think.csv": {
@@ -80,43 +118,81 @@
     }
   },
   "judged_think.csv__conclusion": {
-    "think_content": {
+    "Gemma|think_content": {
       "A": {
-        "diff": 0.365,
+        "diff": 0.375,
         "ci": [
-          0.208,
-          0.531
+          0.167,
+          0.583
         ],
         "significant": true
       },
       "B": {
-        "diff": 0.177,
+        "diff": 0.083,
         "ci": [
-          0.062,
-          0.302
+          -0.083,
+          0.25
         ],
-        "significant": true
+        "significant": false
       },
-      "agree": true
+      "verdict": "disagree"
     },
-    "think_official_frame": {
+    "Gemma|think_official_frame": {
       "A": {
-        "diff": 0.042,
+        "diff": 0.062,
         "ci": [
           0.0,
-          0.094
+          0.146
         ],
         "significant": false
       },
       "B": {
-        "diff": 0.333,
+        "diff": 0.167,
         "ci": [
-          0.208,
-          0.469
+          -0.021,
+          0.354
+        ],
+        "significant": false
+      },
+      "verdict": "agree_null"
+    },
+    "Qwen|think_content": {
+      "A": {
+        "diff": 0.354,
+        "ci": [
+          0.187,
+          0.542
         ],
         "significant": true
       },
-      "agree": false
+      "B": {
+        "diff": 0.271,
+        "ci": [
+          0.104,
+          0.437
+        ],
+        "significant": true
+      },
+      "verdict": "agree_effect"
+    },
+    "Qwen|think_official_frame": {
+      "A": {
+        "diff": 0.021,
+        "ci": [
+          -0.042,
+          0.104
+        ],
+        "significant": false
+      },
+      "B": {
+        "diff": 0.5,
+        "ci": [
+          0.354,
+          0.667
+        ],
+        "significant": true
+      },
+      "verdict": "disagree"
     }
   },
   "judged_frame.csv": {

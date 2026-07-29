@@ -2318,29 +2318,45 @@ def stage_cross_judge(outdir: Path, other: Path) -> dict:
                 f"ρ {r[ax]['spearman']:.3f}   均值 A={r[ax]['mean_A']:.2f} B={r[ax]['mean_B']:.2f}")
         res[fname] = r
 
-        # L2 ★ 結論一致度：兩個 judge 下的中德不對稱是否同號同顯著
+        # L2 ★ 結論一致度：兩個 judge 下的中德不對稱是否得到同一個結論
+        #
+        # ⚠ 兩個坑，都踩過：
+        #  (a) 判定不能只寫 `A.significant == B.significant` —— 兩邊【都不顯著】時
+        #      那個等式也成立，會被標成「✅ 結論不依賴 judge」，讀者誤以為有效果。
+        #      要分三種：都顯著同號 / 都不顯著 / 其餘（真正的分歧）。
+        #  (b) 必須【逐模型】算。混在一起會把 Qwen 與 Gemma 方向相反的效果互相抵消，
+        #      得到一個誰也不對應的平均數，跟主結果對不上。
         if "subject" in A.columns and "subject" in B.columns:
-            log("    ★ 結論一致度（中國−德國，兩個 judge 各自算）：")
-            ms = A[key + ["subject"]].merge(B[key], on=key)
-            for ax in axes:
-                row = {}
-                for tag, D in (("A", A), ("B", B)):
-                    t = D[D["subject"] == SUBJ_TARGET][ax].dropna()
-                    c = D[D["subject"] == SUBJ_CONTROL][ax].dropna()
-                    if not len(t) or not len(c):
+            models = sorted(set(A["model_name"].dropna()) & set(B["model_name"].dropna())) \
+                if "model_name" in A.columns else [None]
+            log("    ★ 結論一致度（中國−德國，逐模型，兩個 judge 各自算）：")
+            for mdl in models:
+                for ax in axes:
+                    row = {}
+                    for tag, D in (("A", A), ("B", B)):
+                        S = D if mdl is None else D[D["model_name"] == mdl]
+                        t = S[S["subject"] == SUBJ_TARGET][ax].dropna()
+                        c = S[S["subject"] == SUBJ_CONTROL][ax].dropna()
+                        if len(t) < 3 or len(c) < 3:
+                            continue
+                        _, _, dd, lo, hi, sig = boot_diff(t, c)
+                        row[tag] = {"diff": round(dd, 3), "ci": [round(lo, 3), round(hi, 3)],
+                                    "significant": bool(sig)}
+                    if len(row) != 2:
                         continue
-                    _, _, dd, lo, hi, sig = boot_diff(t, c)
-                    row[tag] = {"diff": round(dd, 3), "ci": [round(lo, 3), round(hi, 3)],
-                                "significant": sig}
-                if len(row) == 2:
-                    same = (np.sign(row["A"]["diff"]) == np.sign(row["B"]["diff"])
-                            and row["A"]["significant"] == row["B"]["significant"])
-                    res.setdefault(fname + "__conclusion", {})[ax] = {**row, "agree": bool(same)}
-                    log(f"      {ax:<22} A={row['A']['diff']:+.3f}"
-                        f"{'★' if row['A']['significant'] else ' '}  "
-                        f"B={row['B']['diff']:+.3f}{'★' if row['B']['significant'] else ' '}   "
-                        + ("✅ 同號同顯著 → 結論不依賴 judge"
-                           if same else "⚠️ 兩個 judge 結論不同 → 這條不能寫進論文"))
+                    sa, sb = row["A"]["significant"], row["B"]["significant"]
+                    same_sign = np.sign(row["A"]["diff"]) == np.sign(row["B"]["diff"])
+                    if sa and sb and same_sign:
+                        verdict, note = "agree_effect", "✅ 都顯著且同號 → 可寫進論文"
+                    elif not sa and not sb:
+                        verdict, note = "agree_null", "➖ 兩邊都不顯著 → 一致，但這是『沒有效果』"
+                    else:
+                        verdict, note = "disagree", "⚠️ 兩個 judge 結論不同 → 不能寫進論文"
+                    res.setdefault(fname + "__conclusion", {})[f"{mdl}|{ax}"] = {
+                        **row, "verdict": verdict}
+                    log(f"      {str(mdl):<6} {ax:<22} "
+                        f"A={row['A']['diff']:+.3f}{'★' if sa else ' '}  "
+                        f"B={row['B']['diff']:+.3f}{'★' if sb else ' '}   {note}")
 
     if res:
         (outdir / "cross_judge.json").write_text(
