@@ -1,0 +1,218 @@
+{
+  "judged_say.csv": {
+    "say_directness": {
+      "n": 384,
+      "exact": 0.747,
+      "within1": 0.982,
+      "kappa_w": 0.505,
+      "spearman": 0.577,
+      "mean_A": 1.625,
+      "mean_B": 1.542
+    },
+    "say_restriction": {
+      "n": 384,
+      "exact": 0.755,
+      "within1": 0.987,
+      "kappa_w": 0.666,
+      "spearman": 0.778,
+      "mean_A": 0.464,
+      "mean_B": 0.674
+    }
+  },
+  "judged_say.csv__conclusion": {
+    "Gemma|say_directness": {
+      "A": {
+        "diff": 0.354,
+        "ci": [
+          0.208,
+          0.521
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": 0.104,
+        "ci": [
+          -0.167,
+          0.333
+        ],
+        "significant": false
+      },
+      "verdict": "disagree"
+    },
+    "Gemma|say_restriction": {
+      "A": {
+        "diff": -0.583,
+        "ci": [
+          -0.792,
+          -0.396
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": -0.854,
+        "ci": [
+          -1.104,
+          -0.583
+        ],
+        "significant": true
+      },
+      "verdict": "agree_effect"
+    },
+    "Qwen|say_directness": {
+      "A": {
+        "diff": -0.521,
+        "ci": [
+          -0.75,
+          -0.292
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": -0.396,
+        "ci": [
+          -0.583,
+          -0.208
+        ],
+        "significant": true
+      },
+      "verdict": "agree_effect"
+    },
+    "Qwen|say_restriction": {
+      "A": {
+        "diff": 0.625,
+        "ci": [
+          0.292,
+          0.958
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": 0.521,
+        "ci": [
+          0.208,
+          0.854
+        ],
+        "significant": true
+      },
+      "verdict": "agree_effect"
+    }
+  },
+  "judged_think.csv": {
+    "think_content": {
+      "n": 384,
+      "exact": 0.539,
+      "within1": 0.995,
+      "kappa_w": 0.233,
+      "spearman": 0.411,
+      "mean_A": 0.555,
+      "mean_B": 0.958
+    },
+    "think_official_frame": {
+      "n": 384,
+      "exact": 0.729,
+      "within1": 1.0,
+      "kappa_w": 0.097,
+      "spearman": 0.184,
+      "mean_A": 0.031,
+      "mean_B": 0.286
+    }
+  },
+  "judged_think.csv__conclusion": {
+    "Gemma|think_content": {
+      "A": {
+        "diff": 0.375,
+        "ci": [
+          0.167,
+          0.583
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": 0.083,
+        "ci": [
+          -0.083,
+          0.25
+        ],
+        "significant": false
+      },
+      "verdict": "disagree"
+    },
+    "Gemma|think_official_frame": {
+      "A": {
+        "diff": 0.062,
+        "ci": [
+          0.0,
+          0.146
+        ],
+        "significant": false
+      },
+      "B": {
+        "diff": 0.167,
+        "ci": [
+          -0.021,
+          0.354
+        ],
+        "significant": false
+      },
+      "verdict": "agree_null"
+    },
+    "Qwen|think_content": {
+      "A": {
+        "diff": 0.354,
+        "ci": [
+          0.187,
+          0.542
+        ],
+        "significant": true
+      },
+      "B": {
+        "diff": 0.271,
+        "ci": [
+          0.104,
+          0.437
+        ],
+        "significant": true
+      },
+      "verdict": "agree_effect"
+    },
+    "Qwen|think_official_frame": {
+      "A": {
+        "diff": 0.021,
+        "ci": [
+          -0.042,
+          0.104
+        ],
+        "significant": false
+      },
+      "B": {
+        "diff": 0.5,
+        "ci": [
+          0.354,
+          0.667
+        ],
+        "significant": true
+      },
+      "verdict": "disagree"
+    }
+  },
+  "judged_frame.csv": {
+    "frame_official": {
+      "n": 336,
+      "exact": 0.693,
+      "within1": 0.985,
+      "kappa_w": 0.236,
+      "spearman": 0.425,
+      "mean_A": 0.077,
+      "mean_B": 0.399
+    },
+    "frame_rights": {
+      "n": 336,
+      "exact": 0.69,
+      "within1": 0.961,
+      "kappa_w": 0.522,
+      "spearman": 0.799,
+      "mean_A": 0.304,
+      "mean_B": 0.64
+    }
+  }
+}

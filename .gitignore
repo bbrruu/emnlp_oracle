@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# 系統
+.DS_Store
+
+# 憑證(絕不上傳)
+*.env
+.env
+judge.env
+secrets/
+
+# 大型中間產物(依需要解除註解)
+# activations/
+# verbalizations/

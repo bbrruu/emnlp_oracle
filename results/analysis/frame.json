@@ -1,0 +1,252 @@
+{
+  "Gemma": {
+    "concept_effect": {
+      "frame_official": {
+        "S1": 0.167,
+        "S0": 0.01,
+        "diff": 0.156,
+        "ci": [
+          0.076,
+          0.25
+        ],
+        "significant": true
+      },
+      "frame_rights": {
+        "S1": 0.778,
+        "S0": 0.0,
+        "diff": 0.778,
+        "ci": [
+          0.611,
+          0.944
+        ],
+        "significant": true
+      }
+    },
+    "concept_effect_by_control": {
+      "N_everyday|frame_official": {
+        "S1": 0.167,
+        "ctrl": 0.021,
+        "diff": 0.146,
+        "ci": [
+          0.055,
+          0.236
+        ],
+        "significant": true
+      },
+      "N_everyday|frame_rights": {
+        "S1": 0.778,
+        "ctrl": 0.0,
+        "diff": 0.778,
+        "ci": [
+          0.625,
+          0.944
+        ],
+        "significant": true
+      },
+      "N_arousing|frame_official": {
+        "S1": 0.167,
+        "ctrl": 0.0,
+        "diff": 0.167,
+        "ci": [
+          0.083,
+          0.25
+        ],
+        "significant": true
+      },
+      "N_arousing|frame_rights": {
+        "S1": 0.778,
+        "ctrl": 0.0,
+        "diff": 0.778,
+        "ci": [
+          0.625,
+          0.944
+        ],
+        "significant": true
+      }
+    },
+    "lang_trigger": {
+      "frame_official": {
+        "en": 0.083,
+        "zh": 0.25,
+        "diff": -0.167,
+        "ci": [
+          -0.333,
+          0.0
+        ],
+        "significant": false
+      },
+      "frame_rights": {
+        "en": 0.917,
+        "zh": 0.639,
+        "diff": 0.278,
+        "ci": [
+          -0.056,
+          0.611
+        ],
+        "significant": false
+      }
+    },
+    "by_template": {
+      "frame_official": {
+        "by_frame": {
+          "C1": 0.5,
+          "C2": 0.167,
+          "C3": 0.083,
+          "C4": 0.083,
+          "C5": 0.167,
+          "C6": 0.0
+        },
+        "range": 0.5
+      },
+      "frame_rights": {
+        "by_frame": {
+          "C1": 0.833,
+          "C2": 0.917,
+          "C3": 0.75,
+          "C4": 0.667,
+          "C5": 0.833,
+          "C6": 0.667
+        },
+        "range": 0.25
+      }
+    }
+  },
+  "Qwen": {
+    "concept_effect": {
+      "frame_official": {
+        "S1": 0.167,
+        "S0": 0.01,
+        "diff": 0.156,
+        "ci": [
+          0.073,
+          0.25
+        ],
+        "significant": true
+      },
+      "frame_rights": {
+        "S1": 0.639,
+        "S0": 0.0,
+        "diff": 0.639,
+        "ci": [
+          0.5,
+          0.764
+        ],
+        "significant": true
+      }
+    },
+    "concept_effect_by_control": {
+      "N_everyday|frame_official": {
+        "S1": 0.167,
+        "ctrl": 0.021,
+        "diff": 0.146,
+        "ci": [
+          0.049,
+          0.243
+        ],
+        "significant": true
+      },
+      "N_everyday|frame_rights": {
+        "S1": 0.639,
+        "ctrl": 0.0,
+        "diff": 0.639,
+        "ci": [
+          0.5,
+          0.778
+        ],
+        "significant": true
+      },
+      "N_arousing|frame_official": {
+        "S1": 0.167,
+        "ctrl": 0.0,
+        "diff": 0.167,
+        "ci": [
+          0.083,
+          0.264
+        ],
+        "significant": true
+      },
+      "N_arousing|frame_rights": {
+        "S1": 0.639,
+        "ctrl": 0.0,
+        "diff": 0.639,
+        "ci": [
+          0.5,
+          0.778
+        ],
+        "significant": true
+      }
+    },
+    "lang_trigger": {
+      "frame_official": {
+        "en": 0.139,
+        "zh": 0.194,
+        "diff": -0.056,
+        "ci": [
+          -0.222,
+          0.111
+        ],
+        "significant": false
+      },
+      "frame_rights": {
+        "en": 0.611,
+        "zh": 0.667,
+        "diff": -0.056,
+        "ci": [
+          -0.333,
+          0.194
+        ],
+        "significant": false
+      }
+    },
+    "by_template": {
+      "frame_official": {
+        "by_frame": {
+          "C1": 0.5,
+          "C2": 0.083,
+          "C3": 0.167,
+          "C4": 0.083,
+          "C5": 0.167,
+          "C6": 0.0
+        },
+        "range": 0.5
+      },
+      "frame_rights": {
+        "by_frame": {
+          "C1": 0.833,
+          "C2": 0.667,
+          "C3": 0.417,
+          "C4": 0.5,
+          "C5": 0.583,
+          "C6": 0.833
+        },
+        "range": 0.417
+      }
+    }
+  },
+  "_cross_model": {
+    "frame_official": {
+      "a": "Qwen",
+      "b": "Gemma",
+      "mean_a": 0.167,
+      "mean_b": 0.167,
+      "diff": 0.0,
+      "ci": [
+        -0.111,
+        0.125
+      ],
+      "significant": false
+    },
+    "frame_rights": {
+      "a": "Qwen",
+      "b": "Gemma",
+      "mean_a": 0.639,
+      "mean_b": 0.778,
+      "diff": -0.139,
+      "ci": [
+        -0.347,
+        0.069
+      ],
+      "significant": false
+    }
+  }
+}

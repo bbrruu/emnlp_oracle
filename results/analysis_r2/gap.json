@@ -1,0 +1,214 @@
+{
+  "Gemma": {
+    "n": 192,
+    "internal_content_rate": [
+      0.724,
+      0.656,
+      0.786
+    ],
+    "sanitized_rate": [
+      0.021,
+      0.005,
+      0.042
+    ],
+    "sanitized_restr_rate": [
+      0.182,
+      0.13,
+      0.245
+    ],
+    "cond_gap": [
+      -0.647,
+      -0.734,
+      -0.561
+    ],
+    "by_subject": {
+      "中國": {
+        "n": 48,
+        "sanitized_rate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "台灣": {
+        "n": 48,
+        "sanitized_rate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "德國": {
+        "n": 48,
+        "sanitized_rate": [
+          0.042,
+          0.0,
+          0.104
+        ]
+      },
+      "美國": {
+        "n": 48,
+        "sanitized_rate": [
+          0.042,
+          0.0,
+          0.104
+        ]
+      }
+    },
+    "asymmetry_sanitized": {
+      "target": 0.0,
+      "control": 0.042,
+      "diff": -0.042,
+      "ci": [
+        -0.104,
+        0.0
+      ],
+      "significant": false
+    },
+    "asymmetry_sanitized_restr": {
+      "target": 0.0,
+      "control": 0.396,
+      "diff": -0.396,
+      "ci": [
+        -0.542,
+        -0.271
+      ],
+      "significant": true
+    },
+    "asymmetry_no_leak": {
+      "n": 109,
+      "diff": -0.071,
+      "ci": [
+        -0.179,
+        0.0
+      ],
+      "significant": false
+    },
+    "asymmetry": {
+      "target": 0.0,
+      "control": 0.042,
+      "diff": -0.042,
+      "ci": [
+        -0.104,
+        0.0
+      ],
+      "significant": false
+    }
+  },
+  "Qwen": {
+    "n": 192,
+    "internal_content_rate": [
+      0.297,
+      0.234,
+      0.359
+    ],
+    "sanitized_rate": [
+      0.021,
+      0.005,
+      0.042
+    ],
+    "sanitized_restr_rate": [
+      0.172,
+      0.12,
+      0.224
+    ],
+    "cond_gap": [
+      -0.474,
+      -0.632,
+      -0.316
+    ],
+    "by_subject": {
+      "中國": {
+        "n": 48,
+        "sanitized_rate": [
+          0.062,
+          0.0,
+          0.146
+        ]
+      },
+      "台灣": {
+        "n": 48,
+        "sanitized_rate": [
+          0.021,
+          0.0,
+          0.062
+        ]
+      },
+      "德國": {
+        "n": 48,
+        "sanitized_rate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "美國": {
+        "n": 48,
+        "sanitized_rate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "asymmetry_sanitized": {
+      "target": 0.062,
+      "control": 0.0,
+      "diff": 0.062,
+      "ci": [
+        0.0,
+        0.146
+      ],
+      "significant": false
+    },
+    "asymmetry_sanitized_restr": {
+      "target": 0.375,
+      "control": 0.083,
+      "diff": 0.292,
+      "ci": [
+        0.146,
+        0.458
+      ],
+      "significant": true
+    },
+    "asymmetry_faithful_only": {
+      "n": 99,
+      "diff": 0.053,
+      "ci": [
+        0.0,
+        0.158
+      ],
+      "significant": false
+    },
+    "asymmetry_no_leak": {
+      "n": 121,
+      "diff": 0.071,
+      "ci": [
+        0.0,
+        0.179
+      ],
+      "significant": false
+    },
+    "asymmetry": {
+      "target": 0.062,
+      "control": 0.0,
+      "diff": 0.062,
+      "ci": [
+        0.0,
+        0.146
+      ],
+      "significant": false
+    }
+  },
+  "_cross_model": {
+    "a": "Gemma",
+    "b": "Qwen",
+    "scope": "全部",
+    "diff": 0.0,
+    "ci": [
+      -0.026,
+      0.031
+    ],
+    "significant": false
+  }
+}
