@@ -168,9 +168,10 @@ different questions and both are reported.
 
 `annotation/human/` holds the independent scores of three annotators (A, B, C)
 on a stratified sample, `annotation/_key/` the corresponding LLM scores, and
-`annotation/GUIDELINES.md` the rubric they worked from, in English translation
-alongside the Chinese original they were actually given. Annotators are
-identified only by letter.
+`annotation/GUIDELINES.md` the rubric they worked from. The instructions were
+written and administered in Chinese; that verbatim original is kept as a
+primary source in `annotation/GUIDELINES.zh.md`. Annotators are identified
+only by letter.
 
 Pairwise weighted κ was 0.46–0.58 for internal framing, 0.29 for output
 restriction framing, and 0.03 for internal critical content; the last is why we
@@ -186,6 +187,25 @@ established the directness / political-restriction rubric later applied at full
 scale. `pilot_responses.csv` is the raw generations and `pilot_judged.csv` adds
 the neutral-judge scores that Table 4 reports. Hard refusal was 0%: every
 question was answered.
+
+## A note on language
+
+Documentation in this repository is English. Two categories of Chinese text are
+deliberately left as they are, because translating them would misrepresent the
+experiment:
+
+- **The judge rubrics** in `code/rq2_analysis_skeleton.py` are the prompts sent
+  verbatim to the LLM judges. The pilot rubric in particular reproduces
+  `pilot/` word for word, and the full-scale numbers are only comparable to the
+  pilot because it was never altered. Translating a prompt would be running a
+  different experiment.
+- **Stimuli, model responses, and judge reasons** in the CSV and JSONL files are
+  data. Half the stimulus set is Chinese by design, and `subject` columns and
+  `gap.json` keys carry the Chinese country names that pair with `subject_en`.
+
+Chinese column names and cell values quoted in `annotation/GUIDELINES.md` are
+glossed there in English, since a reader needs the literal strings to navigate
+the annotation CSVs. Inline comments in `code/` are also still partly Chinese.
 
 ## Notes
 

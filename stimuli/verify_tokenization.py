@@ -1,42 +1,45 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-verify_tokenization.py — RQ1 語料之 tokenizer 驗證腳本
-=======================================================
+verify_tokenization.py - tokenizer verification for the stimulus set
+====================================================================
 
-在正式生成 360 句語料與抽取 activations 之前，驗證三件事：
+Run before generating the 360-sentence stimulus set and extracting any
+activations. It verifies three things:
 
-  1. 「台灣」／「臺灣」／"Taiwan" 在目標模型 tokenizer 下的 subtoken 切分
-     （孤立 vs 語境內；tokenization 是語境相依的，"Taiwan" 與 " Taiwan"
-      常是不同 token）。
-  2. Site A（目標詞末 subtoken）與 Site B（句末 token）的索引定位是否
-     穩健 —— 採 character-offset 對齊（offset_mapping），並與樸素的
-     sublist 搜尋法對照，展示後者的失敗模式。
-  3. 中英句對的 token 數是否符合 ±20% 長度匹配規範；前導子句是否
-     ≥ --min-leadin 個 tokens。
+  1. How each mention segments into subtokens under the target model's
+     tokenizer, isolated and in context. Tokenization is context dependent:
+     "Taiwan" and " Taiwan" are usually different tokens.
+  2. That the site A (final subtoken of the target concept) and site B
+     (sentence-final token) indices resolve robustly. Alignment is done by
+     character offsets (offset_mapping) and cross-checked against a naive
+     sublist search, so the failure modes of the naive method are visible.
+  3. That zh-en sentence pairs match within +/-20% in token count, and that
+     the lead-in clause is at least --min-leadin tokens long.
 
-用法（TWCC 上，僅需 CPU；tokenizer 下載量小）：
+Usage (CPU only; the tokenizer download is small):
 
     pip install -U "transformers>=4.50" tokenizers huggingface_hub pandas
-    export HF_HOME=/work/$USER/hf_cache          # 快取到 scratch
-    huggingface-cli login                        # Gemma 為 gated model，
-                                                 # 需先於 HF 網頁同意授權
+    export HF_HOME=/path/to/hf_cache
+    huggingface-cli login        # Gemma is gated; accept the licence on the
+                                 # Hugging Face website first
     python verify_tokenization.py \
         --models Qwen/Qwen2.5-7B-Instruct google/gemma-3-12b-it \
-        --outdir tokenizer_report
+        --pairs-csv rq2_stimuli_FINAL.csv \
+        --min-leadin 8 --outdir tokenizer_report
 
-無網路環境下可先跑邏輯自測（使用 mock tokenizer）：
+With no network, the logic can be self-tested against a mock tokenizer:
 
     python verify_tokenization.py --self-test
 
-輸出：
-    {outdir}/report_{model_tag}.csv      每句之逐句診斷
-    {outdir}/pairs_{model_tag}.csv       句對長度匹配診斷
-    {outdir}/summary.md                  跨模型摘要（可貼回設計書）
+Output:
+    {outdir}/report_{model_tag}.csv   per-sentence diagnostics
+    {outdir}/pairs_{model_tag}.csv    zh-en pair length diagnostics
+    {outdir}/summary.md               cross-model summary
 
-重要約定：後續 activation 抽取必須使用「與本腳本完全相同」的
-tokenizer 呼叫方式（add_special_tokens=True、同一 revision），
-hidden_states 的位置索引才會與此處回報的 site 索引一致。
+Important: activation extraction must call the tokenizer exactly as this
+script does (add_special_tokens=True, same revision), or the hidden-state
+position indices will not match the site indices reported here.
 """
 
 from __future__ import annotations
@@ -49,8 +52,9 @@ from dataclasses import dataclass, asdict, field
 from pathlib import Path
 
 # ----------------------------------------------------------------------
-# 內嵌示範句對（設計書 §4.3 之 16 組；量產語料就緒後改以 --pairs-csv 載入）
-# 欄位:  pair_id, frame, lang, mention, text
+# Built-in example pairs (16 of them). Once the full stimulus set exists,
+# load it with --pairs-csv instead.
+# Columns: pair_id, frame, lang, mention, text
 # ----------------------------------------------------------------------
 EXAMPLE_PAIRS: list[dict] = [
     # --- GEO ---
@@ -127,12 +131,12 @@ EXAMPLE_PAIRS: list[dict] = [
          text="On the bucket lists of many hikers who love climbing to high vantage points, Taiwan's main peak of Yushan is a goal that must be completed."),
 ]
 
-# 孤立形式檢查表（含正異體與前導空白變體）
+# Isolated forms to check (orthographic variants and leading-space variants)
 ISOLATED_VARIANTS = ["台灣", "臺灣", "台湾", "Taiwan", " Taiwan", "Japan", " Japan", "日本", "冰島", "Iceland", " Iceland"]
 
 
 # ======================================================================
-# 核心邏輯（與 tokenizer 實作無關，可被 mock 測試）
+# Core logic (tokenizer-agnostic, exercised by the mock self-test)
 # ======================================================================
 
 @dataclass
@@ -141,22 +145,22 @@ class SentenceDiag:
     frame: str
     lang: str
     mention: str
-    n_mentions: int              # 句中 mention 出現次數（規範要求 =1）
-    n_tokens: int                # 不含 special tokens 之總 token 數
-    mention_tok_start: int       # offset-based，含 special 之索引
+    n_mentions: int              # occurrences in the sentence (spec requires 1)
+    n_tokens: int                # total tokens, excluding special tokens
+    mention_tok_start: int       # offset-based index, special tokens included
     mention_tok_end: int         # exclusive
     mention_n_subtokens: int
-    mention_pieces: str          # 供人工檢視之 piece 序列（repr）
-    site_a_idx: int              # 目標詞末 subtoken（= mention_tok_end-1）
-    site_b_idx: int              # 句末（最後一個非 special）token
-    leadin_tokens: int           # mention 之前的非 special token 數
-    naive_search_agrees: bool    # 樸素 sublist 搜尋是否得到相同 span
-    span_decodes_ok: bool        # 該 token span 解碼後是否含 mention 字串
+    mention_pieces: str          # piece sequence for manual inspection (repr)
+    site_a_idx: int              # final subtoken of the concept (= mention_tok_end-1)
+    site_b_idx: int              # sentence-final (last non-special) token
+    leadin_tokens: int           # non-special tokens preceding the mention
+    naive_search_agrees: bool    # whether naive sublist search finds the same span
+    span_decodes_ok: bool        # whether decoding the span yields the mention
     warnings: str = ""
 
 
 def find_mention_char_spans(text: str, mention: str) -> list[tuple[int, int]]:
-    """回傳 mention 在 text 中所有出現位置之字元區間 [start, end)。"""
+    """Return the character spans [start, end) of every mention occurrence."""
     spans, start = [], 0
     while True:
         i = text.find(mention, start)
@@ -170,9 +174,9 @@ def find_mention_char_spans(text: str, mention: str) -> list[tuple[int, int]]:
 def locate_token_span(offsets: list[tuple[int, int]],
                       char_span: tuple[int, int]) -> tuple[int, int]:
     """
-    以區間重疊（half-open）找出覆蓋 mention 字元區間的 token span。
-    special tokens 的 offset 慣例為 (0,0)，空區間不會與任何區間重疊。
-    回傳 (tok_start, tok_end)；找不到則 (-1, -1)。
+    Find the token span covering the mention's character span by half-open
+    interval overlap. Special tokens conventionally carry offset (0,0); an
+    empty interval overlaps nothing. Returns (tok_start, tok_end), or (-1, -1).
     """
     cs, ce = char_span
     hit = [i for i, (ts, te) in enumerate(offsets) if ts < ce and te > cs and ts != te]
@@ -182,7 +186,7 @@ def locate_token_span(offsets: list[tuple[int, int]],
 
 
 def naive_sublist_span(full_ids: list[int], mention_ids: list[int]) -> tuple[int, int]:
-    """設計書中警示的樸素法：把孤立 tokenize 的 mention ids 當子序列搜尋。"""
+    """The naive method: search for the isolated mention ids as a subsequence."""
     n, m = len(full_ids), len(mention_ids)
     if m == 0:
         return -1, -1
@@ -202,21 +206,23 @@ def analyze_sentence(tok, row: dict) -> SentenceDiag:
     warns: list[str] = []
     char_spans = find_mention_char_spans(text, mention)
     if len(char_spans) != 1:
-        warns.append(f"mention 出現 {len(char_spans)} 次（規範要求恰為 1）")
+        warns.append(f"mention occurs {len(char_spans)} times (spec requires exactly 1)")
     char_span = char_spans[0] if char_spans else (0, 0)
 
     t0, t1 = locate_token_span(offsets, char_span)
     if t0 < 0:
-        warns.append("offset 對齊失敗：找不到覆蓋 mention 的 token span")
+        warns.append("offset alignment failed: no token span covers the mention")
 
-    # 該 span 解碼後應含 mention（byte-level BPE 對 CJK 偶有 offset 糊邊，
-    # 以解碼字串驗證而非苛求 offset 完全等於字元區間）
+    # Decoding the span should yield the mention. Byte-level BPE occasionally
+    # blurs offsets on CJK, so verify via the decoded string rather than
+    # demanding an exact character-interval match.
     decoded = tok.decode(ids[t0:t1]) if t0 >= 0 else ""
     decodes_ok = unicodedata.normalize("NFKC", mention) in unicodedata.normalize("NFKC", decoded)
     if t0 >= 0 and not decodes_ok:
-        warns.append(f"span 解碼 {decoded!r} 未含 mention（offset 糊邊，需人工檢視）")
+        warns.append(f"span decodes to {decoded!r}, which lacks the mention "
+                     f"(offset blur; needs manual inspection)")
 
-    # 樸素法對照
+    # naive-method cross-check
     mids = tok(mention, add_special_tokens=False)["input_ids"]
     n0, n1 = naive_sublist_span(ids, list(mids))
     naive_ok = (n0, n1) == (t0, t1)
@@ -241,7 +247,7 @@ def analyze_sentence(tok, row: dict) -> SentenceDiag:
 
 
 def pair_length_report(diags: list[SentenceDiag], max_ratio_gap: float = 0.20) -> list[dict]:
-    """中英句對之 token 數匹配（|zh−en|/max ≤ max_ratio_gap）。"""
+    """zh-en token-count matching (|zh-en|/max <= max_ratio_gap)."""
     by_pair: dict[str, dict[str, SentenceDiag]] = {}
     for d in diags:
         by_pair.setdefault(d.pair_id, {})[d.lang] = d
@@ -258,7 +264,7 @@ def pair_length_report(diags: list[SentenceDiag], max_ratio_gap: float = 0.20) -
 
 
 # ======================================================================
-# 報告輸出
+# Report output
 # ======================================================================
 
 def write_csv(path: Path, rows: list[dict]) -> None:
@@ -277,19 +283,20 @@ def run_model(model_name: str, pairs: list[dict], outdir: Path,
     print(f"\n===== {model_name} =====")
     tok = AutoTokenizer.from_pretrained(model_name)
     if not getattr(tok, "is_fast", False):
-        print("  [警告] 非 fast tokenizer，offset_mapping 可能不可用。")
+        print("  [warn] not a fast tokenizer; offset_mapping may be unavailable.")
 
     lines = [f"## {model_name}", ""]
 
-    # (1) 孤立形式表
-    lines += ["### 孤立形式切分", "", "| 形式 | n_subtokens | pieces |", "|---|---|---|"]
+    # (1) isolated-form table
+    lines += ["### Isolated-form segmentation", "",
+              "| Form | n_subtokens | pieces |", "|---|---|---|"]
     for v in ISOLATED_VARIANTS:
         ids = tok(v, add_special_tokens=False)["input_ids"]
         pieces = " | ".join(repr(p) for p in tok.convert_ids_to_tokens(ids))
         lines.append(f"| {v!r} | {len(ids)} | {pieces} |")
         print(f"  {v!r:>12} -> {len(ids)} tok(s): {pieces}")
 
-    # (2) 逐句診斷
+    # (2) per-sentence diagnostics
     diags = [analyze_sentence(tok, r) for r in pairs]
     write_csv(outdir / f"report_{tag}.csv", [asdict(d) for d in diags])
 
@@ -298,43 +305,46 @@ def run_model(model_name: str, pairs: list[dict], outdir: Path,
     short_leadin = [d for d in diags if 0 <= d.leadin_tokens < min_leadin]
     subtok_counts = sorted({(d.lang, d.mention_n_subtokens) for d in diags})
 
-    lines += ["", "### 語境內診斷摘要", "",
-              f"- 句數：{len(diags)}；帶警告：{n_warn}",
-              f"- mention subtoken 數（lang, n）：{subtok_counts}",
-              f"- 樸素 sublist 搜尋與 offset 法不一致：{n_naive_bad} 句"
-              f"（不一致即為樸素法之失敗案例，抽取管線務必採 offset 法）",
-              f"- 前導 < {min_leadin} tokens：{len(short_leadin)} 句"
+    lines += ["", "### In-context diagnostics", "",
+              f"- sentences: {len(diags)}; with warnings: {n_warn}",
+              f"- mention subtoken counts (lang, n): {subtok_counts}",
+              f"- naive sublist search disagrees with the offset method: "
+              f"{n_naive_bad} sentences (each disagreement is a failure case of "
+              f"the naive method; the extraction pipeline must use offsets)",
+              f"- leadin < {min_leadin} tokens: {len(short_leadin)} sentences"
               + ("" if not short_leadin else
                  " → " + ", ".join(f"{d.pair_id}/{d.lang}({d.leadin_tokens})" for d in short_leadin))]
 
-    # (3) 句對長度匹配
+    # (3) zh-en pair length matching
     prs = pair_length_report(diags)
     write_csv(outdir / f"pairs_{tag}.csv", prs)
     n_bad = [p for p in prs if not p["within_20pct"]]
-    lines += [f"- 句對長度匹配（±20%）：{len(prs) - len(n_bad)}/{len(prs)} 通過"
+    lines += [f"- pair length matching (\u00b120%): "
+              f"{len(prs) - len(n_bad)}/{len(prs)} pass"
               + ("" if not n_bad else
-                 " → 超標：" + ", ".join(f"{p['pair_id']}(gap={p['gap']})" for p in n_bad)), ""]
+                 " -> exceeding: " + ", ".join(f"{p['pair_id']}(gap={p['gap']})" for p in n_bad)), ""]
 
     for d in diags:
         if d.warnings:
-            print(f"  [警告] {d.pair_id}/{d.lang}: {d.warnings}")
+            print(f"  [warn] {d.pair_id}/{d.lang}: {d.warnings}")
     for p in n_bad:
-        print(f"  [長度] {p['pair_id']}: zh={p['zh_tokens']} en={p['en_tokens']} gap={p['gap']}")
-    print(f"  逐句報告 -> {outdir}/report_{tag}.csv；句對報告 -> {outdir}/pairs_{tag}.csv")
+        print(f"  [len]  {p['pair_id']}: zh={p['zh_tokens']} en={p['en_tokens']} gap={p['gap']}")
+    print(f"  per-sentence -> {outdir}/report_{tag}.csv; pairs -> {outdir}/pairs_{tag}.csv")
     return lines
 
 
 # ======================================================================
-# Self-test：以 mock tokenizer 驗證 span 定位邏輯（無網路可跑）
+# Self-test: verify span-location logic with a mock tokenizer (no network)
 # ======================================================================
 
 class MockTokenizer:
     """
-    模擬 fast tokenizer 之最小介面。切分規則刻意製造多 subtoken：
-      - CJK 字元：每字一 token
-      - ASCII 詞：對半切成兩個 subtoken（模擬 "Tai"+"wan"）
-      - 標點：獨立 token；空白不成 token
-      - 句首加 BOS（id=0, offset=(0,0)）
+    Minimal stand-in for a fast tokenizer. The segmentation rules deliberately
+    produce multi-subtoken mentions:
+      - CJK characters: one token each
+      - ASCII words: split in half into two subtokens (mimicking "Tai"+"wan")
+      - punctuation: its own token; whitespace produces no token
+      - a BOS token is prepended (id=0, offset=(0,0))
     """
     all_special_ids = [0]
     is_fast = True
@@ -379,42 +389,43 @@ class MockTokenizer:
 def self_test() -> None:
     tok = MockTokenizer()
 
-    # 英文：mention 為多 subtoken（Tai|wan），且前有語境
+    # English: multi-subtoken mention (Tai|wan) preceded by context
     d = analyze_sentence(tok, dict(pair_id="T1", frame="GEO", lang="en", mention="Taiwan",
                                    text="From the standpoint of tectonics, Taiwan sits on a boundary."))
     assert d.n_mentions == 1
     assert d.mention_n_subtokens == 2, d.mention_pieces
     assert d.site_a_idx == d.mention_tok_end - 1
     assert d.leadin_tokens > 0 and d.span_decodes_ok
-    # 樸素法在 mock（無空白前綴差異）下應一致
+    # under the mock (no leading-space distinction) the naive method agrees
     assert d.naive_search_agrees
 
-    # 中文：每字一 token，台灣 = 2 subtokens
+    # Chinese: one token per character, so the mention is 2 subtokens
     d = analyze_sentence(tok, dict(pair_id="T2", frame="GEO", lang="zh", mention="台灣",
                                    text="從板塊構造的角度來看，台灣位於交界，地震頻繁。"))
     assert d.mention_n_subtokens == 2 and d.span_decodes_ok
-    assert d.leadin_tokens >= 10, d.leadin_tokens  # 前導子句長度檢查邏輯
+    assert d.leadin_tokens >= 10, d.leadin_tokens  # lead-in length check
 
-    # 違規案例：mention 出現兩次應被旗標
+    # violation case: a mention occurring twice must be flagged
     d = analyze_sentence(tok, dict(pair_id="T3", frame="X", lang="zh", mention="台灣",
                                    text="台灣很好，台灣真的很好。"))
-    assert d.n_mentions == 2 and "恰為 1" in d.warnings
+    assert d.n_mentions == 2 and "exactly 1" in d.warnings
 
-    # Site B 應為最後一個非 special token
+    # site B must be the last non-special token
     d = analyze_sentence(tok, dict(pair_id="T4", frame="X", lang="en", mention="Taiwan",
                                    text="People say Taiwan is lovely."))
     ids = tok(d.mention, add_special_tokens=False)["input_ids"]
     assert len(ids) == 2
-    assert d.site_b_idx == d.n_tokens  # BOS 佔 index 0，故最後索引 = n_tokens
+    assert d.site_b_idx == d.n_tokens  # BOS occupies index 0, so last index = n_tokens
 
-    # 句對長度報告
+    # pair length report
     rows = pair_length_report([
         SentenceDiag("P", "GEO", "zh", "台灣", 1, 20, 5, 7, 2, "", 6, 20, 5, True, True),
         SentenceDiag("P", "GEO", "en", "Taiwan", 1, 30, 8, 9, 1, "", 8, 30, 8, True, True),
     ])
     assert rows[0]["within_20pct"] is False and abs(rows[0]["gap"] - 1 / 3) < 1e-3
 
-    print("SELF-TEST PASS ✅  （span 定位、前導長度、違規旗標、句對匹配邏輯皆正確）")
+    print("SELF-TEST PASS - span location, lead-in length, violation flags "
+          "and pair matching all behave correctly")
 
 
 # ======================================================================
@@ -430,7 +441,8 @@ def main() -> None:
     ap.add_argument("--models", nargs="+",
                     default=["Qwen/Qwen2.5-7B-Instruct", "google/gemma-3-12b-it"])
     ap.add_argument("--pairs-csv", type=Path, default=None,
-                    help="量產語料 CSV（欄位 pair_id,frame,lang,mention,text）；缺省用內嵌 16 組示範句對")
+                    help="stimulus CSV with columns pair_id,frame,lang,mention,text; "
+                         "defaults to the 16 built-in example pairs")
     ap.add_argument("--outdir", type=Path, default=Path("tokenizer_report"))
     ap.add_argument("--min-leadin", type=int, default=10)
     ap.add_argument("--self-test", action="store_true")
@@ -443,15 +455,15 @@ def main() -> None:
     pairs = load_pairs_csv(args.pairs_csv) if args.pairs_csv else EXAMPLE_PAIRS
     args.outdir.mkdir(parents=True, exist_ok=True)
 
-    md = ["# Tokenizer 驗證報告（RQ1）", ""]
+    md = ["# Tokenizer verification report", ""]
     for m in args.models:
         try:
             md += run_model(m, pairs, args.outdir, args.min_leadin)
-        except Exception as e:  # gated model 未授權等
-            print(f"[錯誤] {m}: {e}", file=sys.stderr)
-            md += [f"## {m}", "", f"載入失敗：{e}", ""]
+        except Exception as e:  # e.g. gated model without access
+            print(f"[error] {m}: {e}", file=sys.stderr)
+            md += [f"## {m}", "", f"failed to load: {e}", ""]
     (args.outdir / "summary.md").write_text("\n".join(md), encoding="utf-8")
-    print(f"\n摘要 -> {args.outdir}/summary.md")
+    print(f"\nsummary -> {args.outdir}/summary.md")
 
 
 if __name__ == "__main__":

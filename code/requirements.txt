@@ -1,24 +1,26 @@
-# RQ2 the HPC cluster執行包依賴（步驟 ①②③）
-# 安裝：pip install -r requirements.txt
-# ⚠ 請用你 RQ1 跑活的那個 Python 3.10/3.11 環境最保險；不要用 3.14（torch/transformers 可能沒 wheel）。
-# 若 RQ1 的環境還在 → 這些多半都裝好了，直接沿用即可。
+# Dependencies for the extraction, generation and verbalization steps.
+# Install with: pip install -r requirements.txt
+# Use a Python 3.10/3.11 environment; 3.14 may lack torch/transformers wheels.
 
-# ── ① 抽 activation + ② 生成回答（rq2_extract_activations.py / rq2_generate_responses.py）──
-torch                 # 模型 forward（GPU）；CUDA 版不對就到 pytorch.org 選對應指令
-transformers>=4.50    # AutoTokenizer / AutoModelForCausalLM；Gemma-3 需夠新
-accelerate            # device_map="auto" 必需（最容易漏）
-pyarrow               # 寫 / 讀 activation parquet
+# -- 1. activation extraction + 2. response generation --------------------
+# (rq2_extract_activations.py / rq2_generate_responses.py)
+torch                 # model forward pass on GPU; pick the CUDA build from pytorch.org
+transformers>=4.50    # AutoTokenizer / AutoModelForCausalLM; Gemma-3 needs a recent version
+accelerate            # required by device_map="auto"
+pyarrow               # read/write the activation parquet files
 numpy
-pyyaml                # 讀 nla_meta.yaml 的層位（--nla-meta 時）
-huggingface_hub       # 下載 / 離線讀模型與 checkpoint
+pyyaml                # reads the layer index from nla_meta.yaml (with --nla-meta)
+huggingface_hub       # download / offline load of models and checkpoints
 
-# ── ③ NLA 語言化：AV 語言化 + AR 忠實度（verbalize.py / score_roundtrip.py）──
-# AV 端要另外掛 SGLang server 讀 AV checkpoint；AR 端 in-process 跑，不需 SGLang。
-sglang[all]>=0.5.6    # 掛 AV checkpoint 的推論 server（較重、環境相依）
-httpx                 # verbalize 打 SGLang server
+# -- 3. NLA verbalization: AV verbalize + AR faithfulness ------------------
+# (verbalize.py / score_roundtrip.py)
+# The AV side needs a separate SGLang server hosting the AV checkpoint;
+# the AR side runs in-process and needs no server.
+sglang[all]>=0.5.6    # inference server hosting the AV checkpoint
+httpx                 # verbalize.py talks to the SGLang server
 orjson
-safetensors           # 讀 AV/AR checkpoint 權重
-pandas                # verbalize finalize 去重 / score_roundtrip 便利
+safetensors           # reads the AV/AR checkpoint weights
+pandas                # dedup in verbalize, convenience in score_roundtrip
 
-# 註：③ 還需要 NLA 官方 repo 本身（clone + apply patch），見 README 步驟 6。
-#     repo：https://github.com/kitft/natural_language_autoencoders
+# Step 3 also requires the Natural Language Autoencoders repository itself:
+#   https://github.com/kitft/natural_language_autoencoders
