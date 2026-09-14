@@ -9,21 +9,50 @@ annotators to score outputs.
 ## Repository layout
 
 ```
-stimuli/         rq2_stimuli_FINAL.csv  360 bilingual minimal-pair items,
-                 plus the tokenizer-verification script and its report
-code/            extraction → generation → verbalization → analysis
-activations/     residual-stream vectors, 720 per model (site A + site B)
-responses/       raw model generations, both prompt designs, unjudged
-verbalizations/  all k=5 NLA descriptions, and the representative per vector
-roundtrip/       AR reconstruction faithfulness per description
-results/         judged scores, geometry/gap statistics, figures
-annotation/      human annotations (3 annotators) + rubric + LLM reference scores
-pilot/           the 24-item behavioral pilot (Appendix A)
+stimuli/
+  rq2_stimuli_FINAL.csv              360 bilingual minimal-pair items
+  verify_tokenization.py             offset-alignment pass, run before extraction
+  tokenizer_report/                  its output: per-sentence and per-pair diagnostics
 
-Every number in the paper can be recomputed from what is here. Nothing in the
-analysis needs a GPU; only regenerating the activations or the generations from
-the models themselves does.
+code/
+  rq2_extract_activations.py         1. residual-stream activations
+  rq2_generate_responses.py          2. model answers to the stance items
+  verbalize.py                       3. NLA verbalization (needs an SGLang server)
+  score_roundtrip.py                 4a. AR reconstruction faithfulness
+  select_representative.py           4b. one description per vector
+  rq2_analysis_skeleton.py           5. geometry, judges, gap, agreement
+  merge_annotations.py               inter-annotator agreement from annotation/human/
+  requirements.txt
+
+activations/{qwen,gemma}/            720 vectors per model (360 sentences x 2 sites)
+responses/                           192 stance answers per model, unjudged
+  responses_{qwen,gemma}_conclusion-first.jsonl    main results
+  responses_{qwen,gemma}_free-response.jsonl       second prompt design
+verbalizations/
+  {qwen,gemma}_av.parquet            all 3600 descriptions (720 vectors x k=5)
+  nla_representatives_{qwen,gemma}.csv   the most faithful sample per vector
+roundtrip/{qwen,gemma}_roundtrip.csv AR faithfulness and upstream desc_lang
+
+results/
+  analysis/                          Claude-Opus-5, free-response, original rubric
+  analysis_openai/                   GPT-4o-mini, free-response, original rubric
+  analysis_v2{,_openai}/             free-response, truncation-aware rubric (say only)
+  analysis_r2{,_openai}/             conclusion-first - the main results
+  figures/                           fig1_geometry, fig3_subjects are the paper's
+                                     Figures 1 and 2
+
+annotation/
+  human/{say,think,frame}_annotator{A,B,C}.csv   the three annotators' scores
+  _key/{say,think,frame}_llm_key.csv             the LLM scores they were blind to
+  GUIDELINES.md                      the rubric, and how to reproduce the kappas
+  GUIDELINES.zh.md                   the Chinese original given to the annotators
+
+pilot/                               the 24-item behavioral pilot (Appendix A)
 ```
+
+Every number in the paper can be recomputed from what is here. The analysis
+needs no GPU; only regenerating the activations, the generations, or the
+verbalizations from the models themselves does.
 
 ## Stimuli
 
