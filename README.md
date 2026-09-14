@@ -148,12 +148,18 @@ this file is the complete set, including the vectors no judge scored.
 
 Each `results/analysis*` directory is one judge × prompt-design combination:
 
-| Directory | Judge | Responses |
-|---|---|---|
-| `analysis/` | Claude-Opus-5 | free-response |
-| `analysis_openai/` | GPT-4o-mini | free-response |
-| `analysis_r2/` | Claude-Opus-5 | conclusion-first (0% truncation) |
-| `analysis_r2_openai/` | GPT-4o-mini | conclusion-first (0% truncation) |
+| Directory | Judge | Responses | Say rubric |
+|---|---|---|---|
+| `analysis/` | Claude-Opus-5 | free-response | original |
+| `analysis_openai/` | GPT-4o-mini | free-response | original |
+| `analysis_v2/` | Claude-Opus-5 | free-response | truncation-aware |
+| `analysis_v2_openai/` | GPT-4o-mini | free-response | truncation-aware |
+| `analysis_r2/` | Claude-Opus-5 | conclusion-first (0% truncation) | original |
+| `analysis_r2_openai/` | GPT-4o-mini | conclusion-first (0% truncation) | original |
+
+The two `analysis_v2*` directories hold only `judged_say.csv`: the
+truncation-aware rubric was a robustness check on the output axis, so nothing
+downstream of it was recomputed.
 
 Key files: `geometry.json` (representation statistics), `judged_say.csv` /
 `judged_think.csv` / `judged_frame.csv` (per-item scores), `gap.json`
@@ -163,6 +169,19 @@ Key files: `geometry.json` (representation statistics), `judged_say.csv` /
 The conclusion-first runs (`*_r2*`) are the ones reported as the main results;
 the free-response runs are retained because the two prompt designs answer
 different questions and both are reported.
+
+`think_say_gap.csv` carries the per-item indicators (`sanitized_restr`,
+`faith_pass`, `prompt_leak_span`, `desc_lang`) that the think-say gap subsets
+are computed from, so those can be recomputed without rerunning any judge.
+
+### One number that cannot be regenerated here
+
+The label-shuffled placebo for the site B direction analysis is not computed by
+`code/rq2_analysis_skeleton.py`. It was run separately at the time: shuffling
+the sensitive/control labels within each cell over three runs gave leave-one-out
+cosines of **+0.053 / -0.035 / -0.083** with permutation **p = 0.16 / 0.73 /
+0.97** - the null band and p-range the paper reports alongside Figure 1. The
+values are recorded here because the released code cannot reproduce them.
 
 ## Annotation
 
