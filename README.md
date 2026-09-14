@@ -12,11 +12,17 @@ annotators to score outputs.
 stimuli/         rq2_stimuli_FINAL.csv  360 bilingual minimal-pair items,
                  plus the tokenizer-verification script and its report
 code/            extraction → generation → verbalization → analysis
+activations/     residual-stream vectors, 720 per model (site A + site B)
 responses/       raw model generations, both prompt designs, unjudged
-verbalizations/  the representative NLA description per activation vector
+verbalizations/  all k=5 NLA descriptions, and the representative per vector
+roundtrip/       AR reconstruction faithfulness per description
 results/         judged scores, geometry/gap statistics, figures
 annotation/      human annotations (3 annotators) + rubric + LLM reference scores
 pilot/           the 24-item behavioral pilot (Appendix A)
+
+Every number in the paper can be recomputed from what is here. Nothing in the
+analysis needs a GPU; only regenerating the activations or the generations from
+the models themselves does.
 ```
 
 ## Stimuli
@@ -110,11 +116,29 @@ python code/rq2_analysis_skeleton.py --stage all \
 Extraction uses the layers the public NLA checkpoints are trained on (layer 20
 for Qwen, layer 32 for Gemma), so that activations are in-distribution for the
 verbalizer. All pipeline steps above write under `work/`, so re-running them never
-overwrites the released `responses/`, `verbalizations/` or `results/`.
-`--stage geometry` is pure computation and needs no API access, but
-it does read the activation tensors, which are not redistributed here (see
-[Notes](#notes)); reproducing the representation results therefore means
-re-running step 1 on a GPU.
+overwrites the released data.
+
+Steps 1-4 need a GPU and, for verbalization, the NLA checkpoints. Their outputs
+are shipped, so the analysis in step 5 can be run directly against this
+repository:
+
+```bash
+# Representation results (§4.1). Pure computation, no API key needed.
+python code/rq2_analysis_skeleton.py --stage geometry \
+    --activations Qwen=activations/qwen/activations_Qwen2.5-7B-Instruct.parquet \
+    --activations Gemma=activations/gemma/activations_gemma-3-12b-it.parquet \
+    --outdir work/results/
+
+# Judged axes. Needs an LLM endpoint; --roundtrip supplies desc_lang.
+python code/rq2_analysis_skeleton.py --stage judge-think \
+    --verbalize Qwen=verbalizations/nla_representatives_qwen.csv \
+    --roundtrip Qwen=roundtrip/qwen_roundtrip.csv \
+    --stimuli stimuli/rq2_stimuli_FINAL.csv --outdir work/results/
+```
+
+Pass `--roundtrip` whenever a stage consumes descriptions. Without it the code
+falls back to a local heuristic for `desc_lang`, which disagrees with the
+upstream value on 45 of 192 items and changes Table 6's English-only row.
 
 ## Responses
 
@@ -131,13 +155,19 @@ The same response text also appears inline in each `judged_say.csv`.
 
 ## Verbalizations
 
+`verbalizations/{qwen,gemma}_av.parquet` holds all 3600 descriptions per model
+(720 vectors × k=5 samples); `--stage stability` measures semantic agreement
+across the five samples of a vector and takes these files via `--av`.
+
 `verbalizations/nla_representatives_{qwen,gemma}.csv` holds the representative
 NLA description for each of the 720 activation vectors per model (360 sentences
 × {site A, site B}). For every vector, `k=5` descriptions were sampled at
 temperature 0.8 and the one with the lowest AR reconstruction error was
-retained; `selected_k` records which sample won and `faith_cos` its round-trip
-faithfulness. No vector is discarded on faithfulness — it is carried as a
-covariate, and the median is 0.901 for Qwen against 0.996 for Gemma, the
+retained; `selected_k` records which sample won and `cos` its round-trip
+faithfulness. These files are drop-in replacements for the
+`representatives/*_rep.parquet` that step 4 writes, so they can be passed
+straight to `--verbalize`. No vector is discarded on faithfulness — it is carried as a
+covariate, and the median `cos` is 0.901 for Qwen against 0.996 for Gemma, the
 asymmetry noted in the paper's Limitations.
 
 The judged subsets of these descriptions appear in `results/*/judged_think.csv`
@@ -174,20 +204,26 @@ different questions and both are reported.
 `faith_pass`, `prompt_leak_span`, `desc_lang`) that the think-say gap subsets
 are computed from, so those can be recomputed without rerunning any judge.
 
-### One number that cannot be regenerated here
+### The shuffled-label null behind Figure 1
 
-The label-shuffled placebo for the site B direction analysis is not computed by
-`code/rq2_analysis_skeleton.py`. It was run separately at the time: shuffling
-the sensitive/control labels within each cell over three runs gave leave-one-out
-cosines of **+0.053 / -0.035 / -0.083** with permutation **p = 0.16 / 0.73 /
-0.97** - the null band and p-range the paper reports alongside Figure 1. The
-values are recorded here because the released code cannot reproduce them.
+`--stage geometry` builds the null for the site B direction analysis by
+permuting the sensitive/control labels within each cell 1000 times, and reports
+the result as `p_perm` (0.001 for every cell, in `geometry.json`). Since the
+activations ship with this repository, that test is fully reproducible.
+
+The three illustrative draws the paper quotes alongside Figure 1 came from the
+same procedure run three times as standalone datasets: leave-one-out cosines of
+**+0.053 / -0.035 / -0.083** with **p = 0.16 / 0.73 / 0.97**, which is the
+±0.10 band in the figure. Those three specific draws are recorded here rather
+than regenerated, since the code samples the null rather than storing draws.
 
 ## Annotation
 
 `annotation/human/` holds the independent scores of three annotators (A, B, C)
 on a stratified sample, `annotation/_key/` the corresponding LLM scores, and
-`annotation/GUIDELINES.md` the rubric they worked from. The instructions were
+`annotation/GUIDELINES.md` the rubric they worked from, and
+`code/merge_annotations.py` the script that reports inter-annotator agreement
+from those files. The instructions were
 written and administered in Chinese; that verbatim original is kept as a
 primary source in `annotation/GUIDELINES.zh.md`. Annotators are identified
 only by letter.
@@ -230,9 +266,12 @@ the annotation CSVs. Inline comments in `code/` are also still partly Chinese.
 
 - Model weights are not redistributed here; the scripts download them from the
   Hugging Face Hub.
-- Raw activation tensors are not redistributed either; step 1 of the pipeline
-  regenerates them.
-- NLA verbalization additionally requires the released AV/AR checkpoints and the
-  Natural Language Autoencoders repository.
+- Regenerating the activations or the verbalizations requires a GPU, and
+  verbalization additionally requires the released AV/AR checkpoints and the
+  Natural Language Autoencoders repository. Their outputs are shipped so that
+  the analysis does not.
+- Not included, because nothing in the paper rests on them: the judge API
+  response caches, the `human_sample_*` sampling templates that the judge
+  stages emit, and run logs.
 - Judge stages call an external LLM API and need a key supplied via the
   environment; no credentials are included in this repository.

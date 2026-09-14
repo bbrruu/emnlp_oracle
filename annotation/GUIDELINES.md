@@ -184,9 +184,26 @@ cells were edited or imputed. Two things a reader will notice:
 
 ## Reproducing the agreement numbers
 
+Human-vs-human agreement - the table above, and the human column of the
+paper's Table 3 - needs nothing but this repository:
+
 ```bash
+python code/merge_annotations.py
+```
+
+It reads `annotation/human/`, prints the pairwise weighted kappa for every
+axis, and merges the three annotators (majority vote on overlap items, median
+where all three differ). The reported figures are the means of the three
+pairwise values: restriction 0.290, `frame_official` 0.459, `frame_rights`
+0.577, `think_content` 0.029.
+
+LLM-vs-human agreement additionally needs the `human_sample_{say,think,frame}.csv`
+templates, which the judge stages emit and which are not shipped here. Re-run a
+judge stage first, then:
+
+```bash
+python code/merge_annotations.py          # backfills the templates
 python code/rq2_analysis_skeleton.py --stage agreement --outdir results/analysis_r2
-python code/rq2_analysis_skeleton.py --stage agreement --outdir results/analysis_r2_openai
 ```
 
 ## The original instrument
