@@ -13,6 +13,5 @@ venv/
 judge.env
 secrets/
 
-# 大型中間產物(依需要解除註解)
-# activations/
-# verbalizations/
+# 管線中間產物(README 的範例指令都寫到 work/,不會覆蓋已釋出的資料)
+work/
